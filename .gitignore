@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+.venv/
+
+# Node.js
+node_modules/
