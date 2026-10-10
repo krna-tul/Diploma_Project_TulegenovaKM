@@ -1,0 +1,19 @@
+flowchart TB
+  n0["School и User<br/>Роли в пределах Школы"]
+  n1["MentorProfile и Skill<br/>Экспертиза наставника"]
+  n2["Request<br/>Профессиональный запрос"]
+  n3["Pair<br/>Период согласия приказ"]
+  n4["PlanVersion и PlanItem<br/>Версии задач"]
+  n5["Meeting<br/>Факт встречи и результат"]
+  n6["Visit и Observation<br/>Подготовка факты обсуждение"]
+  n7["Evaluation<br/>Начало середина итог"]
+  n8["Event и Enrollment<br/>Мероприятия и запись"]
+  n0 --> n1
+  n0 --> n2
+  n1 --> n3
+  n2 --> n3
+  n3 --> n4
+  n3 --> n5
+  n3 --> n6
+  n3 --> n7
+  n1 --> n8

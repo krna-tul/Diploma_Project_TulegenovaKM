@@ -1,0 +1,41 @@
+@startuml
+left to right direction
+actor "Преподаватель" as Teacher
+actor "Наставник" as Mentor
+actor "Наставляемый" as Mentee
+actor "Школа и директор" as School
+actor "Проректор / регистратор" as Rector
+actor "Департамент" as Department
+actor "Организатор" as Organizer
+Mentor --|> Teacher
+Mentee --|> Teacher
+rectangle "Платформа AITU" {
+ usecase "Просмотреть навыки и события" as Catalog
+ usecase "Подать карточку / запрос" as Apply
+ usecase "Согласовать пару" as Consent
+ usecase "Подобрать и представить пару" as Match
+ usecase "Зарегистрировать распоряжение" as Appoint
+ usecase "Разработать и согласовать план" as Plan
+ usecase "Утвердить план" as Approve
+ usecase "Записать встречу и Development Visit" as Visit
+ usecase "Оценить результат / запросить замену" as Evaluate
+ usecase "Получить обобщенный отчет" as Report
+ usecase "Подтвердить инструктаж" as Training
+ usecase "Опубликовать мероприятие" as Event
+}
+Teacher --> Catalog
+Teacher --> Apply
+Mentor --> Consent
+Mentee --> Consent
+School --> Match
+Rector --> Appoint
+Mentor --> Plan
+Mentee --> Plan
+School --> Approve
+Mentor --> Visit
+Mentee --> Visit
+Teacher --> Evaluate
+School --> Report
+Department --> Training
+Organizer --> Event
+@enduml
