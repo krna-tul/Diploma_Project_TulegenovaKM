@@ -1,0 +1,9 @@
+{
+  "name": "aitu-mentorship-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local interaction prototype for the AITU diploma project",
+  "scripts": {"start": "node scripts/serve.mjs", "test": "node --test tests/*.test.mjs"},
+  "engines": {"node": ">=20"}
+}
