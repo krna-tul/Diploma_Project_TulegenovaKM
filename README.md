@@ -2,132 +2,138 @@
 
 # AITU Faculty Mentoring
 
-**Платформа профессионального развития преподавателей**
+**A platform for faculty professional development**
 
-[Прототип в Figma](https://www.figma.com/design/sy5nfmGGIJu1W4KQk1Tm6d/?node-id=8-2) · [YouTrack](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Документация](#документация) · [Запуск](#запуск-и-тесты)
+[Figma Prototype](https://www.figma.com/design/sy5nfmGGIJu1W4KQk1Tm6d/?node-id=8-2) · [YouTrack](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Documentation](#documentation) · [Getting Started](#getting-started)
 
 </div>
 
-![Личный кабинет наставляемого — дизайн Figma](docs/assets/prototype/03-overview.png)
+![Mentee dashboard — Figma design](docs/assets/prototype/03-overview.png)
 
-Дипломный проект по разработке веб-платформы для управления системой наставничества преподавателей в высшем учебном заведении. Платформа связывает профессиональный запрос, выбор наставника, согласование пары, индивидуальный план, встречи и оценку результатов.
+A diploma project developing a web platform for managing faculty mentoring in higher education. The platform connects professional support requests, mentor selection, pair approval, individual development plans, meetings, and outcome evaluation.
 
-Подготовка к **24 октября 2026**: [критерии и состояние](docs/project/readiness.md), [сверка ТЗ](docs/tz-traceability.md), [задачи YouTrack](docs/project/youtrack.md).
+**Author:** Karina Maratovna Tulegenova · Software Engineering · SE-2419  
+**Supervisor:** Yersultan Bakhytovich Tulebayev  
+**Responsibilities:** requirements analysis, architecture, frontend and backend development, and system verification.
 
-Автор: Тулегенова Карина Маратовна, Software Engineering, группа SE-2419. Руководитель: Тулебаев Ерсултан Бахытович. Автор отвечает за анализ, архитектуру, frontend, backend и проверку системы.
+## Problem and Users
 
-## Проблема и пользователи
+AITU's mentoring process involves several related documents and approval stages. The project brings these activities into a connected workflow so participants can follow their progress.
 
-Положение AITU предусматривает несколько связанных документов и этапов организации наставничества. Проект объединяет их в одном процессе и делает статус взаимодействия доступным участникам. На встрече с клиентами 8 октября 2026 обсуждены роли и конфиденциальность, запросы и назначения, индивидуальные планы и обратная связь, мониторинг и отчетность. [Тезисы встречи и связь с требованиями](docs/research/user-research.md).
+The client meeting on **8 October 2026** with representatives of the Educational and Methodological Office addressed roles and confidentiality, support requests and assignments, development plans and feedback, and monitoring and reporting. The client's technical specification defines the project requirements. [Meeting findings and requirements](docs/research/user-research.md).
 
-Пользователи: преподаватели-наставники и наставляемые, представители Школы, директор Школы, академический департамент, регистратор распоряжений и организаторы мероприятий. Наставничество предназначено для профессионального развития; подробные наблюдения и рефлексия пары остаются конфиденциальными.
+The platform serves mentors, mentees, School representatives and directors, the academic department, order registrars, event organisers, and the Educational and Methodological Office. Detailed observations and reflections remain confidential within the mentoring pair.
 
-## Возможности
+## Project Scope
 
-- Две формы подачи: карточка кандидата в наставники и запрос наставляемого.
-- Каталог навыков и витрина мероприятий с поиском и выбором направления.
-- Проверка кандидата Школой и подтверждение вводного инструктажа.
-- Выбор наставника, согласие обеих сторон, представление директора и регистрация распоряжения проректора.
-- Совместный индивидуальный план с версиями, задачами, сроками, поддержкой и ожидаемыми результатами.
-- Встречи, Development Visit, промежуточная и итоговая оценка.
-- Обращения о замене и обобщенные показатели программы.
+- Separate mentor candidate applications and mentee support requests.
+- A searchable skills catalogue and professional development events.
+- School review of candidates and confirmation of introductory training.
+- Mentor selection, consent from both participants, director endorsement, and registration of the Vice-Rector's order.
+- Shared individual development plans with revisions, tasks, deadlines, support, and expected outcomes.
+- Meetings, Development Visits, and interim and final evaluations.
+- Replacement requests and programme-level summaries.
 
-## Прототип приложения
+The expected outcome is a multi-user platform with role-based access and an evaluation of usability against the existing document-based process.
 
-Экранные макеты экспортированы из **AITU Faculty Mentoring — Prototype**, страница **Refined · AITU Editorial**, 15 октября 2026. Они показывают целевой интерфейс. Локальный HTML/JS-прототип проверяет отдельные сценарии процесса; его реализация пока отличается от макетов Figma.
+## Application Prototype
 
-| Главная | Каталог наставников |
+Explore the interface through **AITU Faculty Mentoring — Prototype**, on the **Refined · AITU Editorial** page in Figma.
+
+| Home | Mentor Catalogue |
 | --- | --- |
-| [![Главная](docs/assets/prototype/01-landing.png)](docs/assets/prototype/01-landing.png) | [![Каталог наставников](docs/assets/prototype/04-mentors.png)](docs/assets/prototype/04-mentors.png) |
-| Знакомство с программой, навыками и возможностями поддержки | Поиск наставника и просмотр профессионального профиля |
+| [![Home](docs/assets/prototype/01-landing.png)](docs/assets/prototype/01-landing.png) | [![Mentor Catalogue](docs/assets/prototype/04-mentors.png)](docs/assets/prototype/04-mentors.png) |
+| Discover the programme, skills, and support opportunities | Find a mentor and explore their professional profile |
 
-| Индивидуальный план | Development Visit |
+| Individual Development Plan | Development Visit |
 | --- | --- |
-| [![Индивидуальный план](docs/assets/prototype/06-plan.png)](docs/assets/prototype/06-plan.png) | [![Development Visit](docs/assets/prototype/07-visit.png)](docs/assets/prototype/07-visit.png) |
-| Цели развития, мероприятия, сроки и прогресс | Подготовка визита, наблюдения и обратная связь |
+| [![Individual Development Plan](docs/assets/prototype/06-plan.png)](docs/assets/prototype/06-plan.png) | [![Development Visit](docs/assets/prototype/07-visit.png)](docs/assets/prototype/07-visit.png) |
+| Development goals, activities, deadlines, and progress | Visit preparation, observations, and feedback |
 
 <details>
-<summary><strong>Обзор программы для УМО</strong></summary>
+<summary><strong>Educational and Methodological Office Dashboard</strong></summary>
 
-![Обзор УМО](docs/assets/prototype/09-umo.png)
+![Programme overview for the Educational and Methodological Office](docs/assets/prototype/09-umo.png)
 
-Мониторинг активности и комплектности документов. Доступ к частным наблюдениям пары ограничивается требованиями конфиденциальности.
+Programme activity and document completion overview, with confidentiality requirements for private mentoring records.
 
 </details>
 
-[Открыть все экраны Figma](https://www.figma.com/design/sy5nfmGGIJu1W4KQk1Tm6d/?node-id=4-2) · [Сценарий локальной демонстрации](docs/prototype.md)
+[Explore All Figma Screens](https://www.figma.com/design/sy5nfmGGIJu1W4KQk1Tm6d/?node-id=4-2) · [Local Prototype Walkthrough](docs/prototype.md)
 
-## Основания и обратная связь
+## Client Input and Supervisor Feedback
 
-| Источник | Что зафиксировано | Материал |
+| Source | Contribution | Details |
 | --- | --- | --- |
-| Встреча с клиентами · 08.10.2026 | Четыре группы потребностей и связь с требованиями | [Evidence of relevance](docs/research/user-research.md) |
-| Отзыв супервайзера по презентации | Полные названия 12 публикаций, объединенный обзор, план и риски, таблица исправлений | [Supervisor Feedback and Improvements](docs/project/supervisor-feedback.md) |
+| Client meeting · 8 October 2026 | Four groups of needs linked to the client's requirements | [Evidence of Relevance](docs/research/user-research.md) |
+| Supervisor feedback | Full publication titles, a consolidated literature review, project management and risks, and a feedback and improvements slide | [Supervisor Feedback and Improvements](docs/project/supervisor-feedback.md) |
 
-## Статус и границы
+## Technology
 
-Подготовлены требования, обзор литературы, сравнения систем и технологий, архитектура, диаграммы, план проверки и интерактивный прототип. Прототип работает локально в одном браузере с синтетическими данными и localStorage. Серверная авторизация, общая база данных, интеграции, уведомления и трехъязычная версия находятся на следующем этапе.
+The target architecture is a **Django modular monolith**, **PostgreSQL**, and **REST/JSON**, supporting the mentoring workflow and role-based access.
 
-Целевая архитектура: модульный монолит Django, PostgreSQL и REST/JSON. Клиентский фреймворк выбирается после проверки UX. Текущий прототип: HTML, CSS, JavaScript; локальный HTTP-сервер и тесты — Node.js. Сторонние зависимости отсутствуют.
+The local interactive prototype uses **HTML, CSS, and JavaScript**, with browser localStorage for demonstration data. **Node.js** provides the local HTTP server and automated domain tests. See the [technology comparison](docs/research/technology-comparison.md) for the alternatives and selection rationale.
 
-Ожидаемый результат диплома — многопользовательская платформа с проверяемыми правами доступа и оценкой удобства по сравнению с ручным документооборотом. Полное приложение не требуется к первому этапу 24 октября.
+## Getting Started
 
-## Запуск и тесты
-
-Требуется Node.js 22 или новее. В корне репозитория:
+Use **Node.js 22 or later**. From the repository root, start the local prototype:
 
 ```sh
 npm start
 ```
 
-Открыть http://localhost:4173. Альтернативный запуск: `node scripts/serve.mjs`. Установка пакетов не требуется. Настройка порта: `PORT=4174 npm start`; пример в `config/.env.example`. Файл `.env` автоматически не загружается.
+Open http://localhost:4173. You can also run `node scripts/serve.mjs` directly. To use another port:
+
+```sh
+PORT=4174 npm start
+```
+
+A configuration example is provided in `config/.env.example`. Supply environment variables through your shell. Stop the server with **Ctrl+C**.
+
+Run the checks:
 
 ```sh
 npm run check
 ```
 
-Альтернативная команда: `node --test tests/*.test.mjs`. Остановка сервера — Ctrl+C. Полный демонстрационный маршрут: [Работа с прототипом](docs/prototype.md).
+This checks JavaScript syntax, local documentation links, and domain scenarios. To run the domain tests separately:
 
-## Структура репозитория
-
-```text
-src/prototype/       интерфейс и модель процесса
-scripts/             локальный сервер
-config/              пример конфигурации
-tests/               доменные тесты
-docs/                требования и проектная документация
-diagrams/source/     Mermaid и PlantUML
-diagrams/exports/    читаемые SVG
+```sh
+node --test tests/*.test.mjs
 ```
 
-## Документация
+Follow the [prototype walkthrough](docs/prototype.md) for the demonstration scenarios.
 
-| Материал | Ссылка |
+## Repository Structure
+
+```text
+src/prototype/       User interface and workflow model
+scripts/             Local server and documentation checks
+config/              Configuration example
+tests/               Automated domain tests
+docs/                Requirements and project documentation
+diagrams/source/     Editable Mermaid and PlantUML diagrams
+diagrams/exports/    Readable SVG diagrams
+```
+
+## Documentation
+
+| Topic | Resource |
 | --- | --- |
-| Proposal и границы | [Описание проекта](docs/proposal.md) |
-| Покрытие ТЗ | [Матрица требований](docs/tz-traceability.md) |
-| Основания и вопросы | [Реестр источников](docs/source-register.md) |
-| Требования и приемка | [Спецификация](docs/requirements.md) |
-| Литература | [Критический обзор](docs/research/literature-review.md) |
-| Аналоги | [Сравнение систем](docs/research/system-comparison.md) |
-| Технологии | [Сравнение решений](docs/research/technology-comparison.md) |
-| Пользовательское исследование | [Встреча 8 октября и дальнейшие обсуждения](docs/research/user-research.md) |
-| Архитектура | [Компоненты, данные и API](docs/architecture/architecture.md) |
-| Диаграммы | [SVG](diagrams/exports/) и [источники](diagrams/source/) |
-| UX | [Интерактивный прототип](src/prototype/index.html) и [сценарии](docs/prototype.md) |
-| Проверка и оценка | [План](docs/verification.md) и [результаты проверки](docs/project/validation.md) |
-| Задачи и риски | [План проекта](docs/project/plan.md) и [YouTrack backlog](docs/project/youtrack.md) |
-| Замечания руководителя | [Изменения и открытый review](docs/project/supervisor-feedback.md) |
-| Первая предзащита | [Готовность к 24 октября](docs/project/readiness.md) |
+| Project proposal and scope | [Project Proposal](docs/proposal.md) |
+| Client specification coverage | [Requirements Traceability](docs/tz-traceability.md) |
+| Source materials | [Source Register](docs/source-register.md) |
+| Requirements and acceptance criteria | [Requirements Specification](docs/requirements.md) |
+| Literature | [Critical Literature Review](docs/research/literature-review.md) |
+| Existing systems | [System Comparison](docs/research/system-comparison.md) |
+| Technology decisions | [Technology Comparison](docs/research/technology-comparison.md) |
+| User research | [Client Meeting Findings](docs/research/user-research.md) |
+| Architecture | [Components, Data, and API](docs/architecture/architecture.md) |
+| Diagrams | [SVG Exports](diagrams/exports/) and [Editable Sources](diagrams/source/) |
+| User experience | [Interactive Prototype](src/prototype/index.html) and [Walkthrough](docs/prototype.md) |
+| Verification and evaluation | [Evaluation Plan](docs/verification.md) and [Verification Results](docs/project/validation.md) |
+| Project management and risks | [Project Plan](docs/project/plan.md) and [YouTrack Tasks](docs/project/youtrack.md) |
+| Supervisor feedback | [Feedback and Improvements](docs/project/supervisor-feedback.md) |
+| First pre-defence | [24 October Checklist](docs/project/readiness.md) |
 
-В YouTrack создана 21 задача с исполнителем, приоритетом, сроком в описании и критериями приемки. Figma содержит 11 экранов. Встреча с клиентами и отзыв по презентации подтверждены автором и приложенными слайдами; дальнейшая пользовательская проверка и review репозитория отражены отдельно в [таблице готовности](docs/project/readiness.md).
-
-## Работа с версиями
-
-По решению автора все текущие изменения выполняются непосредственно в **main**. Ранее подготовленные изменения сохранены в истории и включены в main. Номера DIP в коммитах связывают работу с YouTrack; прежние ветки не требуются для продолжения проекта. История не переписывается, дата коммита не используется как дата встречи или отзыва.
-
-Тег pre-defense-1 создается на проверенной версии после review и проверки доступа комиссии; до этого проект не отмечается как полностью сданный. [Маршрут демонстрации и фиксация версии](docs/project/submission.md).
-
-Автоматические проверки: синтаксис JavaScript, локальные ссылки документации и доменные сценарии. Команда npm run check выполняется локально и в GitHub Actions; результаты не подтверждают серверные права или пользовательскую оценку.
-
-Управление работами: [YouTrack DIP](https://karinatulegenova.youtrack.cloud/issues/DIP), [21 задача и соответствие критериям](docs/project/youtrack.md). Все текущие изменения ведутся в `main`.
+[Track Project Tasks in YouTrack](https://karinatulegenova.youtrack.cloud/issues/DIP)
