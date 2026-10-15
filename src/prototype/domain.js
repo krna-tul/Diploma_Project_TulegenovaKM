@@ -20,7 +20,11 @@ export function initialState() {
 function requireValue(value,label) {if (!String(value ?? '').trim()) throw new Error(`Заполните поле «${label}».`);}
 function requireRole(role,expected) {if(role !== expected) throw new Error('Переключитесь на соответствующую роль сценария.');}
 function find(list,id) {const row=list.find(x=>x.id===id);if(!row) throw new Error('Запись не найдена.');return row;}
-function validDate(value) {return /^\d{4}-\d{2}-\d{2}$/.test(value) && new Date(value+'T00:00:00Z').toISOString().slice(0,10) === value;}
+function validDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const parsed = new Date(value+'T00:00:00Z');
+  return Number.isFinite(parsed.getTime()) && parsed.toISOString().slice(0,10) === value;
+}
 function requireDate(value,label) {requireValue(value,label);if(!validDate(value))throw new Error(`Некорректная дата: ${label}.`);}
 export function addWorkingDays(date,days,holidays=[]) {
   requireDate(date,'Дата назначения');
@@ -101,9 +105,11 @@ export function transition(state,action,data={},role='teacher') {
       p.plan.items.push({...data,id:uid(),done:false});p.plan.version++;p.plan.consents={mentor:false,mentee:false};p.plan.approved=false;p.status='planning';break;
     }
     case 'plan-consent': {participant();const p=pair();if(p.status!=='planning'||!p.plan.goal||!p.plan.items.length)throw new Error('Добавьте цель и хотя бы одну задачу.');p.plan.consents[role]=true;break;}
+    case 'plan-return': {requireRole(role,'director');const p=pair();if(p.status!=='planning')throw new Error('Возврат доступен для плана на согласовании.');requireValue(data.reason,'Комментарий возврата');p.plan.returns??=[];p.plan.returns.push({version:p.plan.version,reason:data.reason,at:new Date().toISOString()});p.plan.consents={mentor:false,mentee:false};break;}
     case 'plan-approve': {requireRole(role,'director');const p=pair();if(p.status!=='planning'||!p.plan.consents.mentor||!p.plan.consents.mentee)throw new Error('Нужны согласия обеих сторон на текущую версию.');p.plan.approved=true;p.plan.approvedAt=new Date().toISOString();p.status='active';break;}
     case 'item-complete': {participant();const p=active();const item=find(p.plan.items,data.itemId);requireValue(data.result,'Достигнутый результат');item.done=true;item.result=data.result;break;}
-    case 'meeting-add': {participant();const p=active();requireDate(data.date,'Дата встречи');requireValue(data.format,'Формат');requireValue(data.result,'Результат');if(data.date<p.appointment.date||data.date>p.appointment.end)throw new Error('Встреча должна быть в периоде наставничества.');p.meetings.push({...data,id:uid()});break;}
+    case 'meeting-add': {participant();const p=active();requireDate(data.date,'Дата встречи');requireValue(data.format,'Формат');requireValue(data.result,'Результат');if(data.date<p.appointment.date||data.date>p.appointment.end)throw new Error('Встреча должна быть в периоде наставничества.');p.meetings.push({...data,id:uid(),author:role,confirmedBy:null});break;}
+    case 'meeting-confirm': {participant();const m=find(active().meetings,data.meetingId);if(!m.author)throw new Error('Старая запись не содержит автора; создайте новую встречу.');if(m.author===role)throw new Error('Встречу подтверждает второй участник.');if(m.confirmedBy)throw new Error('Встреча уже подтверждена.');m.confirmedBy=role;m.confirmedAt=new Date().toISOString();break;}
     case 'visit-prepare': {
       participant();const p=active();for(const [k,l] of Object.entries({purpose:'Цель визита',course:'Дисциплина',topic:'Тема',time:'Время',location:'Место',lessonType:'Тип занятия',objectives:'Цели занятия',outcomes:'Результаты обучения',group:'Особенности группы',focus:'Фокус наблюдения'}))requireValue(data[k],l);
       requireDate(data.date,'Дата визита');if(data.date<p.appointment.date||data.date>p.appointment.end)throw new Error('Визит должен быть в периоде наставничества.');if(!Number.isInteger(Number(data.students))||Number(data.students)<1)throw new Error('Укажите число обучающихся.');if(!data.criteriaShared)throw new Error('Ознакомьте наставляемого с критериями карты.');p.visits.push({...data,id:uid(),status:'observation',observations:[]});break;

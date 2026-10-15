@@ -19,3 +19,28 @@ test('visit preparation, timestamped observation and shared reflection',()=>{let
 test('enrollment is unique ignoring case and respects capacity',()=>{let s=initialState();s.events[0].capacity=1;s=t(s,'event-enroll',{id:'e1',name:'Демо'});assert.throws(()=>t(s,'event-enroll',{id:'e1',name:'демо'}),/уже записаны/);assert.throws(()=>t(s,'event-enroll',{id:'e1',name:'Другой'}),/мест нет/);});
 test('replacement closes existing pair and reopens request while retaining history',()=>{let s=active(),id=s.pairs[0].id;s=t(s,'change-request',{id,type:'replacement',reason:'Изменился запрос'},'mentee');s=t(s,'change-resolve',{id,changeId:s.pairs[0].changeRequests[0].id,reason:'Подобрать новую экспертизу',end:true},'director');assert.equal(s.pairs[0].status,'ended');assert.equal(s.requests[0].status,'submitted');assert.ok(s.pairs[0].plan.items.length);});
 test('summary never returns private observations or reflection',()=>{const s=active();s.pairs[0].visits=[{private:'SECRET'}];s.pairs[0].evaluations={final:{mentor:'SECRET'}};assert.ok(!JSON.stringify(summary(s)).includes('SECRET'));});
+
+test('plan return requires a comment and invalidates version consents',()=>{
+  let s=assigned(),id=s.pairs[0].id;
+  s=t(s,'plan-save',{id,goal:'Цель',frequency:'Раз в неделю',format:'Очный'},'mentor');
+  s=t(s,'plan-item',{id,task:'Задача',due:'2026-11-01',support:'Помощь',expected:'Итог',evidence:'Документ'},'mentor');
+  s=t(s,'plan-consent',{id},'mentor');s=t(s,'plan-consent',{id},'mentee');
+  assert.throws(()=>t(s,'plan-return',{id},'director'),/Комментарий/);
+  s=t(s,'plan-return',{id,reason:'Уточнить измеримый результат'},'director');
+  assert.equal(s.pairs[0].plan.returns[0].reason,'Уточнить измеримый результат');
+  assert.throws(()=>t(s,'plan-approve',{id},'director'),/согласия/);
+});
+test('meeting requires the other participant and cannot be confirmed twice',()=>{
+  let s=active(),id=s.pairs[0].id;
+  s=t(s,'meeting-add',{id,date:'2026-10-20',format:'Очный',result:'Обсудили рубрику'},'mentor');
+  const meetingId=s.pairs[0].meetings[0].id;
+  assert.throws(()=>t(s,'meeting-confirm',{id,meetingId},'mentor'),/второй участник/);
+  assert.throws(()=>t(s,'meeting-confirm',{id,meetingId},'director'),/участникам/);
+  s=t(s,'meeting-confirm',{id,meetingId},'mentee');
+  assert.equal(s.pairs[0].meetings[0].confirmedBy,'mentee');
+  assert.throws(()=>t(s,'meeting-confirm',{id,meetingId},'mentee'),/уже подтверждена/);
+});
+test('invalid calendar dates produce validation errors',()=>{
+  assert.throws(()=>addWorkingDays('2026-99-01',10),/Некорректная дата/);
+  assert.throws(()=>addWorkingDays('2026-02-30',10),/Некорректная дата/);
+});
