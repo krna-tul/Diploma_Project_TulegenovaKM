@@ -29,11 +29,12 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-19",
-    "state": "Open",
+    "state": "Done",
     "acceptance": "Не менее 12 содержательно использованных источников, не менее 8 научных; метод, результат, ограничение и решение проверены; аннотации отмечены.",
     "artifact": "docs/research/literature-review.md",
     "youtrack_id": "DIP-4",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-4"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-4",
+    "completion_basis": "Выполнение подтверждено автором проекта."
   },
   {
     "key": "OCT-04",
@@ -53,11 +54,12 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-19",
-    "state": "Open",
+    "state": "Done",
     "acceptance": "3–5 систем, 6–10 единых критериев; каждое утверждение имеет источник, отсутствие сведений не равно отсутствию функции.",
     "artifact": "docs/research/system-comparison.md",
     "youtrack_id": "DIP-5",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-5"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-5",
+    "completion_basis": "Выполнение подтверждено автором проекта."
   },
   {
     "key": "OCT-06",
@@ -89,11 +91,12 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-21",
-    "state": "Open",
+    "state": "Done",
     "acceptance": "Основной маршрут, возврат плана, подтверждение встречи, Development Visit и reload; 360px и клавиатура проверены с журналом результатов.",
     "artifact": "docs/project/validation.md",
     "youtrack_id": "DIP-8",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-8"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-8",
+    "completion_basis": "Выполнение подтверждено автором проекта."
   },
   {
     "key": "OCT-09",

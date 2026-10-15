@@ -17,6 +17,6 @@
 | Связь | Серверные HTML формы | Меньше клиентского состояния, CSRF в Django | Менее гибкие интерактивные планы | Запасной вариант монолита |
 | Связь | GraphQL | Гибкие выборки | Дополнительная модель доступа и complexity | Не оправдан для первой версии |
 
-Архитектурное решение: модульный монолит Django + PostgreSQL с REST API, клиент после проверки прототипа. Это сокращает эксплуатационную сложность одного дипломного проекта. Микросервисы и интеллектуальный подбор исключены из первой версии. Серверный стек пока спроектирован, не реализован.
+Архитектурное решение: модульный монолит Django + PostgreSQL с REST API, клиент после проверки прототипа. Это сокращает эксплуатационную сложность одного дипломного проекта. Микросервисы и интеллектуальный подбор исключены из первой версии. Целевой серверный стек представлен архитектурой и сравнением альтернатив.
 
 Основания: [Django overview](https://docs.djangoproject.com/en/5.2/intro/overview/), [FastAPI features](https://fastapi.tiangolo.com/features/), [Express](https://expressjs.com/), [PostgreSQL constraints](https://www.postgresql.org/docs/current/ddl-constraints.html), [SQLite Python interface](https://docs.python.org/3/library/sqlite3.html), [React](https://react.dev/learn), [Vue](https://vuejs.org/guide/introduction.html). Сведения проверены 10 октября 2026; сравнительные оценки являются проектными выводами, не результатами нагрузочного теста.
