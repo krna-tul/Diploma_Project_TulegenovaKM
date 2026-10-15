@@ -17,4 +17,4 @@
 
 ## Версия материалов
 
-[pre-defense-1](https://github.com/krna-tul/Diploma_Project_TulegenovaKM/tree/pre-defense-1) фиксирует комплект материалов первой предзащиты. Проверка: `npm run check`, 17 доменных тестов и 71 локальная ссылка. Основные диаграммы представлены непосредственно в README в Mermaid.
+[pre-defense-1](https://github.com/krna-tul/Diploma_Project_TulegenovaKM/tree/pre-defense-1) фиксирует комплект материалов первой предзащиты. Проверка: `npm run check`, 17 доменных тестов и 74 локальные ссылки. Основные диаграммы представлены непосредственно в README в Mermaid.
