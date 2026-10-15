@@ -77,6 +77,11 @@ The following diagrams expand the system context, use cases, and component views
 
 Participants and external services are separated from the mentoring platform.
 
+![System context](diagrams/exports/context-readme.svg)
+
+<details>
+<summary>View editable Mermaid diagram</summary>
+
 ```mermaid
 flowchart TB
     Faculty["Faculty · mentor and mentee"]
@@ -100,9 +105,16 @@ flowchart TB
     class Platform core;
 ```
 
+</details>
+
 ### Use Cases
 
 Role-to-scenario overview in Mermaid; the UML source and SVG are also available in the diagram directory. Detailed Development Visit records are shared within the mentoring pair; management reports use an administrative summary.
+
+![Use cases](diagrams/exports/use-cases-readme.svg)
+
+<details>
+<summary>View editable Mermaid diagram</summary>
 
 ```mermaid
 flowchart LR
@@ -136,9 +148,16 @@ flowchart LR
     Admin --> Config
 ```
 
+</details>
+
 ### Component Architecture
 
 Every application request passes through authentication and object permissions. Domain modules share a transactional database; attachments and integrations have explicit boundaries.
+
+![Component architecture](diagrams/exports/components-readme.svg)
+
+<details>
+<summary>View editable Mermaid diagram</summary>
 
 ```mermaid
 flowchart TB
@@ -167,6 +186,8 @@ flowchart TB
     Access -.-> IT
     Outbox -.-> IT
 ```
+
+</details>
 
 [Architectural Decisions and API](docs/architecture/architecture.md) · [All Editable Diagram Sources](diagrams/source/) · [SVG Exports](diagrams/exports/)
 
