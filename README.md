@@ -4,11 +4,11 @@
 
 **A platform for faculty professional development**
 
-[Figma Prototype](https://www.figma.com/design/sy5nfmGGIJu1W4KQk1Tm6d/?node-id=8-2) · [YouTrack](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Presentation (PDF)](docs/presentation/Presentation_TulegenovaKM.pdf) · [Documentation](#documentation) · [Getting Started](#getting-started)
+[Prototype Screens](Figma/) · [YouTrack](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Presentation (PDF)](docs/presentation/Presentation_TulegenovaKM.pdf) · [Documentation](#documentation) · [Getting Started](#getting-started)
 
 </div>
 
-![Mentee dashboard — Figma design](docs/assets/prototype/03-overview.png)
+![Mentee dashboard — Figma design](Figma/03-overview.png)
 
 A diploma project developing a web platform for managing faculty mentoring in higher education. The platform connects professional support requests, mentor selection, pair approval, individual development plans, meetings, and outcome evaluation.
 
@@ -38,28 +38,28 @@ The expected outcome is a multi-user platform with role-based access and an eval
 
 ## Application Prototype
 
-Explore the interface through **AITU Faculty Mentoring — Prototype**, on the **Refined · AITU Editorial** page in Figma.
+Browse the application screens in the [Figma folder](Figma/). PNG previews are included below.
 
 | Home | Mentor Catalogue |
 | --- | --- |
-| [![Home](docs/assets/prototype/01-landing.png)](docs/assets/prototype/01-landing.png) | [![Mentor Catalogue](docs/assets/prototype/04-mentors.png)](docs/assets/prototype/04-mentors.png) |
+| [![Home](Figma/01-landing.png)](Figma/01-landing.png) | [![Mentor Catalogue](Figma/04-mentors.png)](Figma/04-mentors.png) |
 | Discover the programme, skills, and support opportunities | Find a mentor and explore their professional profile |
 
 | Individual Development Plan | Development Visit |
 | --- | --- |
-| [![Individual Development Plan](docs/assets/prototype/06-plan.png)](docs/assets/prototype/06-plan.png) | [![Development Visit](docs/assets/prototype/07-visit.png)](docs/assets/prototype/07-visit.png) |
+| [![Individual Development Plan](Figma/06-plan.png)](Figma/06-plan.png) | [![Development Visit](Figma/07-visit.png)](Figma/07-visit.png) |
 | Development goals, activities, deadlines, and progress | Visit preparation, observations, and feedback |
 
 <details>
 <summary><strong>Educational and Methodological Office Dashboard</strong></summary>
 
-![Programme overview for the Educational and Methodological Office](docs/assets/prototype/09-umo.png)
+![Programme overview for the Educational and Methodological Office](Figma/09-umo.png)
 
 Programme activity and document completion overview, with confidentiality requirements for private mentoring records.
 
 </details>
 
-[Explore All Figma Screens](https://www.figma.com/design/sy5nfmGGIJu1W4KQk1Tm6d/?node-id=4-2) · [Local Prototype Walkthrough](docs/prototype.md)
+[Browse Prototype Screens](Figma/) · [Local Prototype Walkthrough](docs/prototype.md)
 
 ## Client Input and Supervisor Feedback
 
