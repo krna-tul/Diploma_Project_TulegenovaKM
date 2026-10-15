@@ -1,0 +1,41 @@
+References — Canva, slide 30
+
+[1] W. Nuis, M. Segers, and S. Beausaert, “Conceptualizing mentoring in higher education: A systematic literature review,” Educ. Res. Rev., vol. 41, Art. no. 100565, 2023, doi: 10.1016/j.edurev.2023.100565.
+
+[2] M. Abdollahi and F. Heshmati Nabavi, “Mentoring as an appropriate strategy for medical faculty member development in higher education: A systematic review,” J. Adv. Med. Educ. Prof., vol. 11, no. 1, pp. 3–14, 2023, doi: 10.30476/JAMP.2022.97103.1740.
+
+[3] M. López-Aguado and O. Scialdone, “La mentoría como estrategia para la mejora docente en la universidad, una revisión sistemática,” Rev. Complut. Educ., vol. 37, no. 1, pp. 21–33, 2026, doi: 10.5209/rced.96870.
+
+[4] K. Bell, “Affordances, constraints and collaborative potential of e-mentoring platforms and their features for K–12 educators: A systematic literature review,” Int. J. Mentor. Coach. Educ., vol. 13, no. 3, pp. 346–360, 2024, doi: 10.1108/IJMCE-07-2023-0056.
+
+[5] F. Jin, Z. Song, W. M. Cheung, C.-H. Lin, and T. Liu, “Technological affordances in teachers’ online professional learning communities: A systematic review,” J. Comput. Assist. Learn., vol. 40, no. 3, pp. 1019–1039, 2024, doi: 10.1111/jcal.12935.
+
+[6] L. Huang, M. Liang, Y. Xiong, X. Wu, and C. P. Lim, “A systematic review of technology-enabled teacher professional development during COVID-19 pandemic,” Comput. Educ., vol. 223, Art. no. 105168, 2024, doi: 10.1016/j.compedu.2024.105168.
+
+[7] L. Cutroni and A. Paladino, “Peer-ing in: A systematic review and framework of peer review of teaching in higher education,” Teach. Teach. Educ., vol. 133, Art. no. 104302, 2023, doi: 10.1016/j.tate.2023.104302.
+
+[8] F. M. Otero-Saborido, J. A. Domínguez-Montes, J. M. Cenizo-Benjumea, and G. González-Calvo, “Peer observation of teaching in higher education: Systematic review of observation tools,” Educ. Process: Int. J., vol. 13, no. 1, pp. 84–101, 2024, doi: 10.22521/edupij.2024.131.6.
+
+[9] B. De la Iglesia, D. Forteza, and L. Duma, “Peer feedback in teacher professional development: A systematic review,” Rev. Esp. Pedagog., vol. 82, no. 288, pp. 335–358, 2024, doi: 10.22550/2174-0909.4044.
+
+[10] E. Cano García, “Peer feedback for teaching professional development: Conditions for it to take effect,” Cogent Educ., vol. 11, no. 1, Art. no. 2391577, 2024, doi: 10.1080/2331186X.2024.2391577.
+
+[11] P. Hunt, Ä. Leijen, and M. van der Schaaf, “Automated feedback is nice and human presence makes it better: Teachers’ perceptions of feedback by means of an e-portfolio enhanced with learning analytics,” Educ. Sci., vol. 11, no. 6, Art. no. 278, 2021, doi: 10.3390/educsci11060278.
+
+[12] A. Wang, S. Yu, M. Wang, and L. Chen, “Effects of the visual analytics of peer feedback on teachers’ TPACK development in a lesson study,” Interact. Learn. Environ., vol. 32, no. 8, pp. 4632–4651, 2024, doi: 10.1080/10494820.2023.2204354.
+
+[13] Together, “Together mentorship platform.” Accessed: Oct. 15, 2026. [Online]. Available: https://www.togetherplatform.com/page/mentorship-software-platform
+
+[14] Chronus, “Mentoring software.” Accessed: Oct. 15, 2026. [Online]. Available: https://chronus.com/software/mentoring-software
+
+[15] IRIS Connect, “Video technology.” Accessed: Oct. 15, 2026. [Online]. Available: https://www.irisconnect.com/us/video-technology/
+
+[16] IRIS Connect, “Instructional coaching.” Accessed: Oct. 15, 2026. [Online]. Available: https://www.irisconnect.com/uk/instructional-coaching/
+
+[17] IRIS Connect, “Progress tracking (Objectives).” Accessed: Oct. 15, 2026. [Online]. Available: https://www.irisconnect.com/uk/progress-tracking/
+
+[18] IRIS Connect, “Adaptive professional development.” Accessed: Oct. 15, 2026. [Online]. Available: https://www.irisconnect.com/uk/adaptive-pd/
+
+[19] Chronus, “Mentor matching.” Accessed: Oct. 15, 2026. [Online]. Available: https://chronus.com/software/mentoring-software/mentor-matching
+
+[20] Chronus, “Privacy Notice.” Accessed: Oct. 15, 2026. [Online]. Available: https://mentoring365.chronus.com/p/p1/privacy_policy
