@@ -68,6 +68,108 @@ Programme activity and document completion overview, with confidentiality requir
 | Client meeting · 8 October 2026 | Four groups of needs linked to the client's requirements | [Evidence of Relevance](docs/research/user-research.md) |
 | Supervisor feedback | Full publication titles, a consolidated literature review, project management and risks, and a feedback and improvements slide | [Supervisor Feedback and Improvements](docs/project/supervisor-feedback.md) |
 
+
+## Architecture and Diagrams
+
+The following diagrams expand the system context, use cases, and component views in presentation slides 16–18. They describe the target platform. The runnable browser prototype demonstrates its workflows using localStorage.
+
+### System Context
+
+Participants and external services are separated from the mentoring platform.
+
+```mermaid
+flowchart TB
+    Faculty["Faculty · mentor and mentee"]
+    School["School and director"]
+    Office["Educational and Methodological Office"]
+    Support["Academic department · training"]
+    Registrar["Vice-Rector / order registrar"]
+    Events["Event organiser"]
+    Admin["Technical administrator"]
+    Platform["AITU Faculty Mentoring<br/>Requests · pairs · plans · visits · outcomes"]
+    External["University services<br/>SSO · HR · email · e-signature"]
+    Faculty -->|"Apply, consent and collaborate"| Platform
+    School -->|"Select pairs and approve plans"| Platform
+    Office -->|"Monitor programmes and document completion"| Platform
+    Support -->|"Confirm introductory training"| Platform
+    Registrar -->|"Register appointment order"| Platform
+    Events -->|"Publish development opportunities"| Platform
+    Admin -->|"Configure services and diagnose errors"| Platform
+    Platform -.->|"IT-approved integrations"| External
+    classDef core fill:#f9e5e9,stroke:#b95573,color:#172b4d,stroke-width:2px;
+    class Platform core;
+```
+
+### Use Cases
+
+Role-to-scenario overview in Mermaid; the UML source and SVG are also available in the diagram directory. Detailed Development Visit records are shared within the mentoring pair; management reports use an administrative summary.
+
+```mermaid
+flowchart LR
+    Mentee["Mentee"]
+    Mentor["Mentor"]
+    School["School / director"]
+    Office["Educational and Methodological Office"]
+    Registrar["Order registrar"]
+    Other["Academic department / organiser"]
+    Admin["Technical administrator"]
+    subgraph System["AITU Faculty Mentoring · use cases"]
+        Apply(["Submit support request / mentor profile"])
+        Consent(["Consent to proposed pair"])
+        Match(["Select and endorse pair"])
+        Appoint(["Register appointment"])
+        Plan(["Create and agree development plan"])
+        Approval(["Approve or return plan with reason"])
+        Meeting(["Record and confirm meetings"])
+        Visit(["Prepare visit, observe and reflect"])
+        Outcome(["Evaluate outcomes / request a change"])
+        Report(["Monitor completion, reports and archive"])
+        Training(["Confirm training / publish events"])
+        Config(["Manage configuration and diagnostics"])
+    end
+    Mentee --> Apply & Consent & Plan & Meeting & Visit & Outcome
+    Mentor --> Apply & Consent & Plan & Meeting & Visit & Outcome
+    School --> Match & Approval & Report
+    Registrar --> Appoint
+    Office --> Report
+    Other --> Training
+    Admin --> Config
+```
+
+### Component Architecture
+
+Every application request passes through authentication and object permissions. Domain modules share a transactional database; attachments and integrations have explicit boundaries.
+
+```mermaid
+flowchart TB
+    Web["Web client<br/>Role-specific interface · RU / KZ / EN"]
+    subgraph Server["Target architecture · Django modular monolith"]
+        Access["REST API boundary<br/>Session authentication · CSRF · object permissions"]
+        Catalog["Profiles, skills<br/>and events"]
+        Pair["Requests and appointments<br/>Consent · capacity · order"]
+        Plans["Development plans and meetings<br/>Versions · approval · confirmation"]
+        Visits["Development Visits<br/>Preparation · private observations · reflection"]
+        Outcomes["Evaluation and archive<br/>Final package · immutable history"]
+        UMO["Programme administration<br/>XLSX preview · safe reporting"]
+        Settings["Configuration<br/>Periods · limits · templates"]
+        Outbox["Notification outbox<br/>Deduplicated delivery"]
+        Audit["Audit trail<br/>Actor · action · object"]
+    end
+    DB[("PostgreSQL<br/>Transactions and constraints")]
+    Files["Private attachments<br/>Authorised downloads"]
+    IT["University integration adapters<br/>SSO · HR · email · e-signature"]
+    Web -->|"HTTPS / REST / JSON"| Access
+    Access --> Catalog & Pair & Plans & Visits & Outcomes & UMO & Settings
+    Catalog & Pair & Plans & Visits & Outcomes & UMO & Settings --> DB
+    Pair & Plans & Visits & Outcomes --> Outbox & Audit
+    Outbox & Audit --> DB
+    Visits & Outcomes --> Files
+    Access -.-> IT
+    Outbox -.-> IT
+```
+
+[Architectural Decisions and API](docs/architecture/architecture.md) · [All Editable Diagram Sources](diagrams/source/) · [SVG Exports](diagrams/exports/)
+
 ## Technology
 
 The target architecture is a **Django modular monolith**, **PostgreSQL**, and **REST/JSON**, supporting the mentoring workflow and role-based access.

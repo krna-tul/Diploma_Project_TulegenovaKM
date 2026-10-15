@@ -5,11 +5,12 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-16",
-    "state": "In Review",
+    "state": "Done",
     "acceptance": "Матрица всех именованных FR ТЗ и критериев 1–15; пробелы прототипа явно названы.",
     "artifact": "docs/tz-traceability.md",
     "youtrack_id": "DIP-2",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-2"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-2",
+    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок."
   },
   {
     "key": "OCT-02",
@@ -42,11 +43,12 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-19",
-    "state": "In Review",
+    "state": "Done",
     "acceptance": "Полные названия и ID публикаций в README/docs и Canva сопоставлены; различия набора источников устранены после проверки.",
     "artifact": "docs/research/literature-review.md",
     "youtrack_id": "DIP-1",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-1"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-1",
+    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок."
   },
   {
     "key": "OCT-05",
@@ -67,11 +69,12 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-20",
-    "state": "Open",
+    "state": "Done",
     "acceptance": "Контекст, Use Case и компоненты имеют исходники и SVG; требования и роли УМО/техадминистратора отражены; минимум 3 решения с 2–3 альтернативами.",
     "artifact": "docs/architecture/architecture.md",
     "youtrack_id": "DIP-6",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-6"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-6",
+    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок."
   },
   {
     "key": "OCT-07",
@@ -79,11 +82,12 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-17",
-    "state": "In Review",
+    "state": "Done",
     "acceptance": "Возврат с обязательной причиной снимает согласия; встречу подтверждает только второй участник; положительные и отрицательные тесты проходят.",
     "artifact": "tests/domain.test.mjs",
     "youtrack_id": "DIP-7",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-7"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-7",
+    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок."
   },
   {
     "key": "OCT-08",

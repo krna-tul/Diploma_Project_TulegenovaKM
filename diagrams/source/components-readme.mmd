@@ -1,0 +1,25 @@
+flowchart TB
+    Web["Web client<br/>Role-specific interface · RU / KZ / EN"]
+    subgraph Server["Target architecture · Django modular monolith"]
+        Access["REST API boundary<br/>Session authentication · CSRF · object permissions"]
+        Catalog["Profiles, skills<br/>and events"]
+        Pair["Requests and appointments<br/>Consent · capacity · order"]
+        Plans["Development plans and meetings<br/>Versions · approval · confirmation"]
+        Visits["Development Visits<br/>Preparation · private observations · reflection"]
+        Outcomes["Evaluation and archive<br/>Final package · immutable history"]
+        UMO["Programme administration<br/>XLSX preview · safe reporting"]
+        Settings["Configuration<br/>Periods · limits · templates"]
+        Outbox["Notification outbox<br/>Deduplicated delivery"]
+        Audit["Audit trail<br/>Actor · action · object"]
+    end
+    DB[("PostgreSQL<br/>Transactions and constraints")]
+    Files["Private attachments<br/>Authorised downloads"]
+    IT["University integration adapters<br/>SSO · HR · email · e-signature"]
+    Web -->|"HTTPS / REST / JSON"| Access
+    Access --> Catalog & Pair & Plans & Visits & Outcomes & UMO & Settings
+    Catalog & Pair & Plans & Visits & Outcomes & UMO & Settings --> DB
+    Pair & Plans & Visits & Outcomes --> Outbox & Audit
+    Outbox & Audit --> DB
+    Visits & Outcomes --> Files
+    Access -.-> IT
+    Outbox -.-> IT

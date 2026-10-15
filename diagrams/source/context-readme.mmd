@@ -1,0 +1,20 @@
+flowchart TB
+    Faculty["Faculty · mentor and mentee"]
+    School["School and director"]
+    Office["Educational and Methodological Office"]
+    Support["Academic department · training"]
+    Registrar["Vice-Rector / order registrar"]
+    Events["Event organiser"]
+    Admin["Technical administrator"]
+    Platform["AITU Faculty Mentoring<br/>Requests · pairs · plans · visits · outcomes"]
+    External["University services<br/>SSO · HR · email · e-signature"]
+    Faculty -->|"Apply, consent and collaborate"| Platform
+    School -->|"Select pairs and approve plans"| Platform
+    Office -->|"Monitor programmes and document completion"| Platform
+    Support -->|"Confirm introductory training"| Platform
+    Registrar -->|"Register appointment order"| Platform
+    Events -->|"Publish development opportunities"| Platform
+    Admin -->|"Configure services and diagnose errors"| Platform
+    Platform -.->|"IT-approved integrations"| External
+    classDef core fill:#f9e5e9,stroke:#b95573,color:#172b4d,stroke-width:2px;
+    class Platform core;

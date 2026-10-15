@@ -1,0 +1,29 @@
+flowchart LR
+    Mentee["Mentee"]
+    Mentor["Mentor"]
+    School["School / director"]
+    Office["Educational and Methodological Office"]
+    Registrar["Order registrar"]
+    Other["Academic department / organiser"]
+    Admin["Technical administrator"]
+    subgraph System["AITU Faculty Mentoring · use cases"]
+        Apply(["Submit support request / mentor profile"])
+        Consent(["Consent to proposed pair"])
+        Match(["Select and endorse pair"])
+        Appoint(["Register appointment"])
+        Plan(["Create and agree development plan"])
+        Approval(["Approve or return plan with reason"])
+        Meeting(["Record and confirm meetings"])
+        Visit(["Prepare visit, observe and reflect"])
+        Outcome(["Evaluate outcomes / request a change"])
+        Report(["Monitor completion, reports and archive"])
+        Training(["Confirm training / publish events"])
+        Config(["Manage configuration and diagnostics"])
+    end
+    Mentee --> Apply & Consent & Plan & Meeting & Visit & Outcome
+    Mentor --> Apply & Consent & Plan & Meeting & Visit & Outcome
+    School --> Match & Approval & Report
+    Registrar --> Appoint
+    Office --> Report
+    Other --> Training
+    Admin --> Config
