@@ -1,18 +1,20 @@
-# Готовность к 24 октября
+# Готовность к 24 октября 2026
 
-| Пункт памятки | Материал | Состояние |
+Состояние на 15 октября: основные материалы анализа и локальный прототип существуют, но все критерии предзащиты еще не закрыты. Полная серверная платформа к этому этапу не требуется.
+
+| Критерий | Материал | Проверенное состояние и остаток |
 | --- | --- | --- |
-| Proposal и scope | docs/proposal.md | Подготовлено |
-| Evidence of relevance | docs/source-register.md и research/user-research.md | Документальные основания есть; 3–5 обсуждений отсутствуют |
-| Literature review | docs/research/literature-review.md | Предварительный критический обзор; глубину полного чтения уточнить |
-| Existing systems | docs/research/system-comparison.md | 3 системы, 9 критериев; без hands-on демонстраций |
-| Technology comparison | docs/research/technology-comparison.md | 4 решения с альтернативами |
-| Requirements | docs/requirements.md | FR/NFR и критерии приемки |
-| Architecture | docs/architecture и diagrams | Редактируемые источники и SVG |
-| UX prototype | src/prototype и docs/prototype.md | Локальная интерактивная версия |
-| Verification | docs/verification.md и tests | План плюс доменные тесты прототипа |
-| Management | docs/project/plan.md | Backlog готов; YouTrack ссылка отсутствует |
-| Supervisor feedback | docs/project/plan.md | Ожидается |
-| Repository submission | README и история Git | Локальная ветка; push, review, доступ комиссии и tag еще не выполнены |
+| Proposal и scope | [Proposal](../proposal.md) | Подготовлено; подтвердить с заказчиком |
+| Evidence of relevance | [Исследование](../research/user-research.md) | Документальные основания есть; 3–5 обсуждений либо содержательное соглашение еще нужны |
+| Literature review | [Обзор](../research/literature-review.md) | 12 научных публикаций из Canva; метаданные и доступные разделы проверены; полный анализ открыт |
+| Existing system comparison | [Сравнение](../research/system-comparison.md) | 3 системы × 9 критериев; обновить доказательства до сдачи |
+| Technology comparison | [Технологии](../research/technology-comparison.md) | 4 решения с альтернативами; review открыт |
+| Requirements | [FR/NFR](../requirements.md), [ТЗ](../tz-traceability.md) | Добавлены роли УМО/техадминистратора, архив, XLSX, уведомления, локализация; серверная реализация открыта |
+| Architecture | [Описание](../architecture/architecture.md), [исходники](../../diagrams/source/) | Контекст, Use Case, компоненты и SVG есть; УМО, техадминистратор, архив, импорт и уведомления отражены; review открыт |
+| UX | [Прототип](../prototype.md) | Запускается локально; возврат плана и подтверждение встречи добавлены; полный браузерный проход открыт |
+| Verification | [План](../verification.md), [результаты](validation.md) | 17 доменных тестов; синтаксис и локальные ссылки; backend/пилот не подтверждены |
+| Management | [План](plan.md), [YouTrack](youtrack.md) | Проект DIP и Kanban созданы; 21 реальная задача DIP-1–DIP-21 создана со сроками в описании и ссылками |
+| Supervisor feedback | [Журнал](supervisor-feedback.md) | Замечания к слайдам отражены; содержательный review требований/архитектуры еще нужен |
+| Repository | [README](../../README.md) | Main уже опубликован, история сохранена; новые изменения отдельным PR; review и tag впереди |
 
-До сдачи автору необходимо провести обсуждения, получить отзыв, создать/связать YouTrack и после review самостоятельно согласовать публикацию и тег. Эти внешние действия не заменены локальными шаблонами.
+[Маршрут демонстрации и версия сдачи](submission.md). Доступ руководителя и комиссии проверяет владелец; наличие приватного репозитория само по себе доступ не доказывает. Не создавать фиктивные интервью, review или историю вкладов для закрытия критериев.

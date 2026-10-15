@@ -38,4 +38,17 @@ Teacher --> Evaluate
 School --> Report
 Department --> Training
 Organizer --> Event
+actor "УМО" as UMO
+actor "Технический администратор" as Admin
+usecase "Проверить комплектность / импорт XLSX" as Import
+usecase "Настроить лимиты / справочники" as Configure
+usecase "Вернуть план с причиной" as ReturnPlan
+usecase "Подтвердить встречу второго участника" as Confirm
+usecase "Сформировать итоги / архив" as Archive
+UMO --> Import
+Admin --> Configure
+School --> ReturnPlan
+Mentor --> Confirm
+Mentee --> Confirm
+School --> Archive
 @enduml
