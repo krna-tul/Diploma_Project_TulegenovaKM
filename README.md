@@ -4,7 +4,7 @@
 
 **A platform for faculty professional development**
 
-[Prototype Screens](Figma/) · [YouTrack](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Presentation (PDF)](docs/presentation/Presentation_TulegenovaKM.pdf) · [Documentation](#documentation) · [Getting Started](#getting-started)
+[Prototype Screens](Figma/) · [Public Task Viewer](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Presentation (PDF)](docs/presentation/Presentation_TulegenovaKM.pdf) · [Documentation](#documentation) · [Getting Started](#getting-started)
 
 </div>
 
@@ -260,4 +260,6 @@ diagrams/exports/    Readable SVG diagrams
 | Supervisor feedback | [Feedback and Improvements](docs/project/supervisor-feedback.md) |
 | First pre-defence | [24 October Checklist](docs/project/readiness.md) |
 
-[Track Project Tasks in YouTrack](https://karinatulegenova.youtrack.cloud/issues/DIP)
+[View Project Tasks — Public, Read Only](https://karinatulegenova.youtrack.cloud/issues/DIP)
+
+The public YouTrack task viewer opens without signing in. Visitors can read tasks and comments; creating, editing, and deleting are disabled.
