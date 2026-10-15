@@ -101,7 +101,7 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-18",
-    "state": "Open",
+    "state": "Done",
     "acceptance": "Проект DIP, исполнитель, приоритеты, сроки и приемка; реальные ID связаны с веткой/PR/коммитами; шаблонные задачи не закрыты.",
     "artifact": "docs/project/youtrack.md",
     "youtrack_id": "DIP-9",

@@ -33,3 +33,5 @@
 | [DIP-21](https://karinatulegenova.youtrack.cloud/issue/DIP-21) | FINAL-01 · Подготовить финальную передачу | 2027-05-31 |
 
 [CSV](youtrack-import.csv) — резервная копия плана, не приглашение повторно импортировать уже созданные задачи. Автоматическая интеграция GitHub не подключена; используются прямые ссылки. [PR литературы №1](https://github.com/krna-tul/Diploma_Project_TulegenovaKM/pull/1) соответствует DIP-1 и уже объединен с main.
+
+[PR подготовки №2](https://github.com/krna-tul/Diploma_Project_TulegenovaKM/pull/2) связан с DIP-2, DIP-6, DIP-7 и DIP-9. Обратная ссылка и отчет о созданных 21 задачах добавлены в DIP-9; Stage этой задачи — Готово.

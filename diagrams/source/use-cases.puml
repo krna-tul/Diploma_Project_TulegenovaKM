@@ -22,6 +22,11 @@ rectangle "Платформа AITU" {
  usecase "Получить обобщенный отчет" as Report
  usecase "Подтвердить инструктаж" as Training
  usecase "Опубликовать мероприятие" as Event
+usecase "Проверить комплектность / импорт XLSX" as Import
+usecase "Настроить лимиты / справочники" as Configure
+usecase "Вернуть план с причиной" as ReturnPlan
+usecase "Подтвердить встречу второго участника" as Confirm
+usecase "Сформировать итоги / архив" as Archive
 }
 Teacher --> Catalog
 Teacher --> Apply
@@ -40,11 +45,6 @@ Department --> Training
 Organizer --> Event
 actor "УМО" as UMO
 actor "Технический администратор" as Admin
-usecase "Проверить комплектность / импорт XLSX" as Import
-usecase "Настроить лимиты / справочники" as Configure
-usecase "Вернуть план с причиной" as ReturnPlan
-usecase "Подтвердить встречу второго участника" as Confirm
-usecase "Сформировать итоги / архив" as Archive
 UMO --> Import
 Admin --> Configure
 School --> ReturnPlan

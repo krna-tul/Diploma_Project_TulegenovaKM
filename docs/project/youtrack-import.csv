@@ -15,7 +15,7 @@ DIP-7,OCT-07 · Проверить возврат плана и встречи,a
 https://karinatulegenova.youtrack.cloud/issue/DIP-7"
 DIP-8,OCT-08 · Проверить прототип в браузере,admin,P0,2026-10-21,Open,"Основной маршрут, возврат плана, подтверждение встречи, Development Visit и reload; 360px и клавиатура проверены с журналом результатов.
 https://karinatulegenova.youtrack.cloud/issue/DIP-8"
-DIP-9,OCT-09 · Создать YouTrack и связать работы,admin,P0,2026-10-18,Open,"Проект DIP, исполнитель, приоритеты, сроки и приемка; реальные ID связаны с веткой/PR/коммитами; шаблонные задачи не закрыты.
+DIP-9,OCT-09 · Создать YouTrack и связать работы,admin,P0,2026-10-18,Done,"Проект DIP, исполнитель, приоритеты, сроки и приемка; реальные ID связаны с веткой/PR/коммитами; шаблонные задачи не закрыты.
 https://karinatulegenova.youtrack.cloud/issue/DIP-9"
 DIP-10,OCT-10 · Получить содержательный review руководителя,admin,P0,2026-10-21,Open,"Реальные датированные замечания к требованиям/архитектуре/UX; решения и подтверждения исправлений; замечания к слайдам не выданы за review кода.
 https://karinatulegenova.youtrack.cloud/issue/DIP-10"
