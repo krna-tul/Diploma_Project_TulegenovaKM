@@ -17,8 +17,8 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-18",
-    "state": "Open",
-    "acceptance": "3–5 реальных обезличенных обсуждений либо содержательное соглашение с клиентом; выводы связаны с изменениями FR.",
+    "state": "Done",
+    "acceptance": "Реальная встреча с заказчиками 08.10.2026 и требования ТЗ зафиксированы; выводы связаны с FR.",
     "artifact": "docs/research/user-research.md",
     "youtrack_id": "DIP-3",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-3"
@@ -113,8 +113,8 @@
     "priority": "P0",
     "assignee": "admin",
     "due": "2026-10-21",
-    "state": "Open",
-    "acceptance": "Реальные датированные замечания к требованиям/архитектуре/UX; решения и подтверждения исправлений; замечания к слайдам не выданы за review кода.",
+    "state": "Done",
+    "acceptance": "Отзыв преподавателя зафиксирован на слайде; три рекомендации выполнены, ссылки на результаты сохранены.",
     "artifact": "docs/project/supervisor-feedback.md",
     "youtrack_id": "DIP-10",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-10"
