@@ -4,7 +4,7 @@
 
 **A platform for faculty professional development**
 
-[Figma Prototype](https://www.figma.com/design/sy5nfmGGIJu1W4KQk1Tm6d/?node-id=8-2) · [YouTrack](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Documentation](#documentation) · [Getting Started](#getting-started)
+[Figma Prototype](https://www.figma.com/design/sy5nfmGGIJu1W4KQk1Tm6d/?node-id=8-2) · [YouTrack](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Presentation (PDF)](docs/presentation/Presentation_TulegenovaKM.pdf) · [Documentation](#documentation) · [Getting Started](#getting-started)
 
 </div>
 
@@ -120,6 +120,7 @@ diagrams/exports/    Readable SVG diagrams
 
 | Topic | Resource |
 | --- | --- |
+| Presentation | [Full Presentation (PDF)](docs/presentation/Presentation_TulegenovaKM.pdf) |
 | Project proposal and scope | [Project Proposal](docs/proposal.md) |
 | Client specification coverage | [Requirements Traceability](docs/tz-traceability.md) |
 | Source materials | [Source Register](docs/source-register.md) |
