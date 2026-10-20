@@ -10,7 +10,8 @@
     "artifact": "docs/tz-traceability.md",
     "youtrack_id": "DIP-2",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-2",
-    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок."
+    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок.",
+    "depends_on": []
   },
   {
     "key": "OCT-02",
@@ -22,7 +23,9 @@
     "acceptance": "Реальная встреча с заказчиками 08.10.2026 и требования ТЗ зафиксированы; выводы связаны с FR.",
     "artifact": "docs/research/user-research.md",
     "youtrack_id": "DIP-3",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-3"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-3",
+    "depends_on": [],
+    "result_commit": "https://github.com/krna-tul/Diploma_Project_TulegenovaKM/commit/7dab621"
   },
   {
     "key": "OCT-03",
@@ -35,7 +38,9 @@
     "artifact": "docs/research/literature-review.md",
     "youtrack_id": "DIP-4",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-4",
-    "completion_basis": "Выполнение подтверждено автором проекта."
+    "completion_basis": "Выполнение подтверждено автором проекта.",
+    "depends_on": [],
+    "result_commit": "https://github.com/krna-tul/Diploma_Project_TulegenovaKM/commit/10e1411"
   },
   {
     "key": "OCT-04",
@@ -48,7 +53,8 @@
     "artifact": "docs/research/literature-review.md",
     "youtrack_id": "DIP-1",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-1",
-    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок."
+    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок.",
+    "depends_on": []
   },
   {
     "key": "OCT-05",
@@ -61,7 +67,9 @@
     "artifact": "docs/research/system-comparison.md",
     "youtrack_id": "DIP-5",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-5",
-    "completion_basis": "Выполнение подтверждено автором проекта."
+    "completion_basis": "Выполнение подтверждено автором проекта.",
+    "depends_on": [],
+    "result_commit": "https://github.com/krna-tul/Diploma_Project_TulegenovaKM/commit/10e1411"
   },
   {
     "key": "OCT-06",
@@ -74,7 +82,11 @@
     "artifact": "docs/architecture/architecture.md",
     "youtrack_id": "DIP-6",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-6",
-    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок."
+    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок.",
+    "depends_on": [
+      "DIP-2",
+      "DIP-5"
+    ]
   },
   {
     "key": "OCT-07",
@@ -87,7 +99,8 @@
     "artifact": "tests/domain.test.mjs",
     "youtrack_id": "DIP-7",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-7",
-    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок."
+    "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок.",
+    "depends_on": []
   },
   {
     "key": "OCT-08",
@@ -100,19 +113,27 @@
     "artifact": "docs/project/validation.md",
     "youtrack_id": "DIP-8",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-8",
-    "completion_basis": "Выполнение подтверждено автором проекта."
+    "completion_basis": "Выполнение подтверждено автором проекта.",
+    "depends_on": [
+      "DIP-7"
+    ],
+    "result_commit": "https://github.com/krna-tul/Diploma_Project_TulegenovaKM/commit/ea58d68"
   },
   {
     "key": "OCT-09",
     "summary": "Создать YouTrack и связать работы",
     "priority": "P0",
     "assignee": "admin",
-    "due": "2026-10-18",
-    "state": "Done",
+    "due": "2026-10-22",
+    "state": "In Review",
     "acceptance": "Проект DIP, исполнитель, приоритеты, сроки и приемка; реальные ID связаны с веткой/PR/коммитами; шаблонные задачи не закрыты.",
     "artifact": "docs/project/youtrack.md",
     "youtrack_id": "DIP-9",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-9"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-9",
+    "depends_on": [],
+    "original_due": "2026-10-18",
+    "pull_request": "https://github.com/krna-tul/Diploma_Project_TulegenovaKM/pull/3",
+    "completion_basis": "Поля сроков, зависимости и ссылки исправлены 20.10.2026; независимый review PR №3 и его слияние ожидаются."
   },
   {
     "key": "OCT-10",
@@ -124,7 +145,9 @@
     "acceptance": "Отзыв преподавателя зафиксирован на слайде; три рекомендации выполнены, ссылки на результаты сохранены.",
     "artifact": "docs/project/supervisor-feedback.md",
     "youtrack_id": "DIP-10",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-10"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-10",
+    "depends_on": [],
+    "result_commit": "https://github.com/krna-tul/Diploma_Project_TulegenovaKM/commit/7dab621"
   },
   {
     "key": "OCT-11",
@@ -136,7 +159,19 @@
     "acceptance": "npm run check и демонстрация проходят; PR проверен; доступ комиссии проверен автором; известные ограничения перечислены; pre-defense-1 указывает точный commit и не переносится.",
     "artifact": "docs/project/submission.md",
     "youtrack_id": "DIP-11",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-11"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-11",
+    "depends_on": [
+      "DIP-1",
+      "DIP-2",
+      "DIP-3",
+      "DIP-4",
+      "DIP-5",
+      "DIP-6",
+      "DIP-7",
+      "DIP-8",
+      "DIP-9",
+      "DIP-10"
+    ]
   },
   {
     "key": "MVP-01",
@@ -148,7 +183,12 @@
     "acceptance": "Согласованы Школа, УМО, техадминистратор, пары и объектные права; миграции проверены; приватные консультации отделены от отчетов.",
     "artifact": "docs/requirements.md",
     "youtrack_id": "DIP-12",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-12"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-12",
+    "depends_on": [
+      "DIP-2",
+      "DIP-6",
+      "DIP-10"
+    ]
   },
   {
     "key": "MVP-02",
@@ -160,7 +200,10 @@
     "acceptance": "Тестовые учетные записи и серверный RBAC; отрицательные тесты чужой пары/Школы, УМО и техадминистратора; клиентская роль не определяет права.",
     "artifact": "docs/architecture/architecture.md",
     "youtrack_id": "DIP-13",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-13"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-13",
+    "depends_on": [
+      "DIP-12"
+    ]
   },
   {
     "key": "MVP-03",
@@ -172,7 +215,10 @@
     "acceptance": "Согласия, нагрузка, исключения, документ назначения, календарь, версии и возврат; конкурентные назначения не нарушают лимит.",
     "artifact": "docs/requirements.md",
     "youtrack_id": "DIP-14",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-14"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-14",
+    "depends_on": [
+      "DIP-13"
+    ]
   },
   {
     "key": "MVP-04",
@@ -184,7 +230,10 @@
     "acceptance": "Подтверждение вторым участником; три этапа карты, факты/таймкоды и обсуждение; объектные права проверены.",
     "artifact": "docs/prototype.md",
     "youtrack_id": "DIP-15",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-15"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-15",
+    "depends_on": [
+      "DIP-14"
+    ]
   },
   {
     "key": "MVP-05",
@@ -196,7 +245,10 @@
     "acceptance": "F-08–10 обязательны; завершение и архив сохраняют историю; обычные изменения закрыты; разрешенные архивные операции аудируются.",
     "artifact": "docs/tz-traceability.md",
     "youtrack_id": "DIP-16",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-16"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-16",
+    "depends_on": [
+      "DIP-15"
+    ]
   },
   {
     "key": "MVP-06",
@@ -208,7 +260,10 @@
     "acceptance": "Статусы, фильтры, комплектность, предпросмотр ошибок и дубликатов импорта; выгрузки и изменения справочников аудируются.",
     "artifact": "docs/tz-traceability.md",
     "youtrack_id": "DIP-17",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-17"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-17",
+    "depends_on": [
+      "DIP-13"
+    ]
   },
   {
     "key": "MVP-07",
@@ -220,7 +275,13 @@
     "acceptance": "Системные тексты локализованы, контент не переводится; уведомления без дубликатов; аудит защищен; резервное восстановление измерено.",
     "artifact": "docs/requirements.md",
     "youtrack_id": "DIP-18",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-18"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-18",
+    "depends_on": [
+      "DIP-14",
+      "DIP-15",
+      "DIP-16",
+      "DIP-17"
+    ]
   },
   {
     "key": "MVP-08",
@@ -232,7 +293,10 @@
     "acceptance": "Получены параметры и доступ IT для SSO/HR/почты/ЭЦП либо задокументирован согласованный резервный сценарий; незавершенные интеграции названы.",
     "artifact": "docs/source-register.md",
     "youtrack_id": "DIP-19",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-19"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-19",
+    "depends_on": [
+      "DIP-12"
+    ]
   },
   {
     "key": "PILOT-01",
@@ -244,7 +308,11 @@
     "acceptance": "5–8 согласившихся представителей, одинаковые сценарии с ручной базовой линией; время/ошибки/успех и ограничения выборки представлены без выдуманных результатов.",
     "artifact": "docs/verification.md",
     "youtrack_id": "DIP-20",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-20"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-20",
+    "depends_on": [
+      "DIP-18",
+      "DIP-19"
+    ]
   },
   {
     "key": "FINAL-01",
@@ -256,6 +324,9 @@
     "acceptance": "Исправлены замечания пилота; исходники, миграции, запуск, API и пользовательские инструкции проверены; защита подготовлена.",
     "artifact": "docs/project/submission.md",
     "youtrack_id": "DIP-21",
-    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-21"
+    "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-21",
+    "depends_on": [
+      "DIP-20"
+    ]
   }
 ]
