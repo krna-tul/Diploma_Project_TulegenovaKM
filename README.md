@@ -12,6 +12,8 @@
 
 A diploma project developing a web platform for managing faculty mentoring in higher education. The platform connects professional support requests, mentor selection, pair approval, individual development plans, meetings, and outcome evaluation.
 
+**Project format:** Individual diploma project; Karina Tulegenova is the sole developer.
+
 **Author:** Karina Maratovna Tulegenova · Software Engineering · SE-2419  
 **Supervisor:** Yersultan Bakhytovich Tulebayev  
 **Responsibilities:** requirements analysis, architecture, frontend and backend development, and system verification.
@@ -35,6 +37,22 @@ The platform serves mentors, mentees, School representatives and directors, the 
 - Replacement requests and programme-level summaries.
 
 The expected outcome is a multi-user platform with role-based access and an evaluation of usability against the existing document-based process.
+
+## Current Development Status
+
+As of 20 October 2026, research, requirements, target architecture, diagrams, screen designs, and a runnable local browser prototype are available. Automated verification passes 17 domain tests and 78 local documentation links.
+
+Current work: complete the GitHub/YouTrack management checklist by **22 October 2026**, including structured deadlines, task dependencies, and traceable evidence. Independent PR review and supervisor/committee access verification remain open until confirmed by the relevant people.
+
+Planned: Django backend, PostgreSQL, server-side authentication and permissions, integrations, and user evaluation. The current prototype stores synthetic data in localStorage.
+
+The management deadline is **22 October**; the first pre-defence is **24 October**. Presentation preparation on 23 October is a separate activity.
+
+## Development Workflow
+
+Karina Tulegenova performs analysis, design, implementation, testing, and documentation through her own GitHub account (`krna-tul`) and YouTrack account (`admin`). The supervisor reviews scope, architecture, and results.
+
+For each development task, create a branch such as `feature/DIP-13-backend`, include its YouTrack ID in commits, and open a Pull Request linked to the issue. Record validation and obtain an appropriate review before merging. A self-check or automated check does not count as independent supervisor approval. Link the final commit or PR back from YouTrack and mark the task Done only when its acceptance criteria are met.
 
 ## Application Prototype
 
