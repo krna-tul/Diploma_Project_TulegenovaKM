@@ -1,15 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createInitialState } from '../src/prototype/domain/demo/initial-state.js';
-import { createStateStore } from '../src/prototype/application/state-store.js';
-import { createMentoringService } from '../src/prototype/application/mentoring-service.js';
-import { buildProgramReportCsv } from '../src/prototype/application/export-program-report.js';
-import { createJsonStorageRepository } from '../src/prototype/infrastructure/json-storage-repository.js';
-import { createModelRepository } from '../src/prototype/infrastructure/model-repository.js';
-import { createTranslator } from '../src/prototype/application/localization/translator.js';
-import russian from '../src/prototype/locales/ru.js';
-import kazakh from '../src/prototype/locales/kk.js';
-import { rankMentors } from '../src/prototype/domain/matching/rank-mentors.js';
+import { createInitialState } from '../prototype/domain/demo/initial-state.js';
+import { createStateStore } from '../prototype/application/state-store.js';
+import { createMentoringService } from '../prototype/application/mentoring-service.js';
+import { buildProgramReportCsv } from '../prototype/application/export-program-report.js';
+import { createJsonStorageRepository } from '../prototype/infrastructure/json-storage-repository.js';
+import { createModelRepository } from '../prototype/infrastructure/model-repository.js';
+import { createTranslator } from '../prototype/application/localization/translator.js';
+import russian from '../prototype/locales/ru.js';
+import kazakh from '../prototype/locales/kk.js';
+import { rankMentors } from '../prototype/domain/matching/rank-mentors.js';
 function createService(save = () => {}) {
   const store = createStateStore({
     load: createInitialState,

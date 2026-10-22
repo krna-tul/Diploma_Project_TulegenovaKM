@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { initialState, transition as t, addWorkingDays, summary } from '../src/prototype/domain.js';
+import { initialState, transition as t, addWorkingDays, summary } from '../prototype/domain.js';
 const req = {
   name: 'Демо-преподаватель',
   school: 'Школа цифровых технологий',

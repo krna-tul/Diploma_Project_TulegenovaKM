@@ -1,0 +1,7 @@
+src/research/
+docs/
+docs/diagrams/
+docs/Figma/
+src/tests/
+node_modules/
+.git/

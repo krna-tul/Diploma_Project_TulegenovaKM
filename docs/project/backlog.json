@@ -96,7 +96,7 @@
     "due": "2026-10-17",
     "state": "Done",
     "acceptance": "Возврат с обязательной причиной снимает согласия; встречу подтверждает только второй участник; положительные и отрицательные тесты проходят.",
-    "artifact": "tests/domain.test.mjs",
+    "artifact": "src/tests/domain.test.mjs",
     "youtrack_id": "DIP-7",
     "url": "https://karinatulegenova.youtrack.cloud/issue/DIP-7",
     "completion_basis": "Материалы и критерии приемки проверены; npm run check: 17 тестов, 71 ссылка без ошибок.",
