@@ -1,4 +1,5 @@
-# AITU Faculty Mentoring Platform
+<a name="aitu-faculty-mentoring-platform"></a>
+<h1 align="center">AITU Faculty Mentoring Platform</h1>
 
 **[Open Live Demo →](https://aitu-faculty-mentoring.vercel.app)**
 
@@ -9,7 +10,8 @@
 
 **Supervisor:** Yersultan Tulebayev, Senior-lecturer
 
-## Table of Contents
+<a name="table-of-contents"></a>
+<h2 align="center">Table of Contents</h2>
 
 - [Introduction](#introduction)
 - [Features](#features)
@@ -25,7 +27,8 @@
 - [Conclusion](#conclusion)
 - [References](#references)
 
-## Introduction
+<a name="introduction"></a>
+<h2 align="center">Introduction</h2>
 
 This diploma project aims to develop a web platform for faculty mentoring at Astana IT University. The platform will connect professional development requests, mentor selection, pair approval, individual development plans, meetings, and outcome evaluation in one workflow.
 
@@ -33,7 +36,8 @@ The intended users are faculty mentors and mentees, School representatives and d
 
 An interactive interface prototype and one trained machine learning model are available for demonstration. The prototype illustrates how the future application is intended to work; it is not yet a complete multi-user system.
 
-## Features
+<a name="features"></a>
+<h2 align="center">Features</h2>
 
 The browser prototype demonstrates:
 
@@ -47,7 +51,8 @@ The browser prototype demonstrates:
 
 The [extended workflow demonstration](https://aitu-faculty-mentoring.vercel.app/workflow.html) also models mutual consent, appointment records, plan approval and return, meeting confirmation, and programme completion. Roles are switched manually for demonstration.
 
-## Open Data and Machine Learning
+<a name="open-data-and-machine-learning"></a>
+<h2 align="center">Open Data and Machine Learning</h2>
 
 Confidential university data was not provided for model training or demonstration. The experiment therefore uses the publicly available [UniSkill dataset](https://huggingface.co/datasets/nurlanm/UniSkill_dataset), which contains annotated relationships between university courses and professional skills. Mentor profiles and their course assignments in the interface are illustrative.
 
@@ -55,7 +60,8 @@ One **logistic regression model** was trained to demonstrate the recommendation 
 
 The model runs in the browser. Its test results are **72.69% accuracy** and **0.6938 Macro-F1** on 216 course–skill pairs. The training materials, data provenance, and evaluation are documented in the [frontend and machine learning report](docs/frontend-matching-report.md).
 
-## Current Scope and Future Development
+<a name="current-scope-and-future-development"></a>
+<h2 align="center">Current Scope and Future Development</h2>
 
 The current implementation uses HTML, CSS, and JavaScript. Forms and demonstration state are stored in the visitor's browser using localStorage; they are not shared between users. The sign-in screen is an interface prototype: **user registration, authentication, and server-side authorisation have not been implemented**.
 
@@ -63,7 +69,8 @@ Future development includes registration, authentication, role-based access cont
 
 Requirements, research, interface designs, architecture diagrams, and automated tests accompany the prototype. The current interface provides a demonstration of the planned application and a foundation for its further development.
 
-## Getting Started and Testing
+<a name="getting-started-and-testing"></a>
+<h2 align="center">Getting Started and Testing</h2>
 
 Node.js 22 or later is required. From the repository root, run:
 
@@ -81,7 +88,8 @@ npm test
 
 Alternatively, run `node --test tests/*.test.mjs`. For development, run `npm install` once, then `npm run check` for formatting, documentation links, and tests or `npm run format` to format the code. Stop the server with Ctrl+C. For a complete demonstration walkthrough, see [Using the Prototype](docs/prototype.md).
 
-## Repository Structure
+<a name="repository-structure"></a>
+<h2 align="center">Repository Structure</h2>
 
 The code uses separate domain, application, infrastructure, and presentation layers. See [Code Architecture](docs/code-architecture.md) for dependency rules, patterns, and extension guidance.
 
@@ -100,7 +108,8 @@ docs/                         Requirements and project documentation
 diagrams/                     Diagram sources and SVG exports
 ```
 
-## Documentation
+<a name="documentation"></a>
+<h2 align="center">Documentation</h2>
 
 | Topic                                   | Resource                                                                             |
 | --------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -121,11 +130,13 @@ diagrams/                     Diagram sources and SVG exports
 
 [Public YouTrack task viewer](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Management and deadlines](docs/project/youtrack.md) · [Requirements traceability](docs/tz-traceability.md) · [Presentation](docs/presentation/Presentation_TulegenovaKM.pdf). Client meeting evidence and supervisor feedback are available below.
 
-## Version Control Workflow
+<a name="version-control-workflow"></a>
+<h2 align="center">Version Control Workflow</h2>
 
 I develop the project through my GitHub account (`krna-tul`) and track work in YouTrack. Feature branches and pull requests record changes and validation; supervisor review is recorded separately from automated checks.
 
-## Application Prototype
+<a name="application-prototype"></a>
+<h2 align="center">Application Prototype</h2>
 
 Open the **[live demonstration](https://aitu-faculty-mentoring.vercel.app)** or browse the interface designs in the [Figma folder](Figma/). PNG previews are included below. The sign-in screen and role-specific workspaces demonstrate the planned experience; they do not provide account authentication.
 
@@ -150,18 +161,21 @@ Programme activity and document completion overview, with confidentiality requir
 
 [Browse Prototype Screens](Figma/) · [Local Prototype Walkthrough](docs/prototype.md)
 
-## Client Input and Supervisor Feedback
+<a name="client-input-and-supervisor-feedback"></a>
+<h2 align="center">Client Input and Supervisor Feedback</h2>
 
 | Source              | Contribution                                                                                                                   | Details                                                                    |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
 | Client meeting      | Four groups of needs linked to the client's requirements                                                                       | [Evidence of Relevance](docs/research/user-research.md)                     |
 | Supervisor feedback | Full publication titles, a consolidated literature review, project management and risks, and a feedback and improvements slide | [Supervisor Feedback and Improvements](docs/project/supervisor-feedback.md) |
 
-## Architecture and Diagrams
+<a name="architecture-and-diagrams"></a>
+<h2 align="center">Architecture and Diagrams</h2>
 
 The following diagrams expand the system context, use cases, and component views in presentation slides 16–18. They describe the target platform. The runnable browser prototype demonstrates its workflows using localStorage.
 
-### System Context
+<a name="system-context"></a>
+<h3 align="center">System Context</h3>
 
 Participants and external services are separated from the mentoring platform.
 
@@ -195,7 +209,8 @@ flowchart TB
 
 </details>
 
-### Use Cases
+<a name="use-cases"></a>
+<h3 align="center">Use Cases</h3>
 
 Role-to-scenario overview in Mermaid; the UML source and SVG are also available in the diagram directory. Detailed Development Visit records are shared within the mentoring pair; management reports use an administrative summary.
 
@@ -238,7 +253,8 @@ flowchart LR
 
 </details>
 
-### Component Architecture
+<a name="component-architecture"></a>
+<h3 align="center">Component Architecture</h3>
 
 In the planned backend, application requests will pass through authentication and object permissions. Domain modules will share a transactional database, with separate boundaries for attachments and integrations. These server-side components are not implemented in the current browser prototype.
 
@@ -279,7 +295,8 @@ flowchart TB
 
 [Architectural Decisions and API](docs/architecture/architecture.md) · [All Editable Diagram Sources](diagrams/source/) · [SVG Exports](diagrams/exports/)
 
-## Conclusion
+<a name="conclusion"></a>
+<h2 align="center">Conclusion</h2>
 
 The AITU Faculty Mentoring Platform provides a foundation for bringing faculty development requests, mentor selection, individual plans, and progress review into a connected workflow. The interactive prototype demonstrates the proposed user experience and core mentoring scenarios in English, Russian, and Kazakh.
 
@@ -287,7 +304,8 @@ One logistic regression model trained on publicly available UniSkill data demons
 
 Further development will focus on registration, authentication, server-side permissions, a shared database, and evaluation with intended users. The current prototype and model provide a basis for testing these design decisions before implementing the complete multi-user platform.
 
-## References
+<a name="references"></a>
+<h2 align="center">References</h2>
 
 1. W. Nuis, M. Segers, and S. Beausaert, “Conceptualizing mentoring in higher education: A systematic literature review,” Educ. Res. Rev., vol. 41, Art. no. 100565, 2023, [doi:10.1016/j.edurev.2023.100565](https://doi.org/10.1016/j.edurev.2023.100565).
 
