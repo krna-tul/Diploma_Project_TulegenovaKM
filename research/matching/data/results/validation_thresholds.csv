@@ -1,0 +1,2 @@
+method,threshold,validation_macro_f1
+Logistic regression,0.5499999999999999,0.7368701679552119

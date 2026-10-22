@@ -1,0 +1,30 @@
+{
+  "retrieval_date": "2026-10-14",
+  "files": [
+    {
+      "file": "traindf_public_m.xlsx",
+      "url": "https://huggingface.co/datasets/nurlanm/UniSkill_dataset/resolve/main/traindf_public_m.xlsx",
+      "sha256": "456e0bd93d41568c809b553a37e88e0445aa60468ad6b092443be98e11d2a461",
+      "raw_rows": 3907,
+      "retained_manual_rows": 695,
+      "provenance": "Explicit data_source == real"
+    },
+    {
+      "file": "validationdf_public_m.xlsx",
+      "url": "https://huggingface.co/datasets/nurlanm/UniSkill_dataset/resolve/main/validationdf_public_m.xlsx",
+      "sha256": "fff8b1818d74e6785b04fe7af1cf16bad9bfaf9621e65d347c7d09dac89d3c2b",
+      "raw_rows": 102,
+      "retained_manual_rows": 102,
+      "provenance": "Author evaluation/validation split; paper section 3.3.1 states evaluation is real annotated data"
+    },
+    {
+      "file": "evaldf_public_m.xlsx",
+      "url": "https://huggingface.co/datasets/nurlanm/UniSkill_dataset/resolve/main/evaldf_public_m.xlsx",
+      "sha256": "f4c0eef14cad793075e59d3797d8be59752e933fa5947ce4138edfd4efd11670",
+      "raw_rows": 301,
+      "retained_manual_rows": 301,
+      "provenance": "Author evaluation/validation split; paper section 3.3.1 states evaluation is real annotated data"
+    }
+  ],
+  "manual_csv_sha256": "5393d131ac4e4643b97304f992c4643c07f227e003d4f3348d9e0663cfae4362"
+}
