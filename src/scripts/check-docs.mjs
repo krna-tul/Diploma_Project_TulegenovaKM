@@ -1,6 +1,6 @@
 import { readdir, readFile, access } from 'node:fs/promises';
 import path from 'node:path';
-const root = path.resolve(import.meta.dirname, '..');
+const root = path.resolve(import.meta.dirname, '../..');
 let failures = 0,
   checked = 0;
 async function walk(dir) {

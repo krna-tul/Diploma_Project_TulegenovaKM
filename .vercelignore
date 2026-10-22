@@ -1,7 +1,7 @@
-research/
+src/research/
 docs/
-diagrams/
-Figma/
-tests/
+docs/diagrams/
+docs/Figma/
+src/tests/
 node_modules/
 .git/

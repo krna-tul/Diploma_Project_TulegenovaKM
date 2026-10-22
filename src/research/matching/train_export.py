@@ -5,7 +5,7 @@ import os
 EXPERIMENT_DIRECTORY = Path(__file__).resolve().parent
 DATA_DIRECTORY = EXPERIMENT_DIRECTORY / "data"
 MODEL_EXPORT_PATH = (
-    EXPERIMENT_DIRECTORY / "../../src/prototype/matching/model.json"
+    EXPERIMENT_DIRECTORY / "../../prototype/matching/model.json"
 ).resolve()
 TRAINING_CELL_INDICES = (1, 3, 5, 7, 9)
 

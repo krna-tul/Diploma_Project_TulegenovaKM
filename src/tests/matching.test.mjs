@@ -4,9 +4,9 @@ import { readFileSync } from 'node:fs';
 import {
   scoreCourseRelevance as score,
   jaccardSimilarity as jac,
-} from '../src/prototype/domain/matching/logistic-regression.js';
+} from '../prototype/domain/matching/logistic-regression.js';
 const model = JSON.parse(
-  readFileSync(new URL('../src/prototype/matching/model.json', import.meta.url)),
+  readFileSync(new URL('../prototype/matching/model.json', import.meta.url)),
 );
 const fixtures = JSON.parse(
   readFileSync(new URL('../research/matching/fixtures.json', import.meta.url)),

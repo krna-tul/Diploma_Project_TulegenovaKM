@@ -38,10 +38,10 @@ src/prototype/
   app.js                          Full-workflow entry point
   domain.js                       Compatibility exports for workflow consumers
   i18n.js                         Public localisation exports
-scripts/
+src/scripts/
   serve.mjs                       Local-server startup
   lib/static-server.mjs           Static HTTP request handling
-research/matching/
+src/research/matching/
   train_export.py                 Notebook execution and model export
   data/                           Original experiment and source records
 ```

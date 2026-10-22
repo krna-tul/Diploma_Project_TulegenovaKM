@@ -78,7 +78,7 @@ Node.js 22 or later is required. From the repository root, run:
 npm start
 ```
 
-Open [the local prototype](http://localhost:4173). Alternatively, run `node scripts/serve.mjs`. No package installation is required. To change the port, use `PORT=4174 npm start`; a configuration example is available in `config/.env.example`. The `.env` file is not loaded automatically.
+Open [the local prototype](http://localhost:4173). Alternatively, run `node src/scripts/serve.mjs`. No package installation is required. To change the port, use `PORT=4174 npm start`; a configuration example is available in `src/config/.env.example`. The `.env` file is not loaded automatically.
 
 Run the tests:
 
@@ -86,7 +86,7 @@ Run the tests:
 npm test
 ```
 
-Alternatively, run `node --test tests/*.test.mjs`. For development, run `npm install` once, then `npm run check` for formatting, documentation links, and tests or `npm run format` to format the code. Stop the server with Ctrl+C. For a complete demonstration walkthrough, see [Using the Prototype](docs/prototype.md).
+Alternatively, run `node --test src/tests/*.test.mjs`. For development, run `npm install` once, then `npm run check` for formatting, documentation links, and tests or `npm run format` to format the code. Stop the server with Ctrl+C. For a complete demonstration walkthrough, see [Using the Prototype](docs/prototype.md).
 
 <a name="repository-structure"></a>
 <h2 align="center">Repository Structure</h2>
@@ -94,18 +94,21 @@ Alternatively, run `node --test tests/*.test.mjs`. For development, run `npm ins
 The code uses separate domain, application, infrastructure, and presentation layers. See [Code Architecture](docs/code-architecture.md) for dependency rules, patterns, and extension guidance.
 
 ```text
-src/prototype/main.js         Application composition root
-src/prototype/domain/         Business rules and matching calculations
-src/prototype/application/    Use cases and state transactions
-src/prototype/infrastructure/ Storage, model loading, and downloads
-src/prototype/presentation/   Pages, components, routing, and controllers
-src/prototype/locales/        Russian and Kazakh translations
-src/prototype/styles/         Styles grouped by purpose
-scripts/                      Local HTTP server
-tests/                        Domain, application, matching, and architecture tests
-research/matching/            Training export, open data, and experimental results
-docs/                         Requirements and project documentation
-diagrams/                     Diagram sources and SVG exports
+docs/                         Project documentation
+  diagrams/                   Diagram sources and SVG exports
+  Figma/                      Interface design screenshots
+src/
+  prototype/                  Frontend and mentoring workflows
+    domain/                   Business rules and matching calculations
+    application/              Use cases and state transactions
+    infrastructure/           Storage, model loading, and downloads
+    presentation/             Pages, components, routing, and controllers
+    locales/                  Russian and Kazakh translations
+    styles/                   Styles grouped by purpose
+  scripts/                    Local HTTP server and documentation checks
+  tests/                      Automated tests
+  research/matching/          Training export, open data, and results
+  config/                     Local configuration example
 ```
 
 <a name="documentation"></a>
@@ -122,7 +125,7 @@ diagrams/                     Diagram sources and SVG exports
 | User research                           | [Discussion Plan](docs/research/user-research.md)                                     |
 | Code structure and design patterns      | [Code Architecture](docs/code-architecture.md)                                        |
 | Architecture                            | [Components, Data, and API](docs/architecture/architecture.md)                        |
-| Diagrams                                | [SVG Exports](diagrams/exports/) and [Editable Sources](diagrams/source/)              |
+| Diagrams                                | [SVG Exports](docs/diagrams/exports/) and [Editable Sources](docs/diagrams/source/)              |
 | User experience                         | [Interactive Prototype](src/prototype/index.html) and [Walkthrough](docs/prototype.md) |
 | Verification and evaluation             | [Plan](docs/verification.md) and [Verification Results](docs/project/validation.md)    |
 | Tasks, risks, and review                | [Project Plan](docs/project/plan.md)                                                  |
@@ -138,28 +141,28 @@ I develop the project through my GitHub account (`krna-tul`) and track work in Y
 <a name="application-prototype"></a>
 <h2 align="center">Application Prototype</h2>
 
-Open the **[live demonstration](https://aitu-faculty-mentoring.vercel.app)** or browse the interface designs in the [Figma folder](Figma/). PNG previews are included below. The sign-in screen and role-specific workspaces demonstrate the planned experience; they do not provide account authentication.
+Open the **[live demonstration](https://aitu-faculty-mentoring.vercel.app)** or browse the interface designs in the [Figma folder](docs/Figma/). PNG previews are included below. The sign-in screen and role-specific workspaces demonstrate the planned experience; they do not provide account authentication.
 
 | Home                                                      | Mentor Catalogue                                                 |
 | --------------------------------------------------------- | ---------------------------------------------------------------- |
-| [![Home](Figma/01-landing.png)](Figma/01-landing.png)      | [![Mentor Catalogue](Figma/04-mentors.png)](Figma/04-mentors.png) |
+| [![Home](docs/Figma/01-landing.png)](docs/Figma/01-landing.png)      | [![Mentor Catalogue](docs/Figma/04-mentors.png)](docs/Figma/04-mentors.png) |
 | Discover the programme, skills, and support opportunities | Find a mentor and explore their professional profile             |
 
 | Individual Development Plan                                           | Development Visit                                             |
 | --------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [![Individual Development Plan](Figma/06-plan.png)](Figma/06-plan.png) | [![Development Visit](Figma/07-visit.png)](Figma/07-visit.png) |
+| [![Individual Development Plan](docs/Figma/06-plan.png)](docs/Figma/06-plan.png) | [![Development Visit](docs/Figma/07-visit.png)](docs/Figma/07-visit.png) |
 | Development goals, activities, deadlines, and progress                | Visit preparation, observations, and feedback                 |
 
 <details>
 <summary><strong>Educational and Methodological Office Dashboard</strong></summary>
 
-![Programme overview for the Educational and Methodological Office](Figma/09-umo.png)
+![Programme overview for the Educational and Methodological Office](docs/Figma/09-umo.png)
 
 Programme activity and document completion overview, with confidentiality requirements for private mentoring records.
 
 </details>
 
-[Browse Prototype Screens](Figma/) · [Local Prototype Walkthrough](docs/prototype.md)
+[Browse Prototype Screens](docs/Figma/) · [Local Prototype Walkthrough](docs/prototype.md)
 
 <a name="client-input-and-supervisor-feedback"></a>
 <h2 align="center">Client Input and Supervisor Feedback</h2>
@@ -179,7 +182,7 @@ The following diagrams expand the system context, use cases, and component views
 
 Participants and external services are separated from the mentoring platform.
 
-![System context](diagrams/exports/context-readme.svg)
+![System context](docs/diagrams/exports/context-readme.svg)
 
 <details>
 <summary>View editable Mermaid diagram</summary>
@@ -214,7 +217,7 @@ flowchart TB
 
 Role-to-scenario overview in Mermaid; the UML source and SVG are also available in the diagram directory. Detailed Development Visit records are shared within the mentoring pair; management reports use an administrative summary.
 
-![Use cases](diagrams/exports/use-cases-readme.svg)
+![Use cases](docs/diagrams/exports/use-cases-readme.svg)
 
 <details>
 <summary>View editable Mermaid diagram</summary>
@@ -258,7 +261,7 @@ flowchart LR
 
 In the planned backend, application requests will pass through authentication and object permissions. Domain modules will share a transactional database, with separate boundaries for attachments and integrations. These server-side components are not implemented in the current browser prototype.
 
-![Component architecture](diagrams/exports/components-readme.svg)
+![Component architecture](docs/diagrams/exports/components-readme.svg)
 
 <details>
 <summary>View editable Mermaid diagram</summary>
@@ -293,7 +296,7 @@ flowchart TB
 
 </details>
 
-[Architectural Decisions and API](docs/architecture/architecture.md) · [All Editable Diagram Sources](diagrams/source/) · [SVG Exports](diagrams/exports/)
+[Architectural Decisions and API](docs/architecture/architecture.md) · [All Editable Diagram Sources](docs/diagrams/source/) · [SVG Exports](docs/diagrams/exports/)
 
 <a name="conclusion"></a>
 <h2 align="center">Conclusion</h2>

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-const root = fileURLToPath(new URL('../src/prototype/', import.meta.url));
+const root = fileURLToPath(new URL('../prototype/', import.meta.url));
 function javascriptFiles(directory) {
   return readdirSync(directory, {
     withFileTypes: true,

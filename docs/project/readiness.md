@@ -10,7 +10,7 @@
 | Existing system comparison | [Сравнение](../research/system-comparison.md) | 3 системы × 9 критериев; DIP-5 — Готово |
 | Technology comparison | [Технологии](../research/technology-comparison.md) | 4 решения с альтернативами |
 | Requirements | [FR/NFR](../requirements.md), [ТЗ](../tz-traceability.md) | Добавлены роли УМО/техадминистратора, архив, XLSX, уведомления, локализация |
-| Architecture | [Описание](../architecture/architecture.md), [исходники](../../diagrams/source/) | Контекст, Use Case, компоненты и SVG есть; УМО, техадминистратор, архив, импорт и уведомления отражены |
+| Architecture | [Описание](../architecture/architecture.md), [исходники](../diagrams/source/) | Контекст, Use Case, компоненты и SVG есть; УМО, техадминистратор, архив, импорт и уведомления отражены |
 | UX | [Прототип](../prototype.md) | 11 экранов Figma, 6 PNG в README; локальный сценарий и новые правила проверены; мобильная/клавиатурная проверка и Development Visit завершены по подтверждению автора; DIP-8 — Готово |
 | Verification | [План](../verification.md), [результаты](validation.md) | 17 доменных тестов; синтаксис и локальные ссылки |
 | Management | [План](plan.md), [YouTrack](youtrack.md) | Проект DIP и Kanban созданы; 21 задача DIP-1–DIP-21, заполненное поле «Срок», реальные зависимости и ссылки; DIP-9 — Ревью, будущие DIP-12–DIP-21 — Очередь |
