@@ -1,0 +1,2 @@
+method,accuracy,precision_match,recall_match,f1_match,macro_f1,TN,FP,FN,TP
+Logistic regression,0.7268518518518519,0.7049180327868853,0.5119047619047619,0.593103448275862,0.693764267691938,114,18,41,43

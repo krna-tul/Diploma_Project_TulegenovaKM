@@ -1,0 +1,69 @@
+{
+  "seed": 42,
+  "manual_raw_rows": 1098,
+  "synthetic_training_rows_excluded": 3212,
+  "clean_rows": 1096,
+  "removed_duplicates": 2,
+  "missing_descriptions": 6,
+  "classes": {
+    "0": 700,
+    "1": 396
+  },
+  "groups": 544,
+  "split_sizes": {
+    "train": 649,
+    "validation": 231,
+    "test": 216
+  },
+  "split_class_counts": {
+    "train": {
+      "0": 394,
+      "1": 255
+    },
+    "validation": {
+      "0": 174,
+      "1": 57
+    },
+    "test": {
+      "0": 132,
+      "1": 84
+    }
+  },
+  "metrics": [
+    {
+      "method": "Logistic regression",
+      "accuracy": 0.7268518518518519,
+      "precision_match": 0.7049180327868853,
+      "recall_match": 0.5119047619047619,
+      "f1_match": 0.593103448275862,
+      "macro_f1": 0.693764267691938,
+      "TN": 114,
+      "FP": 18,
+      "FN": 41,
+      "TP": 43
+    }
+  ],
+  "validation_choices": [
+    {
+      "method": "Logistic regression",
+      "threshold": 0.5499999999999999,
+      "validation_macro_f1": 0.7368701679552119
+    }
+  ],
+  "versions": {
+    "python": "3.9.6",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "pandas": "2.3.3",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "openpyxl": "3.1.5"
+  },
+  "model_configs": {
+    "Logistic regression": "Pipeline(steps=[('standardscaler', StandardScaler()),\n                ('logisticregression',\n                 LogisticRegression(C=1, class_weight='balanced', max_iter=1000,\n                                    random_state=42))])"
+  },
+  "train_seconds": {
+    "Logistic regression": 0.009376541999998267
+  },
+  "limitation": "Lexical feature demonstration on real annotated course-skill pairs; no real mentor matching or pedagogical outcome validation."
+}
