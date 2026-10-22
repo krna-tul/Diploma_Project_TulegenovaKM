@@ -1,7 +1,7 @@
 <a name="aitu-faculty-mentoring-platform"></a>
 <h1 align="center">AITU Faculty Mentoring Platform</h1>
 
-**[Open Live Demo →](https://aitu-faculty-mentoring.vercel.app)**
+**[Open Live Demo →](https://aitu-faculty-mentoring.vercel.app)** · **[YouTrack — Project Tasks →](https://karinatulegenova.youtrack.cloud/issues/DIP)**
 
 **Diploma Project:** "Development of a Web Platform for Managing the Faculty Mentorship System in a Higher Education Institution"
 
