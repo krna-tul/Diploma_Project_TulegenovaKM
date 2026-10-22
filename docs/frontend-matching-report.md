@@ -107,7 +107,7 @@ The frontend follows the visual direction of the designs: white backgrounds, nav
 
 The interactive features include form drafts, mentor and event filters, preferred mentor selection, development plan activities, version tracking, submission for School review, and return for revision with a required comment. The Development Visit screen supports preparation, observation, and reflection. An administrative CSV export includes programme summaries without private visit notes.
 
-The new interface stores demonstration data in the browser. The sign-in screen opens a demo workspace without storing or sending a password. The screens are implemented in English; full English, Kazakh, and Russian localisation remains a subsequent task.
+The new interface stores demonstration data in the browser. The sign-in screen opens a demo workspace without storing or sending a password. The interface supports English, Kazakh, and Russian. The EN / KZ / RU switcher updates navigation, headings, labels, statuses, and messages without discarding unsaved form input. The selected language persists in the browser. User-entered content and original UniSkill course and skill texts remain in their source language.
 
 I also retained the original workflow demonstration, which covers appointments, mutual consent, workload limits, and other domain rules. It remains available at `/workflow.html`. The new interface and this original workflow currently use separate local states; connecting them through a shared backend is part of the next development stage.
 
