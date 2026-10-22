@@ -1,58 +1,120 @@
-<div align="center">
+# AITU Faculty Mentoring Platform
 
-# AITU Faculty Mentoring
+A diploma project developing a web platform for managing faculty mentoring in higher education. The platform connects professional development requests, mentor selection, pair approval, individual development plans, meetings, and outcome evaluation.
 
-**A platform for faculty professional development**
+Karina Maratovna Tulegenova · Software Engineering · SE-2419
 
-[Prototype Screens](Figma/) · [Public Task Viewer](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Presentation (PDF)](docs/presentation/Presentation_TulegenovaKM.pdf) · [Documentation](#documentation) · [Getting Started](#getting-started)
+Supervisor: Yersultan Bakhytovich Tulebayev.
 
-</div>
+I am responsible for requirements analysis, architecture, frontend and backend development, and system verification.
 
-![Mentee dashboard — Figma design](Figma/03-overview.png)
+## Table of Contents
 
-A diploma project developing a web platform for managing faculty mentoring in higher education. The platform connects professional support requests, mentor selection, pair approval, individual development plans, meetings, and outcome evaluation.
-
-**Project format:** Individual diploma project; Karina Tulegenova is the sole developer.
-
-**Author:** Karina Maratovna Tulegenova · Software Engineering · SE-2419  
-**Supervisor:** Yersultan Bakhytovich Tulebayev  
-**Responsibilities:** requirements analysis, architecture, frontend and backend development, and system verification.
+- [Problem and Users](#problem-and-users)
+- [Features](#features)
+- [Current Status and Scope](#current-status-and-scope)
+- [Update: 22 October 2026](#update-22-october-2026)
+- [Getting Started and Testing](#getting-started-and-testing)
+- [Repository Structure](#repository-structure)
+- [Documentation](#documentation)
+- [Version Control Workflow](#version-control-workflow)
+- [Application Prototype](#application-prototype)
+- [Client Input and Supervisor Feedback](#client-input-and-supervisor-feedback)
+- [Architecture and Diagrams](#architecture-and-diagrams)
 
 ## Problem and Users
 
-AITU's mentoring process involves several related documents and approval stages. The project brings these activities into a connected workflow so participants can follow their progress.
+AITU's mentoring regulations involve several related documents and organisational stages. This project brings them into a single workflow and makes progress visible to participants. The client meeting on 8 October 2026 addressed roles, confidentiality, support requests, development plans, and reporting. See the [meeting findings](docs/research/user-research.md).
 
-The client meeting on **8 October 2026** with representatives of the Educational and Methodological Office addressed roles and confidentiality, support requests and assignments, development plans and feedback, and monitoring and reporting. The client's technical specification defines the project requirements. [Meeting findings and requirements](docs/research/user-research.md).
+The intended users are faculty mentors and mentees, School representatives and directors, the academic department, order registrars, and event organisers. Mentoring supports professional development; detailed observations and reflections within each mentoring pair remain confidential.
 
-The platform serves mentors, mentees, School representatives and directors, the academic department, order registrars, event organisers, and the Educational and Methodological Office. Detailed observations and reflections remain confidential within the mentoring pair.
+## Features
 
-## Project Scope
-
-- Separate mentor candidate applications and mentee support requests.
-- A searchable skills catalogue and professional development events.
-- School review of candidates and confirmation of introductory training.
-- Mentor selection, consent from both participants, director endorsement, and registration of the Vice-Rector's order.
-- Shared individual development plans with revisions, tasks, deadlines, support, and expected outcomes.
+- Separate application forms for mentor candidates and mentee support requests.
+- A searchable skills catalogue and events listing for exploring development opportunities.
+- School review of mentor candidates and confirmation of introductory training.
+- Mentor selection, consent from both participants, director endorsement, and registration of the Vice-Rector's appointment order.
+- Shared individual development plans with versions, activities, deadlines, support, and expected outcomes.
 - Meetings, Development Visits, and interim and final evaluations.
 - Replacement requests and programme-level summaries.
 
-The expected outcome is a multi-user platform with role-based access and an evaluation of usability against the existing document-based process.
+## Current Status and Scope
 
-## Current Development Status
+Requirements, a literature review, system and technology comparisons, architecture, diagrams, an evaluation plan, and an interactive prototype are available. The prototype runs locally in a single browser using localStorage. Profiles and programmes are illustrative; the recommendation model uses publicly available annotated course–skill pairs from UniSkill. Confidential university data was not provided for training or demonstration. Server-side authentication and authorisation, a shared database, integrations, and notifications are planned for the next stage. The frontend supports English, Russian, and Kazakh through the EN / KZ / RU switcher; the language preference is stored in the browser. User-entered content and original UniSkill course and skill texts remain unchanged.
 
-As of 20 October 2026, research, requirements, target architecture, diagrams, screen designs, and a runnable local browser prototype are available. Automated verification passes 17 domain tests and local documentation link checks.
+The target architecture is a Django modular monolith with PostgreSQL and REST/JSON. The frontend framework will be selected after UX validation. The current prototype uses HTML, CSS, and JavaScript; Node.js provides the local HTTP server and tests. No npm dependencies are required to run the frontend. Typography is loaded from Google Fonts with system-font fallbacks; retraining the model requires Python dependencies.
 
-Current work: complete the GitHub/YouTrack management checklist by **22 October 2026**, including structured deadlines, task dependencies, and traceable evidence. Independent review of PR #3 remains pending. The repository is public at the supervisors’ request; reading access is available without an invitation, and existing collaborator access for `YersultanTulebayev` has been verified.
+The intended diploma outcome is a multi-user platform with verifiable access controls and a usability evaluation against the existing manual document workflow. A complete application is not required for the first milestone on 24 October.
 
-Planned: Django backend, PostgreSQL, server-side authentication and permissions, integrations, and user evaluation. The current prototype stores synthetic data in localStorage.
+## Update: 22 October 2026
 
-The management deadline is **22 October**; the first pre-defence is **24 October**. Presentation preparation on 23 October is a separate activity.
+The frontend implements the eleven supplied interface designs. Working JavaScript logistic regression inference from `aitu-mentoring` is integrated into the following flow: **My request → Find recommendations by skill → Find recommended mentors → View course evidence**. Course links can be edited through **Manage demo course assignments**.
 
-## Development Workflow
+To switch roles, use the avatar or **Demo workspaces** at the bottom of the page. The new screens demonstrate a simplified local workflow. The original complete appointment and mutual-consent workflow remains available at [workflow.html](http://localhost:4173/workflow.html) and uses separate browser state.
 
-Karina Tulegenova performs analysis, design, implementation, testing, and documentation through her own GitHub account (`krna-tul`) and YouTrack account (`admin`). The supervisor reviews scope, architecture, and results.
+See the [frontend, open data, and logistic regression report](docs/frontend-matching-report.md). Results on 216 UniSkill pairs are 72.69% accuracy and 0.6938 Macro-F1. These metrics measure course–skill relevance, not validated mentor-matching accuracy at AITU. The refactored code passes 30 automated tests, including comparison of thirty Python/JavaScript examples and checks of application behaviour and layer boundaries.
 
-For each development task, create a branch such as `feature/DIP-13-backend`, include its YouTrack ID in commits, and open a Pull Request linked to the issue. Record validation and obtain an appropriate review before merging. A self-check or automated check does not count as independent supervisor approval. Link the final commit or PR back from YouTrack and mark the task Done only when its acceptance criteria are met.
+## Getting Started and Testing
+
+Node.js 22 or later is required. From the repository root, run:
+
+```sh
+npm start
+```
+
+Open [the local prototype](http://localhost:4173). Alternatively, run `node scripts/serve.mjs`. No package installation is required. To change the port, use `PORT=4174 npm start`; a configuration example is available in `config/.env.example`. The `.env` file is not loaded automatically.
+
+Run the tests:
+
+```sh
+npm test
+```
+
+Alternatively, run `node --test tests/*.test.mjs`. For development, run `npm install` once, then `npm run check` for formatting, documentation links, and tests or `npm run format` to format the code. Stop the server with Ctrl+C. For a complete demonstration walkthrough, see [Using the Prototype](docs/prototype.md).
+
+## Repository Structure
+
+The code uses separate domain, application, infrastructure, and presentation layers. See [Code Architecture](docs/code-architecture.md) for dependency rules, patterns, and extension guidance.
+
+```text
+src/prototype/main.js         Application composition root
+src/prototype/domain/         Business rules and matching calculations
+src/prototype/application/    Use cases and state transactions
+src/prototype/infrastructure/ Storage, model loading, and downloads
+src/prototype/presentation/   Pages, components, routing, and controllers
+src/prototype/locales/        Russian and Kazakh translations
+src/prototype/styles/         Styles grouped by purpose
+scripts/                      Local HTTP server
+tests/                        Domain, application, matching, and architecture tests
+research/matching/            Training export, open data, and experimental results
+docs/                         Requirements and project documentation
+diagrams/                     Diagram sources and SVG exports
+```
+
+## Documentation
+
+| Topic | Resource |
+| --- | --- |
+| Proposal and scope | [Project Proposal](docs/proposal.md) |
+| Requirements sources and open questions | [Source Register](docs/source-register.md) |
+| Requirements and acceptance criteria | [Specification](docs/requirements.md) |
+| Literature | [Critical Review](docs/research/literature-review.md) |
+| Existing systems | [System Comparison](docs/research/system-comparison.md) |
+| Technology | [Technology Comparison](docs/research/technology-comparison.md) |
+| User research | [Discussion Plan](docs/research/user-research.md) |
+| Code structure and design patterns | [Code Architecture](docs/code-architecture.md) |
+| Architecture | [Components, Data, and API](docs/architecture/architecture.md) |
+| Diagrams | [SVG Exports](diagrams/exports/) and [Editable Sources](diagrams/source/) |
+| User experience | [Interactive Prototype](src/prototype/index.html) and [Walkthrough](docs/prototype.md) |
+| Verification and evaluation | [Plan](docs/verification.md) and [Verification Results](docs/project/validation.md) |
+| Tasks, risks, and review | [Project Plan](docs/project/plan.md) |
+| First pre-defence | [Readiness for 24 October](docs/project/readiness.md) |
+
+[Public YouTrack task viewer](https://karinatulegenova.youtrack.cloud/issues/DIP) · [Management and deadlines](docs/project/youtrack.md) · [Requirements traceability](docs/tz-traceability.md) · [Presentation](docs/presentation/Presentation_TulegenovaKM.pdf). Client meeting evidence and supervisor feedback are available below.
+
+## Version Control Workflow
+
+I develop the project through my GitHub account (`krna-tul`) and track work in YouTrack. Feature branches and pull requests record changes and validation; supervisor review is recorded separately from automated checks.
 
 ## Application Prototype
 
@@ -208,76 +270,3 @@ flowchart TB
 </details>
 
 [Architectural Decisions and API](docs/architecture/architecture.md) · [All Editable Diagram Sources](diagrams/source/) · [SVG Exports](diagrams/exports/)
-
-## Technology
-
-The target architecture is a **Django modular monolith**, **PostgreSQL**, and **REST/JSON**, supporting the mentoring workflow and role-based access.
-
-The local interactive prototype uses **HTML, CSS, and JavaScript**, with browser localStorage for demonstration data. **Node.js** provides the local HTTP server and automated domain tests. See the [technology comparison](docs/research/technology-comparison.md) for the alternatives and selection rationale.
-
-## Getting Started
-
-Use **Node.js 22 or later**. From the repository root, start the local prototype:
-
-```sh
-npm start
-```
-
-Open http://localhost:4173. You can also run `node scripts/serve.mjs` directly. To use another port:
-
-```sh
-PORT=4174 npm start
-```
-
-A configuration example is provided in `config/.env.example`. Supply environment variables through your shell. Stop the server with **Ctrl+C**.
-
-Run the checks:
-
-```sh
-npm run check
-```
-
-This checks JavaScript syntax, local documentation links, and domain scenarios. To run the domain tests separately:
-
-```sh
-node --test tests/*.test.mjs
-```
-
-Follow the [prototype walkthrough](docs/prototype.md) for the demonstration scenarios.
-
-## Repository Structure
-
-```text
-src/prototype/       User interface and workflow model
-scripts/             Local server and documentation checks
-config/              Configuration example
-tests/               Automated domain tests
-docs/                Requirements and project documentation
-diagrams/source/     Editable Mermaid and PlantUML diagrams
-diagrams/exports/    Readable SVG diagrams
-```
-
-## Documentation
-
-| Topic | Resource |
-| --- | --- |
-| Presentation | [Full Presentation (PDF)](docs/presentation/Presentation_TulegenovaKM.pdf) |
-| Project proposal and scope | [Project Proposal](docs/proposal.md) |
-| Client specification coverage | [Requirements Traceability](docs/tz-traceability.md) |
-| Source materials | [Source Register](docs/source-register.md) |
-| Requirements and acceptance criteria | [Requirements Specification](docs/requirements.md) |
-| Literature | [Critical Literature Review](docs/research/literature-review.md) |
-| Existing systems | [System Comparison](docs/research/system-comparison.md) |
-| Technology decisions | [Technology Comparison](docs/research/technology-comparison.md) |
-| User research | [Client Meeting Findings](docs/research/user-research.md) |
-| Architecture | [Components, Data, and API](docs/architecture/architecture.md) |
-| Diagrams | [SVG Exports](diagrams/exports/) and [Editable Sources](diagrams/source/) |
-| User experience | [Interactive Prototype](src/prototype/index.html) and [Walkthrough](docs/prototype.md) |
-| Verification and evaluation | [Evaluation Plan](docs/verification.md) and [Verification Results](docs/project/validation.md) |
-| Project management and risks | [Project Plan](docs/project/plan.md) and [YouTrack Tasks](docs/project/youtrack.md) |
-| Supervisor feedback | [Feedback and Improvements](docs/project/supervisor-feedback.md) |
-| First pre-defence | [24 October Checklist](docs/project/readiness.md) |
-
-[View Project Tasks — Public, Read Only](https://karinatulegenova.youtrack.cloud/issues/DIP)
-
-The public YouTrack task viewer opens without signing in. Visitors can read tasks and comments; creating, editing, and deleting are disabled.
