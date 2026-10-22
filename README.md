@@ -1,101 +1,107 @@
-# Платформа наставничества преподавателей AITU
+# AITU Faculty Mentoring Platform
 
-Дипломный проект по разработке веб-платформы для управления системой наставничества преподавателей в высшем учебном заведении. Платформа связывает профессиональный запрос, выбор наставника, согласование пары, индивидуальный план, встречи и оценку результатов.
+A diploma project developing a web platform for managing faculty mentoring in higher education. The platform connects professional development requests, mentor selection, pair approval, individual development plans, meetings, and outcome evaluation.
 
-Автор: Тулегенова Карина Маратовна, Software Engineering, группа SE-2419. Руководитель: Тулебаев Ерсултан Бахытович. Автор отвечает за анализ, архитектуру, frontend, backend и проверку системы.
+Karina Maratovna Tulegenova · Software Engineering · SE-2419
+
+Supervisor: Yersultan Bakhytovich Tulebayev.
+
+I am responsible for requirements analysis, architecture, frontend and backend development, and system verification.
 
 ## Table of Contents
 
-- [Проблема и пользователи](#проблема-и-пользователи)
-- [Возможности](#возможности)
-- [Статус и границы](#статус-и-границы)
-- [Обновление от 22 октября 2026](#обновление-от-22-октября-2026)
-- [Запуск и тесты](#запуск-и-тесты)
-- [Структура репозитория](#структура-репозитория)
-- [Документация](#документация)
-- [Работа с версиями](#работа-с-версиями)
+- [Problem and Users](#problem-and-users)
+- [Features](#features)
+- [Current Status and Scope](#current-status-and-scope)
+- [Update: 22 October 2026](#update-22-october-2026)
+- [Getting Started and Testing](#getting-started-and-testing)
+- [Repository Structure](#repository-structure)
+- [Documentation](#documentation)
+- [Version Control Workflow](#version-control-workflow)
 
-## Проблема и пользователи
+## Problem and Users
 
-Положение AITU предусматривает несколько связанных документов и этапов организации наставничества. Проект объединяет их в одном процессе и делает статус взаимодействия доступным участникам. Гипотезы о потерях времени и сложностях текущего документооборота проверяются в интервью.
+AITU's mentoring regulations involve several related documents and organisational stages. This project brings them into a single workflow and makes progress visible to participants. Assumptions about time losses and difficulties in the existing document-based process are being investigated through interviews.
 
-Пользователи: преподаватели-наставники и наставляемые, представители Школы, директор Школы, академический департамент, регистратор распоряжений и организаторы мероприятий. Наставничество предназначено для профессионального развития; подробные наблюдения и рефлексия пары остаются конфиденциальными.
+The intended users are faculty mentors and mentees, School representatives and directors, the academic department, order registrars, and event organisers. Mentoring supports professional development; detailed observations and reflections within each mentoring pair remain confidential.
 
-## Возможности
+## Features
 
-- Две формы подачи: карточка кандидата в наставники и запрос наставляемого.
-- Каталог навыков и витрина мероприятий с поиском и выбором направления.
-- Проверка кандидата Школой и подтверждение вводного инструктажа.
-- Выбор наставника, согласие обеих сторон, представление директора и регистрация распоряжения проректора.
-- Совместный индивидуальный план с версиями, задачами, сроками, поддержкой и ожидаемыми результатами.
-- Встречи, Development Visit, промежуточная и итоговая оценка.
-- Обращения о замене и обобщенные показатели программы.
+- Separate application forms for mentor candidates and mentee support requests.
+- A searchable skills catalogue and events listing for exploring development opportunities.
+- School review of mentor candidates and confirmation of introductory training.
+- Mentor selection, consent from both participants, director endorsement, and registration of the Vice-Rector's appointment order.
+- Shared individual development plans with versions, activities, deadlines, support, and expected outcomes.
+- Meetings, Development Visits, and interim and final evaluations.
+- Replacement requests and programme-level summaries.
 
-## Статус и границы
+## Current Status and Scope
 
-Подготовлены требования, обзор литературы, сравнения систем и технологий, архитектура, диаграммы, план проверки и интерактивный прототип. Прототип работает локально в одном браузере с localStorage. Профили и программы демонстрационные; модель рекомендаций использует открытые размеченные пары «курс — навык» из UniSkill. Конфиденциальные данные университета для обучения и демонстрации не были предоставлены. Серверная авторизация, общая база данных, интеграции, уведомления и трехъязычная версия находятся на следующем этапе.
+Requirements, a literature review, system and technology comparisons, architecture, diagrams, an evaluation plan, and an interactive prototype are available. The prototype runs locally in a single browser using localStorage. Profiles and programmes are illustrative; the recommendation model uses publicly available annotated course–skill pairs from UniSkill. Confidential university data was not provided for training or demonstration. Server-side authentication and authorisation, a shared database, integrations, notifications, and a trilingual interface are planned for the next stage.
 
-Целевая архитектура: модульный монолит Django, PostgreSQL и REST/JSON. Клиентский фреймворк выбирается после проверки UX. Текущий прототип: HTML, CSS, JavaScript; локальный HTTP-сервер и тесты — Node.js. Для запуска frontend npm-зависимости не нужны. Типографика загружается из Google Fonts с локальными системными fallback-шрифтами; повторное обучение модели требует Python-зависимостей.
+The target architecture is a Django modular monolith with PostgreSQL and REST/JSON. The frontend framework will be selected after UX validation. The current prototype uses HTML, CSS, and JavaScript; Node.js provides the local HTTP server and tests. No npm dependencies are required to run the frontend. Typography is loaded from Google Fonts with system-font fallbacks; retraining the model requires Python dependencies.
 
-Ожидаемый результат диплома — многопользовательская платформа с проверяемыми правами доступа и оценкой удобства по сравнению с ручным документооборотом. Полное приложение не требуется к первому этапу 24 октября.
+The intended diploma outcome is a multi-user platform with verifiable access controls and a usability evaluation against the existing manual document workflow. A complete application is not required for the first milestone on 24 October.
 
-## Обновление от 22 октября 2026
+## Update: 22 October 2026
 
-Frontend воспроизводит 11 предоставленных макетов. Подключён работающий JavaScript-инференс logistic regression из `aitu-mentoring`: **My request → Find recommendations by skill → Find recommended mentors → View course evidence**. Изменение связей курсов доступно через **Manage demo course assignments**.
+The frontend implements the eleven supplied interface designs. Working JavaScript logistic regression inference from `aitu-mentoring` is integrated into the following flow: **My request → Find recommendations by skill → Find recommended mentors → View course evidence**. Course links can be edited through **Manage demo course assignments**.
 
-Для смены роли используйте аватар или **Demo workspaces** внизу страницы. Новые экраны показывают локальный упрощённый сценарий; полный исходный процесс назначения и взаимных согласий сохранён в `http://localhost:4173/workflow.html` и использует отдельное состояние браузера.
+To switch roles, use the avatar or **Demo workspaces** at the bottom of the page. The new screens demonstrate a simplified local workflow. The original complete appointment and mutual-consent workflow remains available at [workflow.html](http://localhost:4173/workflow.html) and uses separate browser state.
 
-[Отчёт: frontend, открытые данные и logistic regression](docs/frontend-matching-report.md). Метрики на 216 парах UniSkill: accuracy 72.69%, Macro-F1 0.6938. Это качество определения соответствия курса навыку, а не проверенная точность подбора наставников AITU. Пройдены 17 тестов, включая сопоставление 30 Python/JavaScript примеров.
+See the [frontend, open data, and logistic regression report](docs/frontend-matching-report.md). Results on 216 UniSkill pairs are 72.69% accuracy and 0.6938 Macro-F1. These metrics measure course–skill relevance, not validated mentor-matching accuracy at AITU. Seventeen tests passed, including comparison of thirty Python/JavaScript examples.
 
-## Запуск и тесты
+## Getting Started and Testing
 
-Требуется Node.js 20 или новее. В корне репозитория:
+Node.js 20 or later is required. From the repository root, run:
 
 ```sh
 npm start
 ```
 
-Открыть http://localhost:4173. Альтернативный запуск: `node scripts/serve.mjs`. Установка пакетов не требуется. Настройка порта: `PORT=4174 npm start`; пример в `config/.env.example`. Файл `.env` автоматически не загружается.
+Open [the local prototype](http://localhost:4173). Alternatively, run `node scripts/serve.mjs`. No package installation is required. To change the port, use `PORT=4174 npm start`; a configuration example is available in `config/.env.example`. The `.env` file is not loaded automatically.
+
+Run the tests:
 
 ```sh
 npm test
 ```
 
-Альтернативная команда: `node --test tests/*.test.mjs`. Остановка сервера — Ctrl+C. Полный демонстрационный маршрут: [Работа с прототипом](docs/prototype.md).
+Alternatively, run `node --test tests/*.test.mjs`. Stop the server with Ctrl+C. For a complete demonstration walkthrough, see [Using the Prototype](docs/prototype.md).
 
-## Структура репозитория
+## Repository Structure
 
 ```text
-src/prototype/       интерфейс и модель процесса
-scripts/             локальный сервер
-config/              пример конфигурации
-tests/               доменные тесты и проверка matching
-research/matching/   notebook, открытые данные и результаты модели
-docs/                требования и проектная документация
-diagrams/source/     Mermaid и PlantUML
-diagrams/exports/    читаемые SVG
+src/prototype/       User interface and workflow model
+scripts/             Local server
+config/              Configuration example
+tests/               Domain tests and matching verification
+research/matching/   Notebook, open data, and model results
+docs/                Requirements and project documentation
+diagrams/source/     Mermaid and PlantUML sources
+diagrams/exports/    Readable SVG diagrams
 ```
 
-## Документация
+## Documentation
 
-| Материал | Ссылка |
+| Topic | Resource |
 | --- | --- |
-| Proposal и границы | [Описание проекта](docs/proposal.md) |
-| Основания и вопросы | [Реестр источников](docs/source-register.md) |
-| Требования и приемка | [Спецификация](docs/requirements.md) |
-| Литература | [Критический обзор](docs/research/literature-review.md) |
-| Аналоги | [Сравнение систем](docs/research/system-comparison.md) |
-| Технологии | [Сравнение решений](docs/research/technology-comparison.md) |
-| Пользовательское исследование | [План обсуждений](docs/research/user-research.md) |
-| Архитектура | [Компоненты, данные и API](docs/architecture/architecture.md) |
-| Диаграммы | [SVG](diagrams/exports/) и [источники](diagrams/source/) |
-| UX | [Интерактивный прототип](src/prototype/index.html) и [сценарии](docs/prototype.md) |
-| Проверка и оценка | [План](docs/verification.md) и [результаты проверки](docs/project/validation.md) |
-| Задачи, риски, review | [План проекта](docs/project/plan.md) |
-| Первая предзащита | [Готовность к 24 октября](docs/project/readiness.md) |
+| Proposal and scope | [Project Proposal](docs/proposal.md) |
+| Requirements sources and open questions | [Source Register](docs/source-register.md) |
+| Requirements and acceptance criteria | [Specification](docs/requirements.md) |
+| Literature | [Critical Review](docs/research/literature-review.md) |
+| Existing systems | [System Comparison](docs/research/system-comparison.md) |
+| Technology | [Technology Comparison](docs/research/technology-comparison.md) |
+| User research | [Discussion Plan](docs/research/user-research.md) |
+| Architecture | [Components, Data, and API](docs/architecture/architecture.md) |
+| Diagrams | [SVG Exports](diagrams/exports/) and [Editable Sources](diagrams/source/) |
+| User experience | [Interactive Prototype](src/prototype/index.html) and [Walkthrough](docs/prototype.md) |
+| Verification and evaluation | [Plan](docs/verification.md) and [Verification Results](docs/project/validation.md) |
+| Tasks, risks, and review | [Project Plan](docs/project/plan.md) |
+| First pre-defence | [Readiness for 24 October](docs/project/readiness.md) |
 
-YouTrack: проект и ссылка еще не созданы; задачи с приоритетами, ответственными и критериями подготовлены в плане проекта. Figma: внешнего прототипа пока нет; доступен локальный интерактивный интерфейс. Интервью и отзыв руководителя запланированы. Состояние каждого пункта отражено в таблице готовности.
+YouTrack: the project and link have not yet been created; tasks with priorities, owners, and acceptance criteria are prepared in the project plan. Figma: no external prototype is currently available; the local interactive interface is available. Interviews and supervisor feedback are planned. The status of each item is recorded in the readiness checklist.
 
-## Работа с версиями
+## Version Control Workflow
 
-Изменения текущего этапа находятся в ветке `feature/mentorship-predefense` и разделены на коммиты по требованиям, исследованиям, архитектуре, прототипу и проверке. Публикация ветки и review выполняются после согласования. Предзащитный тег устанавливается на проверенную версию; текущая версия еще не помечена как сданная.
+Changes for the current stage are on the `feature/mentorship-predefense` branch, with separate commits for requirements, research, architecture, the prototype, and verification. Branch publication and review follow approval. A pre-defence tag will be applied to a verified version; the current version has not yet been marked as submitted.
