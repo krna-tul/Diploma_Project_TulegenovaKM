@@ -146,3 +146,9 @@ Musazade, N. (2026). *UniSkill_dataset* [Data set]. Hugging Face. https://huggin
 Musazade, N., Mezei, J., & Zhang, M. (2026). UniSkill: A dataset for matching university curricula to professional competencies. In *Proceedings of the Fifteenth Language Resources and Evaluation Conference* (pp. 456–469). ELRA Language Resource Association. https://doi.org/10.63317/2n39qzvk2eqe
 
 The implementation and experimental figures described in this report are based on the `aitu-mentoring` training notebook, exported model, source manifest, saved test results, and Python inference fixtures. These materials are included in the project for reproducibility.
+
+## Code organisation update
+
+The implementation now separates domain, application, infrastructure, and presentation modules. The original model calculations and browser storage keys are preserved. The duplicated inference files have been replaced with one shared ES module, and named action handlers call application services. State updates are committed only after persistence succeeds. Russian and Kazakh dictionaries are separate from translation behaviour. The training export script is divided into named functions without changing the underlying notebook experiment.
+
+The updated automated suite contains 27 tests, including checks of layer boundaries, failed persistence, plan versioning, model loading, ranking, localisation, and the original workflow and inference cases. See [Code Architecture](code-architecture.md) for the current module map and development commands.

@@ -49,7 +49,7 @@ The frontend implements the eleven supplied interface designs. Working JavaScrip
 
 To switch roles, use the avatar or **Demo workspaces** at the bottom of the page. The new screens demonstrate a simplified local workflow. The original complete appointment and mutual-consent workflow remains available at [workflow.html](http://localhost:4173/workflow.html) and uses separate browser state.
 
-See the [frontend, open data, and logistic regression report](docs/frontend-matching-report.md). Results on 216 UniSkill pairs are 72.69% accuracy and 0.6938 Macro-F1. These metrics measure course–skill relevance, not validated mentor-matching accuracy at AITU. Seventeen tests passed, including comparison of thirty Python/JavaScript examples.
+See the [frontend, open data, and logistic regression report](docs/frontend-matching-report.md). Results on 216 UniSkill pairs are 72.69% accuracy and 0.6938 Macro-F1. These metrics measure course–skill relevance, not validated mentor-matching accuracy at AITU. The refactored code passes 27 automated tests, including comparison of thirty Python/JavaScript examples and checks of application behaviour and layer boundaries.
 
 ## Getting Started and Testing
 
@@ -67,19 +67,25 @@ Run the tests:
 npm test
 ```
 
-Alternatively, run `node --test tests/*.test.mjs`. Stop the server with Ctrl+C. For a complete demonstration walkthrough, see [Using the Prototype](docs/prototype.md).
+Alternatively, run `node --test tests/*.test.mjs`. For development, run `npm install` once, then `npm run check` for formatting and tests or `npm run format` to format the code. Stop the server with Ctrl+C. For a complete demonstration walkthrough, see [Using the Prototype](docs/prototype.md).
 
 ## Repository Structure
 
+The code uses separate domain, application, infrastructure, and presentation layers. See [Code Architecture](docs/code-architecture.md) for dependency rules, patterns, and extension guidance.
+
 ```text
-src/prototype/       User interface and workflow model
-scripts/             Local server
-config/              Configuration example
-tests/               Domain tests and matching verification
-research/matching/   Notebook, open data, and model results
-docs/                Requirements and project documentation
-diagrams/source/     Mermaid and PlantUML sources
-diagrams/exports/    Readable SVG diagrams
+src/prototype/main.js         Application composition root
+src/prototype/domain/         Business rules and matching calculations
+src/prototype/application/    Use cases and state transactions
+src/prototype/infrastructure/ Storage, model loading, and downloads
+src/prototype/presentation/   Pages, components, routing, and controllers
+src/prototype/locales/        Russian and Kazakh translations
+src/prototype/styles/         Styles grouped by purpose
+scripts/                      Local HTTP server
+tests/                        Domain, application, matching, and architecture tests
+research/matching/            Training export, open data, and experimental results
+docs/                         Requirements and project documentation
+diagrams/                     Diagram sources and SVG exports
 ```
 
 ## Documentation
@@ -93,6 +99,7 @@ diagrams/exports/    Readable SVG diagrams
 | Existing systems | [System Comparison](docs/research/system-comparison.md) |
 | Technology | [Technology Comparison](docs/research/technology-comparison.md) |
 | User research | [Discussion Plan](docs/research/user-research.md) |
+| Code structure and design patterns | [Code Architecture](docs/code-architecture.md) |
 | Architecture | [Components, Data, and API](docs/architecture/architecture.md) |
 | Diagrams | [SVG Exports](diagrams/exports/) and [Editable Sources](diagrams/source/) |
 | User experience | [Interactive Prototype](src/prototype/index.html) and [Walkthrough](docs/prototype.md) |
