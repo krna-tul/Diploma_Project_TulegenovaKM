@@ -1,5 +1,7 @@
 # AITU Faculty Mentoring Platform
 
+**[Open Live Demo →](https://aitu-faculty-mentoring.vercel.app)**
+
 **Diploma Project:** "Development of a Web Platform for Managing the Faculty Mentorship System in a Higher Education Institution"
 
 **Student:** Karina Tulegenova
