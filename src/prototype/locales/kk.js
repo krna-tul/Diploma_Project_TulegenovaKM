@@ -481,4 +481,97 @@ export default {
   Settings: 'Баптаулар',
   Help: 'Көмек',
   About: 'Бағдарлама туралы',
+  'A shared path to': 'Кәсіби дамуға',
+  professional: 'бірге',
+  'Learn from experience': 'Тәжірибеден үйреніңіз',
+  'Observe colleagues in class and get thoughtful feedback from an experienced mentor.':
+    'Әріптестердің сабағын бақылап, тәжірибелі тәлімгерден ойластырылған кері байланыс алыңыз.',
+  'Build your practice': 'Тәжірибеңізді дамытыңыз',
+  'Turn your goals into an individual development plan with clear activities.':
+    'Мақсаттарыңызды нақты әрекеттері бар жеке даму жоспарына айналдырыңыз.',
+  'Grow together': 'Бірге өсейік',
+  'Meet, reflect and share outcomes with your School and colleagues.':
+    'Кездесіп, талдап, нәтижелерді Мектеппен және әріптестермен бөлісіңіз.',
+  'START WITH AN EVENT': 'ІС-ШАРАДАН БАСТАҢЫЗ',
+  'Join a workshop or an open lesson, meet mentors and discover what you would like to learn next.':
+    'Шеберлік сабағына немесе ашық сабаққа қатысып, тәлімгерлермен танысып, әрі қарай нені үйренгіңіз келетінін анықтаңыз.',
+  'HOW MENTORING WORKS': 'ТӘЛІМГЕРЛІК ҚАЛАЙ ЖҰМЫС ІСТЕЙДІ',
+  'Three steps, one shared path': 'Үш қадам, бір ортақ жол',
+  'Your next step': 'Келесі қадамыңыз',
+  'Tell us what you want to develop — or share the experience you can offer.':
+    'Нені дамытқыңыз келетінін айтыңыз — немесе ұсына алатын тәжірибеңізбен бөлісіңіз.',
+  Details: 'Толығырақ',
+  'Previous events': 'Алдыңғы іс-шаралар',
+  'Next events': 'Келесі іс-шаралар',
+  'Illustrated Astana skyline': 'Иллюстрация: Астана панорамасы',
+  'Illustrated AITU campus': 'Иллюстрация: AITU кампусы',
+  'workshop with colleagues': 'әріптестермен шеберлік сабағы',
+  'open lesson with colleagues': 'әріптестермен ашық сабақ',
+  'mentor roundtable with colleagues': 'әріптестермен тәлімгерлер дөңгелек үстелі',
+  'peer circle with colleagues': 'әріптестермен өзара сабаққа қатысу тобы',
+  'PEER CIRCLE': 'ӨЗАРА ҚАТЫСУ ТОБЫ',
+  'Learn from a colleague’s class': 'Әріптестің сабағынан үйреніңіз',
+  'Join a small group, observe a colleague and share what worked for students.':
+    'Шағын топқа қосылып, әріптестің сабағын бақылап, студенттерге не тиімді болғанын талқылаңыз.',
+  'Peer observation · Reflection': 'Өзара бақылау · Рефлексия',
+  'What you will do:': 'Не істейсіз:',
+  'A practical session on group work and short activities that keep every student involved.':
+    'Әр студентті тартатын топтық жұмыс пен қысқа тапсырмалар туралы практикалық сабақ.',
+  'Try three active learning techniques in pairs':
+    'Жұппен белсенді оқытудың үш тәсілін байқап көресіз',
+  'Adapt one activity for your own course': 'Бір тапсырманы өз курсыңызға бейімдейсіз',
+  'Agree a small change to test in your next class':
+    'Келесі сабақта тексеретін шағын өзгерісті таңдайсыз',
+  'Format: 90 minutes, up to 16 participants.': 'Форматы: 90 минут, 16 қатысушыға дейін.',
+  'Visit a real class led by an experienced colleague and see how students are engaged step by step.':
+    'Тәжірибелі әріптестің нақты сабағына барып, студенттердің қадам сайын қалай тартылатынын көріңіз.',
+  'Observe one focus agreed in advance': 'Алдын ала келісілген бір бағытты бақылайсыз',
+  'Note moments of strong student engagement':
+    'Студенттердің белсенді қатысқан сәттерін белгілейсіз',
+  'Discuss the teaching choices with the lecturer':
+    'Педагогикалық шешімдерді оқытушымен талқылайсыз',
+  'Format: one lesson and a 30-minute discussion.': 'Форматы: бір сабақ және 30 минуттық талқылау.',
+  'An open conversation with mentors about turning feedback into a clear plan for change.':
+    'Кері байланысты нақты өзгеріс жоспарына айналдыру туралы тәлімгерлермен ашық әңгіме.',
+  'Share one classroom challenge': 'Сабақтағы бір қиындықпен бөлісесіз',
+  'Learn the four steps of an Action Research cycle':
+    'Іс-әрекеттік зерттеу циклінің төрт қадамын үйренесіз',
+  'Draft a first question to investigate': 'Зерттеуге арналған алғашқы сұрақты құрастырасыз',
+  'Format: 60 minutes, small groups of five.': 'Форматы: 60 минут, бес адамнан тұратын топтар.',
+  'A small circle of colleagues who visit each other’s classes and reflect together.':
+    'Бір-бірінің сабағына барып, бірге талдайтын әріптестердің шағын тобы.',
+  'Visit one class of a colleague': 'Әріптестің бір сабағына барасыз',
+  'Use the Plus, Question, Recommendation format':
+    '«Артықшылық, сұрақ, ұсыныс» форматын қолданасыз',
+  'Reflect on one idea for your own teaching': 'Өз сабағыңыз үшін бір идеяны ойластырасыз',
+  'Format: three meetings during the semester.': 'Форматы: семестр бойы үш кездесу.',
+  'A practical session on group work and short activities for every student.':
+    'Әр студентке арналған топтық жұмыс пен қысқа тапсырмалар туралы практикалық сабақ.',
+  'Before the session:': 'Сабаққа дейін:',
+  'Choose one course where you would like to try a new activity.':
+    'Жаңа тапсырманы байқап көргіңіз келетін бір курсты таңдаңыз.',
+  'During the workshop:': 'Шеберлік сабағында:',
+  'Try three techniques in pairs and adapt one for your class.':
+    'Жұппен үш тәсілді байқап, біреуін өз сабағыңызға бейімдеңіз.',
+  'Visit a real class led by an experienced colleague.':
+    'Тәжірибелі әріптестің нақты сабағына барыңыз.',
+  'Please note:': 'Назар аударыңыз:',
+  'the observation focus is agreed in advance;': 'бақылау бағыты алдын ала келісіледі;',
+  'observers do not interrupt the lesson.': 'бақылаушылар сабақты бөлмейді.',
+  'A short discussion with the lecturer follows.':
+    'Сабақтан кейін оқытушымен қысқа талқылау болады.',
+  'An open conversation with mentors about turning feedback into a plan.':
+    'Кері байланысты жоспарға айналдыру туралы тәлімгерлермен ашық әңгіме.',
+  'You will get:': 'Сіз аласыз:',
+  'the four steps of an Action Research cycle;': 'іс-әрекеттік зерттеу циклінің төрт қадамын;',
+  'a first question to investigate;': 'зерттеуге арналған алғашқы сұрақты;',
+  'ideas from colleagues.': 'әріптестерден идеялар.',
+  'Classroom examples stay within the group.': 'Сабақтағы мысалдар топ ішінде қалады.',
+  'A small circle of colleagues who visit each other’s classes.':
+    'Бір-бірінің сабағына баратын әріптестердің шағын тобы.',
+  'How it works:': 'Бұл қалай жүреді:',
+  'visit one class of a colleague;': 'әріптестің бір сабағына барыңыз;',
+  'share a plus, a question and a recommendation.':
+    'артықшылықпен, сұрақпен және ұсыныспен бөлісіңіз.',
+  'Three meetings during the semester.': 'Семестр бойы үш кездесу.',
 };

@@ -30,8 +30,20 @@ export function createNotifications(localize) {
   };
 }
 export function openDialog(markup) {
+  const dialog = queryElement('#dialog');
   queryElement('#dialog-body').innerHTML = markup;
-  queryElement('#dialog').showModal();
+  const title = dialog.querySelector('#dialog-body h2');
+  if (title) {
+    title.id ||= 'dialog-title';
+    dialog.setAttribute('aria-labelledby', title.id);
+  } else dialog.removeAttribute('aria-labelledby');
+  if (!dialog.dataset.backdropClose) {
+    dialog.dataset.backdropClose = 'true';
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+  dialog.showModal();
 }
 export function closeDialog() {
   queryElement('#dialog').close();

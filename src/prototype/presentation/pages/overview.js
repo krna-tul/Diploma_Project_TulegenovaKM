@@ -1,5 +1,5 @@
 import { html } from '../components/html-template.js';
-import { renderHeading, renderLink, escapeHtml } from '../components/html.js';
+import { renderHeading, renderLink, renderIcon, escapeHtml } from '../components/html.js';
 import { demoMentors } from '../../domain/demo/catalog.js';
 export function renderOverviewPage(viewContext) {
   const { state } = viewContext;
@@ -16,13 +16,13 @@ export function renderOverviewPage(viewContext) {
     </div>
     <div class="grid3">
       ${[
-        ['Find a mentor', 'Explore expertise across AITU.', 'mentors'],
-        ['Build your plan', 'Turn your goals into practical steps.', 'plan'],
-        ['Reflect & develop', 'Learn from visits and feedback.', 'visit'],
+        ['Find a mentor', 'Explore expertise across AITU.', 'mentors', 'search'],
+        ['Build your plan', 'Turn your goals into practical steps.', 'plan', 'target'],
+        ['Reflect & develop', 'Learn from visits and feedback.', 'visit', 'chat'],
       ]
         .map(
-          ([label, values, item], index) =>
-            `<a class="journey-card" href="#${item}"><small>0${index + 1} / YOUR JOURNEY</small><h2>${label}</h2><p>${values}</p></a>`,
+          ([label, values, item, icon], index) =>
+            `<a class="journey-card" href="#${item}">${renderIcon(icon, 'journey-icon')}<small>0${index + 1} / YOUR JOURNEY</small><h2>${label}</h2><p>${values}</p></a>`,
         )
         .join('')}
     </div>

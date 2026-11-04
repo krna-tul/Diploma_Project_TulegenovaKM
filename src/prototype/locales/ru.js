@@ -484,4 +484,96 @@ export default {
   Settings: 'Настройки',
   Help: 'Помощь',
   About: 'О программе',
+  'A shared path to': 'Общий путь',
+  professional: 'к профессиональному',
+  'Learn from experience': 'Учитесь на опыте',
+  'Observe colleagues in class and get thoughtful feedback from an experienced mentor.':
+    'Наблюдайте за занятиями коллег и получайте вдумчивую обратную связь от опытного наставника.',
+  'Build your practice': 'Развивайте свою практику',
+  'Turn your goals into an individual development plan with clear activities.':
+    'Превратите цели в индивидуальный план развития с понятными шагами.',
+  'Grow together': 'Растите вместе',
+  'Meet, reflect and share outcomes with your School and colleagues.':
+    'Встречайтесь, анализируйте и делитесь результатами со Школой и коллегами.',
+  'START WITH AN EVENT': 'НАЧНИТЕ С МЕРОПРИЯТИЯ',
+  'Join a workshop or an open lesson, meet mentors and discover what you would like to learn next.':
+    'Посетите мастер-класс или открытое занятие, познакомьтесь с наставниками и выберите, чему учиться дальше.',
+  'HOW MENTORING WORKS': 'КАК РАБОТАЕТ НАСТАВНИЧЕСТВО',
+  'Three steps, one shared path': 'Три шага, один общий путь',
+  'Your next step': 'Ваш следующий шаг',
+  'Tell us what you want to develop — or share the experience you can offer.':
+    'Расскажите, что хотите развить, — или поделитесь опытом, который можете предложить.',
+  Details: 'Подробнее',
+  'Previous events': 'Предыдущие мероприятия',
+  'Next events': 'Следующие мероприятия',
+  'Illustrated Astana skyline': 'Иллюстрация: панорама Астаны',
+  'Illustrated AITU campus': 'Иллюстрация: кампус AITU',
+  'workshop with colleagues': 'мастер-класс с коллегами',
+  'open lesson with colleagues': 'открытое занятие с коллегами',
+  'mentor roundtable with colleagues': 'круглый стол наставников с коллегами',
+  'peer circle with colleagues': 'круг взаимных посещений с коллегами',
+  'PEER CIRCLE': 'КРУГ ВЗАИМНЫХ ПОСЕЩЕНИЙ',
+  'Learn from a colleague’s class': 'Учитесь на занятии коллеги',
+  'Join a small group, observe a colleague and share what worked for students.':
+    'Присоединитесь к небольшой группе, посетите занятие коллеги и обсудите, что сработало для студентов.',
+  'Peer observation · Reflection': 'Взаимное посещение · Рефлексия',
+  'What you will do:': 'Что вы будете делать:',
+  'A practical session on group work and short activities that keep every student involved.':
+    'Практическое занятие о групповой работе и коротких заданиях, которые вовлекают каждого студента.',
+  'Try three active learning techniques in pairs':
+    'Попробуете в парах три приёма активного обучения',
+  'Adapt one activity for your own course': 'Адаптируете одно задание для своего курса',
+  'Agree a small change to test in your next class':
+    'Выберете небольшое изменение для проверки на следующем занятии',
+  'Format: 90 minutes, up to 16 participants.': 'Формат: 90 минут, до 16 участников.',
+  'Visit a real class led by an experienced colleague and see how students are engaged step by step.':
+    'Посетите настоящее занятие опытного коллеги и посмотрите, как шаг за шагом вовлекаются студенты.',
+  'Observe one focus agreed in advance': 'Понаблюдаете за одним заранее согласованным фокусом',
+  'Note moments of strong student engagement': 'Отметите моменты сильного вовлечения студентов',
+  'Discuss the teaching choices with the lecturer':
+    'Обсудите педагогические решения с преподавателем',
+  'Format: one lesson and a 30-minute discussion.':
+    'Формат: одно занятие и 30-минутное обсуждение.',
+  'An open conversation with mentors about turning feedback into a clear plan for change.':
+    'Открытый разговор с наставниками о том, как превратить обратную связь в понятный план изменений.',
+  'Share one classroom challenge': 'Поделитесь одной трудностью в аудитории',
+  'Learn the four steps of an Action Research cycle':
+    'Узнаете четыре шага цикла исследования практики',
+  'Draft a first question to investigate': 'Сформулируете первый вопрос для исследования',
+  'Format: 60 minutes, small groups of five.': 'Формат: 60 минут, группы по пять человек.',
+  'A small circle of colleagues who visit each other’s classes and reflect together.':
+    'Небольшой круг коллег, которые посещают занятия друг друга и вместе анализируют их.',
+  'Visit one class of a colleague': 'Посетите одно занятие коллеги',
+  'Use the Plus, Question, Recommendation format':
+    'Используете формат «Плюс, вопрос, рекомендация»',
+  'Reflect on one idea for your own teaching': 'Обдумаете одну идею для своего преподавания',
+  'Format: three meetings during the semester.': 'Формат: три встречи в течение семестра.',
+  'A practical session on group work and short activities for every student.':
+    'Практическое занятие о групповой работе и коротких заданиях для каждого студента.',
+  'Before the session:': 'До занятия:',
+  'Choose one course where you would like to try a new activity.':
+    'Выберите курс, в котором хотите попробовать новое задание.',
+  'During the workshop:': 'На мастер-классе:',
+  'Try three techniques in pairs and adapt one for your class.':
+    'Попробуйте в парах три приёма и адаптируйте один для своего занятия.',
+  'Visit a real class led by an experienced colleague.':
+    'Посетите настоящее занятие опытного коллеги.',
+  'Please note:': 'Обратите внимание:',
+  'the observation focus is agreed in advance;': 'фокус наблюдения согласуется заранее;',
+  'observers do not interrupt the lesson.': 'наблюдатели не прерывают занятие.',
+  'A short discussion with the lecturer follows.':
+    'После занятия — короткое обсуждение с преподавателем.',
+  'An open conversation with mentors about turning feedback into a plan.':
+    'Открытый разговор с наставниками о том, как превратить обратную связь в план.',
+  'You will get:': 'Вы получите:',
+  'the four steps of an Action Research cycle;': 'четыре шага цикла исследования практики;',
+  'a first question to investigate;': 'первый вопрос для исследования;',
+  'ideas from colleagues.': 'идеи от коллег.',
+  'Classroom examples stay within the group.': 'Примеры из занятий остаются внутри группы.',
+  'A small circle of colleagues who visit each other’s classes.':
+    'Небольшой круг коллег, которые посещают занятия друг друга.',
+  'How it works:': 'Как это работает:',
+  'visit one class of a colleague;': 'посетите одно занятие коллеги;',
+  'share a plus, a question and a recommendation.': 'поделитесь плюсом, вопросом и рекомендацией.',
+  'Three meetings during the semester.': 'Три встречи в течение семестра.',
 };

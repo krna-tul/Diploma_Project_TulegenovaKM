@@ -30,6 +30,7 @@ import {
   updateDocumentTitle,
 } from './presentation/router.js';
 import { queryElement } from './presentation/dom.js';
+import { mountCardSliders } from './presentation/components/card-slider.js';
 const repository = createJsonStorageRepository({
   storage: window.localStorage,
   key: 'aitu-reference-ui-v1',
@@ -100,6 +101,7 @@ function render() {
   if (route === 'courses') refreshCourses();
   if (route === 'request') refreshSkillDescription();
   localize();
+  mountCardSliders();
   updateDocumentTitle(translate);
 }
 const dependencies = {

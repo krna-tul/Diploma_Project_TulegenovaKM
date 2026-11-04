@@ -1,6 +1,6 @@
 import { html } from '../components/html-template.js';
 import { languageSwitcher } from '../../i18n.js';
-import { renderLink } from '../components/html.js';
+import { renderLink, renderIcon } from '../components/html.js';
 export function renderHeader(viewContext, publicPage) {
   const { role } = viewContext;
   return html`
@@ -14,8 +14,8 @@ export function renderHeader(viewContext, publicPage) {
       </a>
       ${
         publicPage
-          ? `<div class="public-nav"><a href="#about">ABOUT THE PROGRAM</a><a href="#events">EVENTS</a>${languageSwitcher()}${renderLink('Sign in', 'signin')}</div>`
-          : `<div class="header-right">${languageSwitcher()}<button data-action="notifications">Notifications</button><span class="avatar" title="Switch demo workspace">AK<select id="role" aria-label="Demo workspace">${[
+          ? `<div class="public-nav"><a href="#about">ABOUT THE PROGRAM</a><a href="#events">EVENTS</a><span class="language-wrap">${renderIcon('globe')}${languageSwitcher()}</span>${renderLink('Sign in', 'signin')}</div>`
+          : `<div class="header-right"><span class="language-wrap">${renderIcon('globe')}${languageSwitcher()}</span><button data-action="notifications" class="notifications-button">${renderIcon('bell')}<span>Notifications</span></button><span class="avatar" title="Switch demo workspace">AK<select id="role" aria-label="Demo workspace">${[
               ['mentee', 'Mentee'],
               ['mentor', 'Mentor'],
               ['school', 'School coordinator'],
@@ -30,6 +30,24 @@ export function renderHeader(viewContext, publicPage) {
     </header>
   `;
 }
+const sidebarIcons = [
+  [/overview/i, 'home'],
+  [/find a mentor|mentor directory/i, 'search'],
+  [/request/i, 'document'],
+  [/plans? for review/i, 'check-circle'],
+  [/development plan/i, 'target'],
+  [/meetings|visit/i, 'calendar'],
+  [/feedback/i, 'chat'],
+  [/mentor profile/i, 'user'],
+  [/mentees/i, 'people'],
+  [/changes/i, 'edit'],
+  [/report|export/i, 'download'],
+  [/archive/i, 'archive'],
+  [/settings/i, 'settings'],
+  [/programs/i, 'document'],
+];
+const sidebarIcon = (label) =>
+  sidebarIcons.find(([pattern]) => pattern.test(label))?.[1] || 'document';
 export function renderSidebar(viewContext) {
   const { role, page } = viewContext;
   let items =
@@ -81,7 +99,7 @@ export function renderSidebar(viewContext) {
         }
       </small>
       <nav aria-label="Workspace">
-        ${items.map(([routeName, label]) => `<a href="#${routeName}" class="${page() === routeName ? 'active' : ''}">${label}</a>`).join('')}
+        ${items.map(([routeName, label]) => `<a href="#${routeName}" class="${page() === routeName ? 'active' : ''}">${renderIcon(sidebarIcon(label))}<span>${label}</span></a>`).join('')}
       </nav>
       <div class="sidebar-note">
         <h3>A space for growth.</h3>

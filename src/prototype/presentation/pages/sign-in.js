@@ -3,7 +3,7 @@ import { renderInput, arrowIcon } from '../components/html.js';
 export function renderSignInPage(viewContext) {
   return html`
     <section class="signin">
-      <div class="photo signin-photo">
+      <div class="signin-photo" role="img" aria-label="Illustrated AITU campus">
         <div class="signin-quote">
           <h2>
             Support starts

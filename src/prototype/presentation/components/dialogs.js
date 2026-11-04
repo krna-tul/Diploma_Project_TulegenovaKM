@@ -1,3 +1,4 @@
+import { parseDetails } from './slider-math.js';
 import { html } from './html-template.js';
 import { escapeHtml, renderButton, renderInput, arrowIcon } from './html.js';
 export const renderAccountHelp = () =>
@@ -56,12 +57,23 @@ export function renderActivityDialog() {
   `;
 }
 export function renderEventDialog(event, eventId, isRegistered) {
+  const blocks = parseDetails(event.details)
+    .map((block) =>
+      block.type === 'list'
+        ? `<ul class="detail-list">${block.items.map((item) => `<li>${item}</li>`).join('')}</ul>`
+        : block.type === 'heading'
+          ? `<h3>${block.text}</h3>`
+          : `<p>${block.text}</p>`,
+    )
+    .join('');
   return html`
-    <small>${event.type}</small>
-    <h2>${event.title}</h2>
-    <p>${event.description}</p>
-    <p>Dates and mentors will be confirmed by AITU.</p>
-    <p class="helper">Registering interest is saved in this browser only.</p>
-    ${renderButton(isRegistered ? 'Interest registered' : 'Register interest', 'enroll', false, `data-id="${eventId}" ${isRegistered ? 'disabled' : ''}`)}
+    <div class="event-dialog">
+      <span class="type tone-${eventId % 3}">${event.type}</span>
+      <h2 id="dialog-title">${event.title}</h2>
+      ${blocks || `<p>${event.description}</p>`}
+      <p>Dates and mentors will be confirmed by AITU.</p>
+      <p class="helper">Registering interest is saved in this browser only.</p>
+      ${renderButton(isRegistered ? 'Interest registered' : 'Register interest', 'enroll', false, `data-id="${eventId}" ${isRegistered ? 'disabled' : ''}`)}
+    </div>
   `;
 }

@@ -1,5 +1,6 @@
 import { queryElement } from '../dom.js';
 import { demoEvents } from '../../domain/demo/catalog.js';
+import { refreshCardSliders } from '../components/card-slider.js';
 export function updateSkillDescription(viewContext) {
   const { model } = viewContext;
   const selectedSkill = model?.skills.find(
@@ -28,4 +29,5 @@ export function updateEventFilters(viewContext) {
     count += Number(show);
   });
   if (queryElement('#event-empty')) queryElement('#event-empty').hidden = count > 0;
+  refreshCardSliders();
 }

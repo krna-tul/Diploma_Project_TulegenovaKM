@@ -53,3 +53,5 @@ export const renderHeading = (eyebrow, title, sub) => html`
   </div>
 `;
 export const arrowIcon = '<span class="arrow" aria-hidden="true">→</span>';
+export const renderIcon = (name, className = '') =>
+  `<img class="icon ${className}" src="assets/icons/${name}.png" alt="" aria-hidden="true" width="24" height="24" />`;
