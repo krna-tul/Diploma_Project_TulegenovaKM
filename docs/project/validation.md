@@ -1,36 +1,36 @@
-# Результаты проверки прототипа
+# Prototype Verification Results
 
-Дата: 10 октября 2026 года. Версия: локальная ветка feature/mentorship-predefense. Проверка относится к прототипу; целевые серверные требования проверяются после реализации backend.
+Date: 10 October 2026. Version: local branch feature/mentorship-predefense. The checks apply to the prototype; the target server requirements are verified after the backend is implemented.
 
-## Автоматические проверки
+## Automated checks
 
-Команда: `node --test src/tests/*.test.mjs`. Результат: 14 тестов, 14 успешных, 0 ошибок.
+Command: `node --test src/tests/*.test.mjs`. Result: 14 tests, 14 passed, 0 failed.
 
-Покрыты: запрос без предпочтительного наставника, стаж и инструктаж кандидата, согласия сторон, обязательное представление перед назначением, лимит нагрузки с исключением, рабочие дни и заданный праздник, сроки задач, повторное согласование измененного плана, итоговая оценка, даты встреч, три этапа визита и таймкоды, уникальность записи и емкость мероприятия, замена пары с сохранением истории, отсутствие частного текста в сводке.
+Covered: a request without a preferred mentor, the candidate's experience and training, consent from both sides, the mandatory nomination before appointment, the workload limit with an exception, working days and a given holiday, task deadlines, re-consent after a plan change, the final evaluation, meeting dates, the three visit stages and timestamps, unique registration and event capacity, pair replacement with preserved history, and no private text in the summary.
 
-Синтаксис app.js, domain.js и serve.mjs проверен командой `node --check`. Локальный HTTP-сервер возвращает 200 для главной и статических файлов.
+The syntax of app.js, domain.js and serve.mjs is checked with `node --check`. The local HTTP server returns 200 for the home page and static files.
 
-## Проверка в браузере
+## Browser checks
 
-В Chrome на http://localhost:4173 выполнены:
+In Chrome at http://localhost:4173 the following were completed:
 
-- Отправка профессионального запроса без предпочтительной кандидатуры.
-- Предложение пары директором и получение согласий наставника и наставляемого.
-- Представление и регистрация распоряжения.
-- Создание цели и задачи плана, согласование двумя сторонами и утверждение директором.
-- Просмотр полей подготовки Development Visit в роли наставника.
-- Перезагрузка с сохранением запроса, пары и утвержденного плана.
-- Поиск навыка по слову «рубрики» и показ связанного мероприятия после выбора направления.
-- Визуальный просмотр главной страницы и карточек навыков на настольном экране.
+- Submitting a professional request without a preferred candidate.
+- The director proposing a pair and receiving consent from the mentor and the mentee.
+- Nomination and registration of the appointment order.
+- Creating a plan goal and task, consent from both sides and approval by the director.
+- Viewing the Development Visit preparation fields in the mentor role.
+- Reloading the page with the request, pair and approved plan preserved.
+- Searching for a skill by the word "rubrics" and showing the related event after choosing a direction.
+- A visual review of the home page and skill cards on a desktop screen.
 
-## Проверка интерфейса
+## Interface checks
 
-Автор проекта подтвердила завершение проверки мобильного экрана, полного прохода клавиатурой и сценария Development Visit. DIP-8 — Готово. Доменные правила визита покрыты автоматическими тестами.
+The project author confirmed completing the mobile screen check, a full keyboard pass and the Development Visit scenario. DIP-8 — Done. The visit domain rules are covered by automated tests.
 
-## Повторная проверка 15 октября 2026
+## Re-check on 15 October 2026
 
-Ветка feature/october24-readiness. npm run check: проверка синтаксиса app.js/domain.js/serve.mjs, локальных ссылок Markdown и 17 доменных тестов — успешно. Новые сценарии: обязательная причина возврата плана и сброс согласий; подтверждение встречи другим участником, запрет автору/директору и повторному подтверждению; некорректные календарные даты. Эти результаты не являются серверными тестами безопасности.
+Branch feature/october24-readiness. npm run check: syntax check of app.js/domain.js/serve.mjs, local Markdown links and 17 domain tests — passed. New scenarios: a mandatory reason for returning a plan and resetting consents; meeting confirmation by the other participant, with the author, the director and repeat confirmations rejected; invalid calendar dates. These results are not server-side security tests.
 
-В Chrome на http://localhost:4174 повторно выполнен путь: запрос без выбранного наставника → предложение пары → согласия → представление → распоряжение → цель и задача плана. Проверены возврат директором с причиной, видимость причины, сброс обоих согласий, повторное согласование и утверждение. Наставник записал встречу, наставляемый подтвердил ее. После перезагрузки сохранены активная пара и распоряжение. Все данные синтетические.
+In Chrome at http://localhost:4174 the path was repeated: request without a selected mentor → pair proposal → consents → nomination → order → plan goal and task. Checked: the director returning the plan with a reason, the reason being visible, both consents being reset, re-consent and approval. The mentor recorded a meeting and the mentee confirmed it. After reloading, the active pair and the order were preserved. All data is synthetic.
 
-[PR №2](https://github.com/krna-tul/Diploma_Project_TulegenovaKM/pull/2): GitHub Actions успешно прошел на cfe1eb6. Последующие изменения отчета проверяются новым запуском. Отзыв преподавателя и выполненные изменения зафиксированы в [журнале](supervisor-feedback.md). Выполнение DIP-8 подтверждено автором проекта.
+[PR No. 2](https://github.com/krna-tul/Diploma_Project_TulegenovaKM/pull/2): GitHub Actions passed on cfe1eb6. Later changes to the report are checked by a new run. The supervisor's feedback and the changes made are recorded in the [log](supervisor-feedback.md). Completion of DIP-8 is confirmed by the project author.

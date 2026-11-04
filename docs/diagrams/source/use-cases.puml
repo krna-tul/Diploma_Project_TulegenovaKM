@@ -1,32 +1,32 @@
 @startuml
 left to right direction
-actor "Преподаватель" as Teacher
-actor "Наставник" as Mentor
-actor "Наставляемый" as Mentee
-actor "Школа и директор" as School
-actor "Проректор / регистратор" as Rector
-actor "Департамент" as Department
-actor "Организатор" as Organizer
+actor "Lecturer" as Teacher
+actor "Mentor" as Mentor
+actor "Mentee" as Mentee
+actor "School and director" as School
+actor "Vice-rector / registrar" as Rector
+actor "Department" as Department
+actor "Organiser" as Organizer
 Mentor --|> Teacher
 Mentee --|> Teacher
-rectangle "Платформа AITU" {
- usecase "Просмотреть навыки и события" as Catalog
- usecase "Подать карточку / запрос" as Apply
- usecase "Согласовать пару" as Consent
- usecase "Подобрать и представить пару" as Match
- usecase "Зарегистрировать распоряжение" as Appoint
- usecase "Разработать и согласовать план" as Plan
- usecase "Утвердить план" as Approve
- usecase "Записать встречу и Development Visit" as Visit
- usecase "Оценить результат / запросить замену" as Evaluate
- usecase "Получить обобщенный отчет" as Report
- usecase "Подтвердить инструктаж" as Training
- usecase "Опубликовать мероприятие" as Event
-usecase "Проверить комплектность / импорт XLSX" as Import
-usecase "Настроить лимиты / справочники" as Configure
-usecase "Вернуть план с причиной" as ReturnPlan
-usecase "Подтвердить встречу второго участника" as Confirm
-usecase "Сформировать итоги / архив" as Archive
+rectangle "AITU platform" {
+ usecase "Browse skills and events" as Catalog
+ usecase "Submit profile / request" as Apply
+ usecase "Consent to the pair" as Consent
+ usecase "Match and nominate the pair" as Match
+ usecase "Register the appointment order" as Appoint
+ usecase "Draft and agree the plan" as Plan
+ usecase "Approve the plan" as Approve
+ usecase "Record a meeting and Development Visit" as Visit
+ usecase "Evaluate the outcome / request replacement" as Evaluate
+ usecase "Get an aggregated report" as Report
+ usecase "Confirm training" as Training
+ usecase "Publish an event" as Event
+usecase "Check completeness / import XLSX" as Import
+usecase "Configure limits / reference lists" as Configure
+usecase "Return plan with reason" as ReturnPlan
+usecase "Confirm the other participant's meeting" as Confirm
+usecase "Produce outcomes / archive" as Archive
 }
 Teacher --> Catalog
 Teacher --> Apply
@@ -43,8 +43,8 @@ Teacher --> Evaluate
 School --> Report
 Department --> Training
 Organizer --> Event
-actor "УМО" as UMO
-actor "Технический администратор" as Admin
+actor "Academic office" as UMO
+actor "Technical administrator" as Admin
 UMO --> Import
 Admin --> Configure
 School --> ReturnPlan

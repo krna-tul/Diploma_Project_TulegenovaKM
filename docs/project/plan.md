@@ -1,43 +1,43 @@
-# План проекта и риски
+# Project Plan and Risks
 
-Исполнитель: Карина Тулегенова — анализ, архитектура, frontend/backend, тестирование и документация. Руководитель: Ерсултан Тулебаев — review объема, архитектуры и плана оценки; конкретные встречи согласуются отдельно. Представители AITU подтверждают бизнес-процесс, формы и доступ IT. Состав участников пилота определяется на этапе его организации..
+Developer: Karina Tulegenova — analysis, architecture, frontend and backend, testing and documentation. Supervisor: Yersultan Tulebayev — review of scope, architecture and the evaluation plan; individual meetings are arranged separately. AITU representatives confirm the business process, forms and IT access. The pilot participants are chosen when the pilot is organised.
 
-Диплом индивидуальный. Изменения выполняются в отдельных ветках, проверяются в Pull Request и после review объединяются в main. [Проект YouTrack DIP](https://karinatulegenova.youtrack.cloud/issues/DIP) содержит задачи проекта. [Backlog](backlog.json) и [инструкция импорта](youtrack.md) содержат 21 работу; задачи связаны с материалами репозитория. Исторические сроки и коммиты не изменяются задним числом.
+The diploma is an individual project. Changes are made in separate branches, checked in a Pull Request and merged into main after review. The [YouTrack DIP project](https://karinatulegenova.youtrack.cloud/issues/DIP) holds the project tasks. The [backlog](backlog.json) and the [import guide](youtrack.md) contain 21 work items; the tasks are linked to repository materials. Historical deadlines and commits are not changed retroactively.
 
-## Этапы сентября 2026 — мая 2027
+## Stages, September 2026 – May 2027
 
-| Период | Результат | Зависимость и состояние |
+| Period | Result | Dependency and status |
 | --- | --- | --- |
-| Сентябрь — октябрь 2026 | Требования, литература, сравнения, ранний прототип и первая предзащита 24 октября | Подготовка материалов первой предзащиты |
-| Ноябрь 2026 | Согласованная архитектура, роли и модель данных | Подтверждение заказчиком требований и шаблонов |
-| Декабрь 2026 — февраль 2027 | Backend, права, назначения, планы, встречи, визиты, итоговые формы и архив | Утвержденные контракты и схема БД |
-| Март 2027 | Интеграционная проверка, УМО, импорт, локализация и аудит | Работа основных модулей; внешние интеграции зависят от IT |
-| Апрель 2027 | Пилот, сравнение с ручным процессом и анализ результатов | Согласившиеся пользователи и тестовый стенд |
-| Май 2027 | Исправления, диплом, инструкции и защита | Результаты пилота и review руководителя |
+| September – October 2026 | Requirements, literature, comparisons, early prototype and the first pre-defence on 24 October | Preparing the first pre-defence materials |
+| November 2026 | Agreed architecture, roles and data model | Client confirmation of requirements and templates |
+| December 2026 – February 2027 | Backend, permissions, appointments, plans, meetings, visits, final forms and archive | Approved contracts and database schema |
+| March 2027 | Integration testing, academic office, import, localisation and audit | Core modules working; external integrations depend on IT |
+| April 2027 | Pilot, comparison with the manual process and analysis of results | Consenting users and a test environment |
+| May 2027 | Fixes, diploma, guides and defence | Pilot results and the supervisor's review |
 
-## Контрольные сроки
+## Milestones
 
-**22 октября 2026:** организация GitHub/YouTrack, заполненные поля сроков, зависимости задач и ссылки на результаты.
-**23 октября:** окончательная подготовка комплекта материалов и выступления (DIP-11).
-**24 октября:** первая предзащита.
+**22 October 2026:** GitHub and YouTrack organised, due dates filled, task dependencies and links to results.
+**23 October:** final preparation of the materials and the talk (DIP-11).
+**24 October:** first pre-defence.
 
-Доступ к чтению открыт публично по просьбе руководства; существующий доступ `YersultanTulebayev` подтверждён через GitHub API. Независимый review PR №3 ещё ожидается; самопроверка его не заменяет.
+Read access is public at the request of the supervisors; the existing `YersultanTulebayev` access is confirmed through the GitHub API. An independent review of PR No. 3 is still pending; a self-review does not replace it.
 
-## Приоритет перед 24 октября
+## Priorities before 24 October
 
-OCT-02/03/04/05: подтверждение актуальности, полные тексты, единая библиография и доказательные сравнения до 19 октября. OCT-06/10: review архитектуры и замечания до 21 октября. OCT-08/11: демонстрация, проверка, PR и фиксированная сдаваемая версия до 23 октября. OCT-09: настоящий YouTrack и связь задач с результатами. Статусы и критерии приемки хранятся в backlog; реальные зависимости оформлены связями в YouTrack и перечислены в [карте задач](youtrack.md). DIP-4, DIP-5 и DIP-8 завершены по подтверждению автора проекта.
+OCT-02/03/04/05: confirmation of relevance, full texts, a single bibliography and evidence-based comparisons by 19 October. OCT-06/10: architecture review and comments by 21 October. OCT-08/11: demonstration, checks, PR and a fixed submission version by 23 October. OCT-09: a real YouTrack project and links from tasks to results. Statuses and acceptance criteria are kept in the backlog; real dependencies are set as YouTrack links and listed in the [task map](youtrack.md). DIP-4, DIP-5 and DIP-8 are completed as confirmed by the project author.
 
-## Риски
+## Risks
 
-| Риск | Влияние | Мера | Владелец |
+| Risk | Impact | Mitigation | Owner |
 | --- | --- | --- | --- |
-| Нет утвержденных приложений | Неверные формы | Получить шаблоны, сверить поля | Карина/Школа |
-| Недоступны пользователи | Нет подтверждения актуальности | Назначить обсуждения заранее, не подменять их гипотезами | Карина |
-| Утечка наблюдений | Нарушение доверия | Разделить частные заметки и отчеты, объектные права | Карина |
-| Слишком широкий объем | Срыв реализации | Модульный монолит, интеграции после MVP | Карина |
-| Неизвестен календарь | Неверный дедлайн плана | Календарь университета до production | Школа |
-| Не проверены локализация и SSO | Ошибки внедрения | Согласовать контракты до backend | Карина/ИТ |
+| No approved appendices | Wrong forms | Obtain the templates and check the fields | Karina / School |
+| Users unavailable | No confirmation of relevance | Schedule discussions early; do not replace them with assumptions | Karina |
+| Observation leak | Loss of trust | Separate private notes from reports; object permissions | Karina |
+| Scope too broad | Implementation delay | Modular monolith; integrations after the MVP | Karina |
+| Unknown calendar | Wrong plan deadline | University calendar before production | School |
+| Localisation and SSO not verified | Rollout errors | Agree contracts before the backend | Karina / IT |
 
-## Обратная связь и review
+## Feedback and review
 
-[Журнал замечаний](supervisor-feedback.md) фиксирует полученный отзыв преподавателя и выполненные изменения. Три рекомендации отражены в презентации; DIP-10 завершена. [Сдача](submission.md) содержит порядок демонстрации и материалы этапа.
+The [feedback log](supervisor-feedback.md) records the supervisor's feedback and the changes made. The three recommendations are reflected in the presentation; DIP-10 is done. The [submission](submission.md) document contains the demonstration order and the stage materials.

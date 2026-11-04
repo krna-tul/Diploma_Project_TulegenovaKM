@@ -1,61 +1,61 @@
-# Требования к платформе наставничества
+# Mentoring Platform Requirements
 
-Must — обязательная первая серверная версия; Should — следующая приоритетная функция. Критерии относятся к целевой платформе; покрытие локального прототипа указано отдельно в docs/prototype.md.
+Must — required in the first server version; Should — the next priority function. The criteria apply to the target platform; coverage by the local prototype is listed separately in docs/prototype.md.
 
-## Функциональные требования
+## Functional requirements
 
-| ID | Приоритет и источник | Требование | Критерий приемки |
+| ID | Priority and source | Requirement | Acceptance criterion |
 | --- | --- | --- | --- |
-| FR01 | Must USER REG | Отдельная форма наставника с опытом, квалификацией, подтверждениями, экспертизой, форматами, доступностью и согласием | Стаж ниже 3 лет блокирует отправку; Школа отдельно проверяет остальные критерии и инструктаж до публикации карточки |
-| FR02 | Must USER REG | Форма наставляемого с запросом, целью, навыками, форматом, периодом и предпочтительной кандидатурой | Запрос без выбранного наставника принимается; Школа может предложить доступного кандидата |
-| FR03 | Must USER | Главная витрина навыков и мероприятий с двумя кнопками подачи сверху | Можно выбрать навык без поиска по названию, увидеть связанные события и начать заявку с этим навыком |
-| FR04 | Must REG | Согласование с обеими сторонами и Школой | Назначение недоступно без двух согласий; отказ/возврат содержит причину и сохраняется в истории |
-| FR05 | Must REG | Проверка нагрузки и конфликта интересов | Третья активная пара блокируется без обоснования, согласия наставника и решения директора; пара с конфликтом не назначается |
-| FR06 | Must REG | Документ назначения | После согласования директор представляет пару, уполномоченный сотрудник фиксирует номер, дату и автора распоряжения проректора; только после этого начинается период |
-| FR07 | Must REG | Совместный индивидуальный план | Содержит цели, задачи, сроки, поддержку, ожидаемые результаты и фиксацию прогресса; срок подготовки — 10 рабочих дней от назначения; обе стороны согласуют версию, директор утверждает ее |
-| FR08 | Must REG | Изменение плана | Правка утвержденного плана создает новую версию, отменяет прежние согласия и требует повторного утверждения; история доступна |
-| FR09 | Must REG | Встречи и прогресс | Участники записывают дату, формат и результат встречи в план; подсказка рекомендует встречи не реже раза в две недели |
-| FR10 | Must DV | Development Visit | Подготовка содержит цель, дисциплину, дату, место, тему, тип и контекст; наблюдения содержат таймкоды и факты; обсуждение содержит самоанализ, плюс/вопрос/рекомендацию, изменения и способ измерения |
-| FR11 | Must REG | Оценка в начале, середине и конце | Начальные ожидания, промежуточная обратная связь, итоговая самооценка и отзыв наставника связаны с парой; завершение требует итоговой оценки |
-| FR12 | Must REG | Замена и досрочное завершение | Любой участник подает обращение; Школа фиксирует решение и причину; архив не исчезает; обращение не маркируется как неуспех |
-| FR13 | Must REG | Обобщенная аналитика | Руководство видит темы запросов, формы работы и результаты без частных заметок/затруднений; малая группа подавляется по согласованному порогу |
-| FR14 | Should USER | Публикация и запись на мероприятия | Организатор задает навыки, дату, формат, емкость; повторная запись не создает дубликат, превышение емкости блокируется |
-| FR15 | Should REG | Учет наставнической работы | Показывается 15 часов за наставляемого в триместр с возможностью указать внутреннее исключение; экспорт не подменяет кадровый план |
+| FR01 | Must USER REG | A separate mentor form with experience, qualifications, evidence, expertise, formats, availability and consent | Less than 3 years of experience blocks submission; the School separately checks the other criteria and the training before the profile is published |
+| FR02 | Must USER REG | A mentee form with the request, goal, skills, format, period and preferred candidate | A request without a selected mentor is accepted; the School can propose an available candidate |
+| FR03 | Must USER | A home showcase of skills and events with two application buttons at the top | A skill can be chosen without searching by name, related events are visible and an application can be started with that skill |
+| FR04 | Must REG | Consent from both sides and the School | Appointment is unavailable without two consents; a refusal or return contains a reason and is kept in the history |
+| FR05 | Must REG | Workload and conflict of interest check | A third active pair is blocked without a justification, the mentor's consent and the director's decision; a pair with a conflict is not appointed |
+| FR06 | Must REG | Appointment document | After consent the director nominates the pair, and an authorised staff member records the number, date and author of the vice-rector's order; only then does the period start |
+| FR07 | Must REG | Joint individual plan | Contains goals, tasks, deadlines, support, expected results and progress records; preparation time is 10 working days from the appointment; both sides consent to the version and the director approves it |
+| FR08 | Must REG | Plan change | Editing an approved plan creates a new version, cancels the earlier consents and requires re-approval; the history is available |
+| FR09 | Must REG | Meetings and progress | Participants record the date, format and outcome of a meeting in the plan; a hint recommends meeting at least once every two weeks |
+| FR10 | Must DV | Development Visit | Preparation contains the goal, course, date, place, topic, type and context; observations contain timestamps and facts; the discussion contains self-reflection, plus/question/recommendation, changes and a way to measure them |
+| FR11 | Must REG | Evaluation at the start, midpoint and end | Initial expectations, midpoint feedback, final self-assessment and the mentor's feedback are linked to the pair; completion requires the final evaluation |
+| FR12 | Must REG | Replacement and early completion | Any participant can submit a request; the School records the decision and the reason; the archive is kept; the request is not marked as a failure |
+| FR13 | Must REG | Aggregated analytics | Management sees request topics, work formats and results without private notes or difficulties; small groups are suppressed by an agreed threshold |
+| FR14 | Should USER | Publishing and registering for events | The organiser sets skills, date, format and capacity; a repeated registration does not create a duplicate, and exceeding capacity is blocked |
+| FR15 | Should REG | Recording mentoring work | 15 hours per mentee per trimester are shown, with an option to record an internal exception; the export does not replace the HR plan |
 
-## Нефункциональные требования
+## Non-functional requirements
 
-| ID | Критерий приемки целевой версии |
+| ID | Acceptance criterion for the target version |
 | --- | --- |
-| NFR01 Доступ | Сервер проверяет роль, Школу и участие в паре на каждом запросе; тесты подмены ID дают 403/404; переключатель роли в прототипе не является авторизацией |
-| NFR02 Конфиденциальность | Подробные наблюдения доступны только паре; управленческий отчет не включает их; исключительный доступ содержит основание, объем, согласие/категорию исключения и аудит |
-| NFR03 Сохранность | Резервная копия ежедневно; восстановление проверяется на тестовой БД; целевые RPO 24 ч и RTO 4 ч подлежат согласованию |
-| NFR04 Производительность | По TZ основные операции до 2 с, поиск/фильтрация до 3 с; нагрузка и трактовка порога согласуются. Предложение стенда: 100 пользователей, 1000 карточек, p95; не утверждено заказчиком |
-| NFR05 Доступность интерфейса | Все основные сценарии с клавиатуры; подписи полей, видимый фокус, ошибки текстом; ширина 360–1440 px без горизонтального скролла страницы |
-| NFR06 Аудит | Для переходов состояния записаны пользователь, время, сущность, версия, старый и новый статус; аудит исключает текст личных заметок |
-| NFR07 Валидация | Сервер проверяет даты, обязательные поля и статусы независимо от клиента; неверные переходы дают 409; конкурентные изменения не теряют обновления |
-| NFR08 Локализация | Интерфейс, статусы и системные сообщения RU/KZ/EN; пользовательский контент автоматически не переводится. Проверить переключение языка и казахские символы; прототип пока RU |
+| NFR01 Access | The server checks the role, the School and participation in the pair on every request; ID substitution tests return 403/404; the role switcher in the prototype is not authorisation |
+| NFR02 Confidentiality | Detailed observations are available only to the pair; the management report does not include them; exceptional access records a reason, scope, consent or exception category and an audit entry |
+| NFR03 Durability | Daily backup; recovery is tested on a test database; target RPO 24 h and RTO 4 h are to be agreed |
+| NFR04 Performance | According to the specification, core operations within 2 s and search or filtering within 3 s; the load and the interpretation of the threshold are to be agreed. Proposed test bench: 100 users, 1,000 profiles, p95; not yet approved by the client |
+| NFR05 Interface accessibility | All main scenarios work from the keyboard; field labels, visible focus, errors as text; widths of 360–1440 px without horizontal page scrolling |
+| NFR06 Audit | For state transitions the user, time, entity, version, old and new status are recorded; the audit excludes the text of personal notes |
+| NFR07 Validation | The server checks dates, required fields and statuses independently of the client; invalid transitions return 409; concurrent changes do not lose updates |
+| NFR08 Localisation | Interface, statuses and system messages in RU/KZ/EN; user content is not translated automatically. Check language switching and Kazakh characters; the new frontend supports all three languages |
 
-## Роли и видимость
+## Roles and visibility
 
-Преподаватель может быть наставником и наставляемым в разных парах. Школа проверяет кандидатов, предлагает пары и получает минимальные отчетные сведения своей Школы. Директор согласует исключения и утверждает план. Проректор/регистратор фиксирует распоряжение. Департамент академической деятельности проводит инструктаж. Организатор управляет событиями. Администратор управляет справочниками и учетными записями, но не получает автоматический доступ к частным заметкам.
+A lecturer can be a mentor and a mentee in different pairs. The School reviews candidates, proposes pairs and receives the minimum reporting information for its own School. The director agrees exceptions and approves the plan. The vice-rector or registrar records the order. The Department of Academic Affairs runs the training. The organiser manages events. The administrator manages reference lists and accounts but does not get automatic access to private notes.
 
-## Состояния
+## States
 
-Карточка: черновик → проверка Школы → инструктаж подтвержден → опубликована; возможен возврат. Пара: запрос → подбор → согласия обеих сторон → представление директора → распоряжение → план → работа → итоговая оценка → завершена. На этапах возможны отказ и обращение о замене. План: черновик → два согласия → утвержден; изменение → новая версия и новые согласия.
+Profile: draft → School review → training confirmed → published; a return is possible. Pair: request → matching → consent from both sides → director's nomination → order → plan → work → final evaluation → completed. A refusal and a replacement request are possible at each stage. Plan: draft → two consents → approved; a change → a new version and new consents.
 
-## Дополнения по техническому заданию
+## Additions from the technical specification
 
-| ID | Приоритет и источник | Требование | Критерий приемки целевой версии |
+| ID | Priority and source | Requirement | Acceptance criterion for the target version |
 | --- | --- | --- | --- |
-| FR16 | Must TZ FR-SCH-05 | Возврат плана с комментарием | Пустая причина запрещена; участники видят версию и комментарий; старые согласия сброшены |
-| FR17 | Must TZ FR-MEN-08/FR-MTR-06 | Подтверждение встречи вторым участником | Автор не подтверждает собственную запись; второй участник подтверждает один раз; дата и автор подтверждения сохранены |
-| FR18 | Must TZ §18–19,28 | Итоговые формы и архив | Завершение требует чек-листа F-08, самооценки F-09 и отзыва F-10; архив закрывает обычные изменения, сохраняет версии, доступ и корректировки журналируются |
-| FR19 | Must TZ FR-UMO-01–09 | Кабинет УМО | Фильтры по Школе/статусу/периоду, комплектность и нагрузка; выгрузка разрешенных полей с аудитом; частные консультации исключены |
-| FR20 | Must TZ FR-TECH-01–05 | Техническое администрирование | Техадминистратор видит ошибки интеграций и технические журналы; запрос к содержанию консультации запрещен без отдельного основания |
-| FR21 | Must TZ §21 | Предварительная проверка XLSX | До подтверждения показаны пропуски, неверный корпоративный email и дубликаты; отмена не меняет БД; разрешенный импорт журналируется |
-| FR22 | Must TZ §23 | Справочники и шаблоны | Уполномоченный администратор меняет сроки, лимиты, Школы, категории и шаблоны без изменения кода; история сохраняет прежние значения |
-| FR23 | Must TZ §17,22 | Конфиденциальные обращения | Обычная управленческая и техническая роль не видит текст; доступ только назначенным обработчикам, просмотры и выгрузки аудируются |
-| FR24 | Must TZ §16 | Внутренние уведомления | Участник видит назначение, возврат, приближение сроков и итоговый этап; повторная обработка события не создает дубликат |
-| FR25 | Should TZ §6,27 | Интеграции второй очереди | SSO/HR/почта/ЭЦП подключаются после доступа IT; до этого тестовые данные и внешнее подписание явно обозначены |
+| FR16 | Must TZ FR-SCH-05 | Plan return with a comment | An empty reason is forbidden; participants see the version and the comment; the old consents are reset |
+| FR17 | Must TZ FR-MEN-08/FR-MTR-06 | Meeting confirmation by the other participant | The author does not confirm their own record; the other participant confirms once; the date and author of the confirmation are saved |
+| FR18 | Must TZ §18–19,28 | Final forms and archive | Completion requires the F-08 checklist, the F-09 self-assessment and the F-10 feedback; the archive closes ordinary changes, keeps versions, and access and corrections are logged |
+| FR19 | Must TZ FR-UMO-01–09 | Academic office workspace | Filters by School, status and period, completeness and workload; export of permitted fields with an audit entry; private consultations are excluded |
+| FR20 | Must TZ FR-TECH-01–05 | Technical administration | The technical administrator sees integration errors and technical logs; access to consultation content is forbidden without a separate reason |
+| FR21 | Must TZ §21 | XLSX pre-check | Before confirmation, gaps, invalid corporate emails and duplicates are shown; cancelling does not change the database; a permitted import is logged |
+| FR22 | Must TZ §23 | Reference lists and templates | An authorised administrator changes deadlines, limits, Schools, categories and templates without changing code; the history keeps the previous values |
+| FR23 | Must TZ §17,22 | Confidential requests | An ordinary management or technical role does not see the text; access is limited to assigned handlers, and views and exports are audited |
+| FR24 | Must TZ §16 | Internal notifications | A participant sees the appointment, a return, approaching deadlines and the final stage; reprocessing an event does not create a duplicate |
+| FR25 | Should TZ §6,27 | Second-stage integrations | SSO, HR, email and e-signature are connected after IT grants access; until then test data and external signing are clearly marked |
 
-FR16 и FR17 демонстрируются локально. FR18–25 описывают последующую серверную реализацию. Завершение текущего прототипа проверяет только два итоговых текста, а не полный комплект F-08–F-10: это не приемка целевого MVP.
+FR16 and FR17 are demonstrated locally. FR18–25 describe the later server implementation. Completion in the current prototype checks only two final texts, not the full F-08–F-10 package: this is not acceptance of the target MVP.

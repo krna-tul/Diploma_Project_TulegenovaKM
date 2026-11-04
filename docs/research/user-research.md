@@ -1,40 +1,40 @@
-# Встреча с клиентами и проверка потребностей
+# Client Meeting and Needs Validation
 
-## Встреча 8 октября 2026
+## Meeting on 8 October 2026
 
-8 октября 2026 состоялась встреча с заказчиками из учебно-методического департамента. Тезисы обсуждения отражены на слайде **Evidence of relevance**, а ТЗ содержит требования заказчиков. Ниже приведено резюме встречи и связь с проектными решениями.
+On 8 October 2026 a meeting took place with the clients from the Educational and Methodological Department. The key points of the discussion are shown on the **Evidence of relevance** slide, and the technical specification contains the clients' requirements. Below is a summary of the meeting and its link to the project decisions.
 
-Участники, указанные на слайде:
+Participants named on the slide:
 
 - Shunkeyeva Saule Alisherovna — Head of the Educational and Methodological Office.
 - Abisheva Sandugash Kanatovna — Chief Manager of the Educational and Methodological Office.
 - Tulebayev Yersultan Bakhytovich — Senior Lecturer and Mentor.
 
-| Тема | Тезис клиентов | Решение проекта и проверка |
+| Topic | Clients' point | Project decision and check |
 | --- | --- | --- |
-| Роли и конфиденциальность | Разделить доступ наставляемых, наставников, руководства Школы и УМО; сохранять конфиденциальность наблюдений | Ролевая модель и объектные права; частные записи не включаются в общую сводку. См. требования и архитектуру |
-| Запрос и назначение | Наставляемый формулирует потребность до назначения; цифровые формы и профили поддерживают решение Школы | Заявка с профессиональной потребностью и каталог наставников; назначение проходит человеческое согласование |
-| План и обратная связь | Наставничество следует индивидуальному плану; нужны проверки прогресса, наблюдения занятий и обратная связь пары | Версии плана, мероприятия, встречи и Development Visit |
-| Мониторинг и отчетность | УМО и Школе нужен обзор активности; сводка встреч, рекомендаций и чеклистов с экспортом | Обобщенные отчеты и экспорт с учетом прав доступа; подробные наблюдения остаются частными |
+| Roles and confidentiality | Separate access for mentees, mentors, School management and the academic office; keep observations confidential | Role model and object permissions; private records are not included in the general summary. See the requirements and architecture |
+| Request and appointment | The mentee states the need before the appointment; digital forms and profiles support the School's decision | An application with the professional need and a mentor catalogue; the appointment goes through human approval |
+| Plan and feedback | Mentoring follows an individual plan; progress checks, class observations and feedback within the pair are needed | Plan versions, activities, meetings and Development Visit |
+| Monitoring and reporting | The academic office and the School need an overview of activity; a summary of meetings, recommendations and checklists with export | Aggregated reports and export that respect access rights; detailed observations stay private |
 
-![Тезисы встречи с клиентами 8 октября](../assets/evidence/client-meeting-08-october.png)
+![Key points of the client meeting on 8 October](../assets/evidence/client-meeting-08-october.png)
 
-Связанные материалы: [требования](../requirements.md), [архитектура](../architecture/architecture.md), [покрытие ТЗ](../tz-traceability.md). Встреча и ТЗ подтверждают актуальность проекта и требования заказчиков. Результат зафиксирован в DIP-3.
+Related materials: [requirements](../requirements.md), [architecture](../architecture/architecture.md), [specification coverage](../tz-traceability.md). The meeting and the specification confirm the relevance of the project and the clients' requirements. The result is recorded in DIP-3.
 
-## Дальнейшая проверка
+## Further validation
 
-## План дальнейшей пользовательской оценки
+## Plan for further user evaluation
 
-Для дальнейшего уточнения: начинающий преподаватель, опытный наставник, директор/представитель Школы, сотрудник академического департамента; при доступности — преподаватель с добровольным запросом. Автор организует обсуждения самостоятельно, с согласием на запись и обезличивание.
+For further refinement: a novice lecturer, an experienced mentor, a School director or representative, a staff member of the academic department; if available, a lecturer with a voluntary request. The author organises the discussions independently, with consent to recording and anonymisation.
 
-Вопросы: как сейчас выбирают наставника; покажите путь последней заявки; где теряются время и документы; кто согласует назначения и планы; что можно видеть руководству; что мешает встречам; как выбирают навык; чем подтверждается полезность наставничества; какие поля обязательны и какие избыточны?
+Questions: how is a mentor chosen today; show the path of the last application; where are time and documents lost; who approves appointments and plans; what may management see; what gets in the way of meetings; how is a skill chosen; what confirms that mentoring is useful; which fields are required and which are redundant?
 
-После вопросов участник выполняет в прототипе сценарий «найти навык → запросить поддержку → понять статус → составить план». Измеряются время, ошибки и необходимость помощи. Первая попытка выполняется без помощи исследователя.
+After the questions, the participant completes the scenario "find a skill → request support → understand the status → draft a plan" in the prototype. Time, errors and the need for help are measured. The first attempt is made without the researcher's help.
 
-## Шаблон записи
+## Record template
 
-| Дата и код участника | Роль | Согласие | Наблюдаемый факт/обезличенная цитата | Вывод | Затронутое FR | Изменение и согласование |
+| Date and participant code | Role | Consent | Observed fact / anonymised quote | Finding | Affected FR | Change and approval |
 | --- | --- | --- | --- | --- | --- | --- |
-| Не заполнено | — | — | — | — | — | — |
+| Not filled in | — | — | — | — | — | — |
 
-Гипотезы: H1 преподаватели затрудняются сформулировать запрос; H2 статус согласования непрозрачен; H3 единый план снижает повторный ввод; H4 витрина навыков помогает выбору. Каждая гипотеза может быть опровергнута; сохранять противоречащие ответы.
+Hypotheses: H1 lecturers find it hard to formulate a request; H2 the approval status is not transparent; H3 a single plan reduces repeated data entry; H4 the skills showcase helps the choice. Each hypothesis can be refuted; contradicting answers are kept.

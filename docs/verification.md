@@ -1,32 +1,36 @@
-# План проверки и оценки
+# Verification and Evaluation Plan
 
-## Проверка реализации
+## Implementation checks
 
-| Сценарий | FR | Метод и ожидаемый результат |
+| Scenario | FR | Method and expected result |
 | --- | --- | --- |
-| Заявка кандидата со стажем 2 года | 01 | Отправка блокируется; 3 года проходят проверку стажа, остальные критерии проверяет Школа |
-| Запрос без наставника | 02 | Заявка сохраняется и ожидает подбора |
-| Третья пара без исключения | 05 | Назначение блокируется; с обоснованием и двумя согласиями допускается |
-| Неполное согласование пары | 04–06 | Представление и назначение недоступны |
-| Правка утвержденного плана | 07–08 | Новая версия, старые согласия не действуют |
-| Выходной/праздник в сроке плана | 07 | 10 рабочих дней по утвержденному календарю; в прототипе только выходные |
-| Возврат плана | 16 | Без комментария запрещен; комментарий виден участникам, согласия сброшены |
-| Подтверждение встречи | 17 | Автор не подтверждает запись; второй участник подтверждает один раз |
-| Development Visit | 10 | Подготовка, наблюдение, обсуждение сохраняются без потери таймкодов |
-| Просмотр чужой карты | NFR01–02 | Сервер возвращает отказ, текст не попадает в отчет |
-| Одновременное назначение | 05 NFR07 | Лимит соблюден после двух конкурентных транзакций |
-| Завершение без итогов | 11 | Блокируется до самооценки и отзыва |
+| Candidate application with 2 years of experience | 01 | Submission is blocked; 3 years pass the experience check, and the School checks the other criteria |
+| Request without a mentor | 02 | The application is saved and waits for matching |
+| Third pair without an exception | 05 | Appointment is blocked; it is allowed with a justification and two consents |
+| Incomplete pair consent | 04–06 | Nomination and appointment are unavailable |
+| Editing an approved plan | 07–08 | A new version; the old consents no longer apply |
+| Weekend or holiday within the plan deadline | 07 | 10 working days according to the approved calendar; the prototype handles weekends only |
+| Plan return | 16 | Forbidden without a comment; the comment is visible to participants and consents are reset |
+| Meeting confirmation | 17 | The author does not confirm the record; the other participant confirms once |
+| Development Visit | 10 | Preparation, observation and discussion are saved without losing timestamps |
+| Viewing another pair's map | NFR01–02 | The server refuses access, and the text does not reach the report |
+| Concurrent appointment | 05 NFR07 | The limit holds after two concurrent transactions |
+| Completion without outcomes | 11 | Blocked until the self-assessment and feedback are done |
 
-Автотесты прототипа проверяют доменные переходы, нагрузку, календарь и повторные согласия. Ручная проверка браузера покрывает формы, сохранение после перезагрузки, витрину, клавиатуру и мобильную ширину. Серверные тесты доступа, нагрузки и восстановления выполняются после backend; прототип не доказывает NFR01–04.
+Prototype tests check domain transitions, workload, the calendar and repeated consents. Manual browser checks cover forms, persistence after reload, the showcase, the keyboard and mobile width. Server tests for access, load and recovery run after the backend exists; the prototype does not prove NFR01–04.
 
-## Оценка с пользователями
+## Evaluation with users
 
-Базовая линия — те же задания с Word-формами и ручным реестром. Участники: 5–8 представителей преподавателей/Школы с согласия; распределить порядок вариантов, чтобы снизить эффект обучения. Использовать синтетический одинаковый кейс. Условия: одна машина, браузер и сеть, одинаковая инструкция, без подсказок до первой попытки.
+The baseline is the same tasks done with Word forms and a manual register. Participants: 5–8 representatives of lecturers or the School, with consent; the order of the variants is balanced to reduce the learning effect. A synthetic identical case is used. Conditions: the same machine, browser and network, the same instructions, no hints before the first attempt.
 
-Измерения: время от начала запроса до корректного оформления; доля завершенных сценариев без помощи; число пропусков обязательных полей; время поиска статуса; оценка удобства 1–5; качественные замечания. Предварительные цели: ≥80% завершения без помощи и медианное время оформления ниже базовой линии на ≥20%. Это гипотезы до пилота, не достигнутые результаты. Отдельно измерить 0 случаев раскрытия частных заметок в административном отчете.
+Measures: time from starting the request to correct registration; share of scenarios completed without help; number of missed required fields; time to find a status; usability rating 1–5; qualitative comments. Preliminary targets: ≥80% completion without help and a median registration time at least 20% below the baseline. These are hypotheses before the pilot, not achieved results. Separately, measure 0 cases of private notes being disclosed in the administrative report.
 
-Малый размер выборки ограничивает обобщение. Результат описывать медианами, диапазонами и наблюдениями; причинный рост качества преподавания, удержания кадров и успеваемости не заявлять. Показатели NFR04 измерять отдельным воспроизводимым нагрузочным сценарием.
+The small sample size limits generalisation. Results are described with medians, ranges and observations; no causal claims are made about improved teaching quality, staff retention or student performance. NFR04 indicators are measured with a separate reproducible load scenario.
 
-## Проверка обновления от 22 октября 2026
+## Update check, 22 October 2026
 
-Пройдены 17 Node.js-тестов, включая 30 контрольных примеров переноса Python → JavaScript. Браузерная проверка охватила 11 экранов, рекомендации и их признаки, сохранение черновика, возврат плана с обязательным комментарием и шесть ключевых экранов при ширине 390 px. Методика, результаты и границы проверки приведены в [отчёте](frontend-matching-report.md). Проверки локального интерфейса не подтверждают серверные права доступа.
+17 Node.js tests passed, including 30 control examples of the Python → JavaScript port. The browser check covered 11 screens, the recommendations and their features, saving a draft, returning a plan with a mandatory comment, and six key screens at a width of 390 px. The method, results and limits of the check are in the [report](frontend-matching-report.md). Checks of the local interface do not confirm server-side access rights.
+
+## Update check, 4 November 2026
+
+After the illustrated redesign and the card slider: `npm run check` passes (formatting, 0 missing local documentation links, 34 tests). New tests in `src/tests/slider.test.mjs` cover the 760/1100 px breakpoints, clamping of the slider index, parsing of the Details text, and Russian and Kazakh translations for every event card string. In the browser: the landing page, the slider (arrows, counter, disabled last step, hover state, Details dialog with Esc), the events page with filters, the overview, sign-in and mentor catalogue were checked at 1440 px, and the landing page at 375 px in English and Russian without horizontal scrolling.

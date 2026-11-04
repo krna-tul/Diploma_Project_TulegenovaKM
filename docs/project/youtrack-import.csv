@@ -1,43 +1,43 @@
 YouTrack ID,Summary,Assignee,Priority,Due Date,State,Description
-DIP-2,OCT-01 · Сверить ТЗ и требования,admin,P0,2026-10-16,Done,"Матрица всех именованных FR ТЗ и критериев 1–15; пробелы прототипа явно названы.
+DIP-2,OCT-01 · Reconcile the specification and requirements,admin,P0,2026-10-16,Done,"A matrix of every named FR in the specification and criteria 1–15; prototype gaps are named explicitly.
 https://karinatulegenova.youtrack.cloud/issue/DIP-2"
-DIP-3,OCT-02 · Подтвердить актуальность с заказчиком,admin,P0,2026-10-18,Done,"Реальная встреча с заказчиками 08.10.2026 и требования ТЗ зафиксированы; выводы связаны с FR.
+DIP-3,OCT-02 · Confirm relevance with the client,admin,P0,2026-10-18,Done,"The real meeting with the clients on 08.10.2026 and the specification requirements are recorded; findings are linked to FRs.
 https://karinatulegenova.youtrack.cloud/issue/DIP-3"
-DIP-4,OCT-03 · Проверить полный текст научных источников,admin,P0,2026-10-19,Done,"Не менее 12 содержательно использованных источников, не менее 8 научных; метод, результат, ограничение и решение проверены; аннотации отмечены.
+DIP-4,OCT-03 · Check the full text of scientific sources,admin,P0,2026-10-19,Done,"At least 12 substantively used sources, at least 8 of them scientific; method, result, limitation and decision checked; abstracts marked.
 https://karinatulegenova.youtrack.cloud/issue/DIP-4"
-DIP-1,OCT-04 · Согласовать библиографию с презентацией,admin,P0,2026-10-19,Done,"Полные названия и ID публикаций в README/docs и Canva сопоставлены; различия набора источников устранены после проверки.
+DIP-1,OCT-04 · Align the bibliography with the presentation,admin,P0,2026-10-19,Done,"Full titles and IDs of publications in README/docs and Canva matched; differences in the source set resolved after checking.
 https://karinatulegenova.youtrack.cloud/issue/DIP-1"
-DIP-5,OCT-05 · Перепроверить сравнение аналогов,admin,P0,2026-10-19,Done,"3–5 систем, 6–10 единых критериев; каждое утверждение имеет источник, отсутствие сведений не равно отсутствию функции.
+DIP-5,OCT-05 · Re-check the comparison of existing systems,admin,P0,2026-10-19,Done,"3–5 systems, 6–10 shared criteria; every claim has a source, and missing information does not mean a missing feature.
 https://karinatulegenova.youtrack.cloud/issue/DIP-5"
-DIP-6,OCT-06 · Согласовать архитектуру и стек,admin,P0,2026-10-20,Done,"Контекст, Use Case и компоненты имеют исходники и SVG; требования и роли УМО/техадминистратора отражены; минимум 3 решения с 2–3 альтернативами.
+DIP-6,OCT-06 · Agree the architecture and stack,admin,P0,2026-10-20,Done,"Context, Use Case and component diagrams have sources and SVG; requirements and the academic office and technical administrator roles are covered; at least 3 decisions with 2–3 alternatives.
 https://karinatulegenova.youtrack.cloud/issue/DIP-6"
-DIP-7,OCT-07 · Проверить возврат плана и встречи,admin,P0,2026-10-17,Done,"Возврат с обязательной причиной снимает согласия; встречу подтверждает только второй участник; положительные и отрицательные тесты проходят.
+DIP-7,OCT-07 · Check plan return and meetings,admin,P0,2026-10-17,Done,"A return with a mandatory reason removes consents; only the other participant confirms a meeting; positive and negative tests pass.
 https://karinatulegenova.youtrack.cloud/issue/DIP-7"
-DIP-8,OCT-08 · Проверить прототип в браузере,admin,P0,2026-10-21,Done,"Основной маршрут, возврат плана, подтверждение встречи, Development Visit и reload; 360px и клавиатура проверены с журналом результатов.
+DIP-8,OCT-08 · Check the prototype in the browser,admin,P0,2026-10-21,Done,"Main route, plan return, meeting confirmation, Development Visit and reload; 360 px and keyboard checked with a results log.
 https://karinatulegenova.youtrack.cloud/issue/DIP-8"
-DIP-9,OCT-09 · Создать YouTrack и связать работы,admin,P0,2026-10-22,In Review,"Проект DIP, исполнитель, приоритеты, сроки и приемка; реальные ID связаны с веткой/PR/коммитами; шаблонные задачи не закрыты.
+DIP-9,OCT-09 · Create YouTrack and link the work,admin,P0,2026-10-22,In Review,"DIP project, assignee, priorities, deadlines and acceptance; real IDs linked to the branch, PR and commits; template tasks are not closed.
 https://karinatulegenova.youtrack.cloud/issue/DIP-9"
-DIP-10,OCT-10 · Получить содержательный review руководителя,admin,P0,2026-10-21,Done,"Отзыв преподавателя зафиксирован на слайде; три рекомендации выполнены, ссылки на результаты сохранены.
+DIP-10,OCT-10 · Get a substantive review from the supervisor,admin,P0,2026-10-21,Done,"The supervisor's feedback is recorded on the slide; three recommendations done, links to the results saved.
 https://karinatulegenova.youtrack.cloud/issue/DIP-10"
-DIP-11,OCT-11 · Собрать проверенную версию предзащиты,admin,P0,2026-10-23,Open,"npm run check и демонстрация проходят; PR проверен; доступ комиссии проверен автором; известные ограничения перечислены; pre-defense-1 указывает точный commit и не переносится.
+DIP-11,OCT-11 · Assemble the verified pre-defence version,admin,P0,2026-10-23,Open,"npm run check and the demonstration pass; the PR is reviewed; committee access checked by the author; known limitations listed; pre-defense-1 points to an exact commit and is not moved.
 https://karinatulegenova.youtrack.cloud/issue/DIP-11"
-DIP-12,MVP-01 · Уточнить роли и модель данных,admin,P1,2026-11-30,Open,"Согласованы Школа, УМО, техадминистратор, пары и объектные права; миграции проверены; приватные консультации отделены от отчетов.
+DIP-12,MVP-01 · Refine roles and the data model,admin,P1,2026-11-30,Open,"School, academic office, technical administrator, pairs and object permissions agreed; migrations checked; private consultations separated from reports.
 https://karinatulegenova.youtrack.cloud/issue/DIP-12"
-DIP-13,MVP-02 · Реализовать backend и доступ,admin,P1,2026-12-31,Open,"Тестовые учетные записи и серверный RBAC; отрицательные тесты чужой пары/Школы, УМО и техадминистратора; клиентская роль не определяет права.
+DIP-13,MVP-02 · Implement the backend and access control,admin,P1,2026-12-31,Open,"Test accounts and server-side RBAC; negative tests for another pair or School, the academic office and the technical administrator; the client-side role does not define permissions.
 https://karinatulegenova.youtrack.cloud/issue/DIP-13"
-DIP-14,MVP-03 · Реализовать назначения и версии планов,admin,P1,2027-01-31,Open,"Согласия, нагрузка, исключения, документ назначения, календарь, версии и возврат; конкурентные назначения не нарушают лимит.
+DIP-14,MVP-03 · Implement appointments and plan versions,admin,P1,2027-01-31,Open,"Consents, workload, exceptions, appointment document, calendar, versions and return; concurrent appointments do not break the limit.
 https://karinatulegenova.youtrack.cloud/issue/DIP-14"
-DIP-15,MVP-04 · Реализовать встречи и Development Visit,admin,P1,2027-02-15,Open,"Подтверждение вторым участником; три этапа карты, факты/таймкоды и обсуждение; объектные права проверены.
+DIP-15,MVP-04 · Implement meetings and Development Visit,admin,P1,2027-02-15,Open,"Confirmation by the other participant; three stages of the observation map, facts and timestamps, and discussion; object permissions checked.
 https://karinatulegenova.youtrack.cloud/issue/DIP-15"
-DIP-16,MVP-05 · Реализовать итоги и архив,admin,P1,2027-02-28,Open,"F-08–10 обязательны; завершение и архив сохраняют историю; обычные изменения закрыты; разрешенные архивные операции аудируются.
+DIP-16,MVP-05 · Implement outcomes and the archive,admin,P1,2027-02-28,Open,"F-08–10 are mandatory; completion and archive keep the history; ordinary changes are closed; permitted archive operations are audited.
 https://karinatulegenova.youtrack.cloud/issue/DIP-16"
-DIP-17,"MVP-06 · Реализовать УМО, справочники и XLSX",admin,P1,2027-03-15,Open,"Статусы, фильтры, комплектность, предпросмотр ошибок и дубликатов импорта; выгрузки и изменения справочников аудируются.
+DIP-17,"MVP-06 · Implement the academic office, reference lists and XLSX",admin,P1,2027-03-15,Open,"Statuses, filters, completeness, preview of import errors and duplicates; exports and reference list changes are audited.
 https://karinatulegenova.youtrack.cloud/issue/DIP-17"
-DIP-18,"MVP-07 · Добавить уведомления, аудит и RU KZ EN",admin,P1,2027-03-31,Open,"Системные тексты локализованы, контент не переводится; уведомления без дубликатов; аудит защищен; резервное восстановление измерено.
+DIP-18,"MVP-07 · Add notifications, audit and RU KZ EN",admin,P1,2027-03-31,Open,"System texts are localised and content is not translated; notifications without duplicates; the audit log is protected; backup recovery is measured.
 https://karinatulegenova.youtrack.cloud/issue/DIP-18"
-DIP-19,MVP-08 · Согласовать внешние интеграции,admin,P2,2027-03-31,Open,"Получены параметры и доступ IT для SSO/HR/почты/ЭЦП либо задокументирован согласованный резервный сценарий; незавершенные интеграции названы.
+DIP-19,MVP-08 · Agree external integrations,admin,P2,2027-03-31,Open,"Parameters and IT access for SSO, HR, email and e-signature obtained, or an agreed fallback scenario documented; unfinished integrations are named.
 https://karinatulegenova.youtrack.cloud/issue/DIP-19"
-DIP-20,PILOT-01 · Провести пилот и оценку,admin,P1,2027-04-30,Open,"5–8 согласившихся представителей, одинаковые сценарии с ручной базовой линией; время/ошибки/успех и ограничения выборки представлены без выдуманных результатов.
+DIP-20,PILOT-01 · Run the pilot and evaluation,admin,P1,2027-04-30,Open,"5–8 consenting representatives, the same scenarios against a manual baseline; time, errors, success and sample limitations presented without invented results.
 https://karinatulegenova.youtrack.cloud/issue/DIP-20"
-DIP-21,FINAL-01 · Подготовить финальную передачу,admin,P1,2027-05-31,Open,"Исправлены замечания пилота; исходники, миграции, запуск, API и пользовательские инструкции проверены; защита подготовлена.
+DIP-21,FINAL-01 · Prepare the final handover,admin,P1,2027-05-31,Open,"Pilot comments addressed; sources, migrations, launch, API and user guides checked; defence prepared.
 https://karinatulegenova.youtrack.cloud/issue/DIP-21"

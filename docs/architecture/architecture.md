@@ -1,56 +1,56 @@
-# Архитектура целевой платформы
+# Target Platform Architecture
 
-## Компоненты
+## Components
 
-Веб-клиент обращается к модульному монолиту через REST/JSON. Модули: идентификация и роли; профили/навыки/мероприятия; заявки и назначения; планы и встречи; Development Visit; оценка и архив; УМО и импорт XLSX с предпросмотром; справочники и настройки; внутренние уведомления; обобщенные отчеты и аудит. PostgreSQL хранит связанные сущности. Закрытые вложения хранятся отдельно с проверкой доступа; университетский SSO, HR, почта и ЭЦП подключаются после согласования с IT. Внутренние уведомления и RU/KZ/EN входят в целевой MVP.
+The web client calls a modular monolith over REST/JSON. Modules: identity and roles; profiles, skills and events; requests and appointments; plans and meetings; Development Visit; evaluation and archive; academic office and XLSX import with preview; reference lists and settings; internal notifications; aggregated reports and audit. PostgreSQL stores the related entities. Private attachments are stored separately with access checks; university SSO, HR, email and e-signature are connected after approval by IT. Internal notifications and RU/KZ/EN are part of the target MVP.
 
-Текущий прототип не обращается к этому API: он демонстрирует процесс в одном браузере. Диаграммы показывают целевую архитектуру, а не уже работающий backend.
+The current prototype does not call this API: it demonstrates the process in a single browser. The diagrams show the target architecture, not a backend that already runs.
 
-## Данные и инварианты
+## Data and invariants
 
-User имеет роли в пределах School; MentorProfile ссылается на User и Skill через связующую таблицу. Request хранит профессиональный запрос и предпочтительного наставника. Pair связывает наставника, наставляемого, школу, период, решения и реквизиты распоряжения. PlanVersion принадлежит Pair; PlanItem и Meeting принадлежат версии/паре. Visit хранит подготовку, Observation — факты и таймкод; Reflection — обсуждение. Evaluation относится к этапу начала, середины или конца. Event связывается с Skill; Enrollment уникален по событию и участнику.
+A User has roles within a School; MentorProfile references User and Skill through a link table. Request stores the professional request and the preferred mentor. Pair links the mentor, the mentee, the School, the period, the decisions and the appointment order details. PlanVersion belongs to a Pair; PlanItem and Meeting belong to the version or the pair. Visit stores the preparation, Observation stores facts and a timestamp, and Reflection stores the discussion. Evaluation belongs to the start, midpoint or final stage. Event is linked to Skill; Enrollment is unique per event and participant.
 
-Назначение третьей пары проверяется в транзакции с блокировкой наставника и подсчетом активных назначений; исключение имеет обоснование и два подтверждения. Совпадение наставника с наставляемым запрещено. Наличие двух согласий и распоряжения обязательно для начала программы. Согласия плана привязаны к версии, поэтому правка не сохраняет старое утверждение. Для обновлений используется version/If-Match; потерянное обновление дает 409. Все изменения состояния пишутся в аудит в той же транзакции.
+A third pair is checked inside a transaction that locks the mentor and counts active appointments; an exception requires a justification and two confirmations. A mentor cannot be their own mentee. Two consents and an appointment order are required before the programme starts. Plan consents are tied to a version, so an edit does not keep the old approval. Updates use version/If-Match; a lost update returns 409. Every state change is written to the audit log in the same transaction.
 
-## Доступ
+## Access
 
-Публичной внутри университета является только согласованная карточка наставника и витрина. Подробные карты наблюдения и обсуждения доступны паре. Школа получает административные реквизиты и утверждаемый план с минимально необходимыми сведениями; личные заметки не включаются в план. Управленческая аналитика строится из отдельной проекции без частного текста. Исключительный доступ регистрируется с основанием и областью раскрытия; роль администратора сама по себе его не дает.
+Only the approved mentor profile and the public showcase are visible across the university. Detailed observation and discussion notes are available to the pair. The School receives administrative order details and the plan under approval with the minimum necessary information; personal notes are not included in the plan. Management analytics are built from a separate projection without private text. Exceptional access is logged with a reason and the scope of disclosure; the administrator role alone does not grant it.
 
-## Черновой контракт API
+## Draft API contract
 
-| Метод и путь | Назначение | Доступ |
+| Method and path | Purpose | Access |
 | --- | --- | --- |
-| GET /api/skills, /api/events, /api/mentors | Каталог | Авторизованные преподаватели |
-| POST /api/mentor-applications | Карточка кандидата | Автор |
-| POST /api/requests | Индивидуальный запрос | Автор или уполномоченная Школа |
-| POST /api/pairs/{id}/consents | Согласие на пару | Соответствующий участник |
-| POST /api/pairs/{id}/presentation | Представление | Директор своей Школы |
-| POST /api/pairs/{id}/appointment | Реквизиты распоряжения | Проректор/регистратор |
-| POST /api/pairs/{id}/plans | Версия плана | Участники пары |
-| POST /api/plans/{id}/consents | Согласование версии | Участники |
-| POST /api/plans/{id}/approval | Утверждение | Директор |
-| POST /api/pairs/{id}/meetings, /visits, /evaluations | Работа пары | Участники |
-| POST /api/pairs/{id}/change-requests | Замена/досрочное завершение | Участники и Школа |
-| GET /api/reports/summary | Обобщенный отчет | Школа по своей области |
+| GET /api/skills, /api/events, /api/mentors | Catalogue | Signed-in lecturers |
+| POST /api/mentor-applications | Candidate profile | Author |
+| POST /api/requests | Individual request | Author or authorised School |
+| POST /api/pairs/{id}/consents | Consent to the pair | The relevant participant |
+| POST /api/pairs/{id}/presentation | Nomination | Director of the same School |
+| POST /api/pairs/{id}/appointment | Appointment order details | Vice-rector / registrar |
+| POST /api/pairs/{id}/plans | Plan version | Pair participants |
+| POST /api/plans/{id}/consents | Version consent | Participants |
+| POST /api/plans/{id}/approval | Approval | Director |
+| POST /api/pairs/{id}/meetings, /visits, /evaluations | Pair work | Participants |
+| POST /api/pairs/{id}/change-requests | Replacement / early completion | Participants and School |
+| GET /api/reports/summary | Aggregated report | School within its scope |
 
-Ошибки: 400/422 валидация, 401 отсутствие входа, 403/404 недоступный ресурс, 409 конфликт версии/статуса. Cookie session требует CSRF для записей; HTTPS обязателен. Идентификатор роли с клиента не определяет права.
+Errors: 400/422 validation, 401 not signed in, 403/404 resource not available, 409 version or status conflict. A cookie session requires CSRF protection for writes; HTTPS is mandatory. A role identifier sent by the client never defines permissions.
 
-Диаграммы: docs/diagrams/source и читаемые SVG в docs/diagrams/exports. Use Case выполнена в PlantUML; остальные в Mermaid. SVG — автономные читаемые представления той же структуры; источники остаются редактируемыми.
+Diagrams: sources in docs/diagrams/source and readable SVG files in docs/diagrams/exports. The use case diagram is written in PlantUML; the others in Mermaid. The SVG files are standalone readable views of the same structure; the sources remain editable.
 
-## Дополнение по ТЗ: УМО, администрирование и архив
+## Addendum to the specification: academic office, administration and archive
 
-УМО получает административную проекцию статусов, комплектности и сроков по разрешенной области. Частный текст запросов, наблюдений и обсуждений в нее не входит. Технический администратор управляет конфигурацией, учетными записями и технической диагностикой, но не читает конфиденциальное содержание по одной лишь технической роли. Серверная проверка объекта обязательна для каждого запроса и скачивания вложения.
+The academic office receives an administrative projection of statuses, completeness and deadlines within its permitted scope. Private text from requests, observations and discussions is not included. The technical administrator manages configuration, accounts and technical diagnostics but does not read confidential content on the strength of a technical role alone. A server-side object check is mandatory for every request and every attachment download.
 
-ImportBatch хранит предпросмотр XLSX, ошибки строк и дубликаты email; запись разрешается только после подтверждения проверенного набора. ConfigurationVersion хранит периоды, лимиты и шаблоны без изменения кода. FinalPackage связывает обязательные F-08–10, самооценку и отзыв наставника с парой. ArchiveSnapshot сохраняет пакет и историю; обычные изменения завершенной программы запрещены, разрешенные служебные операции требуют основания и аудита. NotificationOutbox записывается транзакционно вместе с изменением процесса, уникальный ключ события защищает от повторных уведомлений.
+ImportBatch stores the XLSX preview, row errors and duplicate emails; writing is allowed only after the checked set is confirmed. ConfigurationVersion stores periods, limits and templates without code changes. FinalPackage links the mandatory F-08–10 forms, the self-assessment and the mentor's feedback to the pair. ArchiveSnapshot keeps the package and its history; ordinary changes to a completed programme are forbidden, and permitted service operations require a reason and an audit entry. NotificationOutbox is written in the same transaction as the process change, and a unique event key prevents duplicate notifications.
 
-| Метод и путь | Назначение | Доступ |
+| Method and path | Purpose | Access |
 | --- | --- | --- |
-| POST /api/plans/{id}/return | Возврат с причиной, новая версия и сброс согласий | Директор своей Школы |
-| POST /api/meetings/{id}/confirmation | Однократное подтверждение | Второй участник пары |
-| GET /api/umo/programmes | Статусы и комплектность без частного текста | УМО в своей области |
-| POST /api/imports/preview, /api/imports/{id}/commit | Проверка и подтверждение XLSX | Уполномоченный сотрудник |
-| POST /api/pairs/{id}/completion | Проверить комплект F-08–10 и завершить | Уполномоченный участник процесса |
-| GET /api/pairs/{id}/archive | Архив с объектными правами | Разрешенная область |
-| PATCH /api/configuration | Версия настроек и аудит | Технический администратор |
+| POST /api/plans/{id}/return | Return with a reason, new version and consent reset | Director of the same School |
+| POST /api/meetings/{id}/confirmation | One-time confirmation | The other participant of the pair |
+| GET /api/umo/programmes | Statuses and completeness without private text | Academic office within its scope |
+| POST /api/imports/preview, /api/imports/{id}/commit | Check and confirm XLSX | Authorised staff member |
+| POST /api/pairs/{id}/completion | Check the F-08–10 package and complete | Authorised process participant |
+| GET /api/pairs/{id}/archive | Archive with object permissions | Permitted scope |
+| PATCH /api/configuration | Settings version and audit | Technical administrator |
 
-Это проектный контракт, а не реализованные endpoints. Покрытие текущего прототипа и будущего MVP: [матрица ТЗ](../tz-traceability.md).
+This is a design contract, not implemented endpoints. Coverage by the current prototype and the future MVP: [specification matrix](../tz-traceability.md).

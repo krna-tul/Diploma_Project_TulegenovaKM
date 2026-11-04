@@ -43,7 +43,8 @@ The browser prototype demonstrates:
 
 - Mentor profile and mentee request forms, with locally saved drafts.
 - A mentor catalogue with search and filters, and skill-based recommendations.
-- A catalogue of events for exploring professional development opportunities.
+- A catalogue of events for exploring professional development opportunities, shown as a card slider with a Details dialog.
+- An illustrated blue interface with glass navigation and a custom icon set, designed in Figma.
 - Individual development plans with activities, versions, and review decisions.
 - Meetings, Development Visits, and reflection forms.
 - School review and programme administration screens with summary exports.
@@ -104,7 +105,8 @@ src/
     infrastructure/           Storage, model loading, and downloads
     presentation/             Pages, components, routing, and controllers
     locales/                  Russian and Kazakh translations
-    styles/                   Styles grouped by purpose
+    styles/                   Styles grouped by purpose; theme.css holds the illustrated design
+    assets/                   Logo, illustrations, and icons
   scripts/                    Local HTTP server and documentation checks
   tests/                      Automated tests
   research/matching/          Training export, open data, and results

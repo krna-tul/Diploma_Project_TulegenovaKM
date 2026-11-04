@@ -1,20 +1,20 @@
-# Готовность к 24 октября 2026
+# Readiness for 24 October 2026
 
-Материалы этапа 24 октября: анализ, проектирование, планирование и прототип. Выполнение DIP-4, DIP-5 и DIP-8 подтверждено автором проекта.
+Materials for the 24 October stage: analysis, design, planning and prototype. Completion of DIP-4, DIP-5 and DIP-8 is confirmed by the project author.
 
-| Критерий | Материал | Материалы этапа |
+| Criterion | Material | Stage materials |
 | --- | --- | --- |
-| Proposal и scope | [Proposal](../proposal.md) | Проблема, цель, пользователи, результаты и границы проекта |
-| Evidence of relevance | [Исследование](../research/user-research.md) | Подтверждено: реальная встреча с заказчиками 8 октября, имена и тезисы в презентации, требования в ТЗ; DIP-3 — Готово |
-| Literature review | [Обзор](../research/literature-review.md) | 12 научных публикаций из Canva, критическая таблица и синтез; DIP-4 — Готово |
-| Existing system comparison | [Сравнение](../research/system-comparison.md) | 3 системы × 9 критериев; DIP-5 — Готово |
-| Technology comparison | [Технологии](../research/technology-comparison.md) | 4 решения с альтернативами |
-| Requirements | [FR/NFR](../requirements.md), [ТЗ](../tz-traceability.md) | Добавлены роли УМО/техадминистратора, архив, XLSX, уведомления, локализация |
-| Architecture | [Описание](../architecture/architecture.md), [исходники](../diagrams/source/) | Контекст, Use Case, компоненты и SVG есть; УМО, техадминистратор, архив, импорт и уведомления отражены |
-| UX | [Прототип](../prototype.md) | 11 экранов Figma, 6 PNG в README; локальный сценарий и новые правила проверены; мобильная/клавиатурная проверка и Development Visit завершены по подтверждению автора; DIP-8 — Готово |
-| Verification | [План](../verification.md), [результаты](validation.md) | 17 доменных тестов; синтаксис и локальные ссылки |
-| Management | [План](plan.md), [YouTrack](youtrack.md) | Проект DIP и Kanban созданы; 21 задача DIP-1–DIP-21, заполненное поле «Срок», реальные зависимости и ссылки; DIP-9 — Ревью, будущие DIP-12–DIP-21 — Очередь |
-| Supervisor feedback | [Журнал](supervisor-feedback.md) | Подтверждено: отзыв преподавателя и три выполненных исправления представлены на слайде; DIP-10 — Готово |
-| Repository | [README](../../README.md) | Индивидуальный проект; новые изменения проходят отдельную ветку и PR, независимый review необходимо подтвердить |
+| Proposal and scope | [Proposal](../proposal.md) | Problem, goal, users, results and project scope |
+| Evidence of relevance | [Research](../research/user-research.md) | Confirmed: a real meeting with the clients on 8 October, names and key points in the presentation, requirements in the specification; DIP-3 — Done |
+| Literature review | [Review](../research/literature-review.md) | 12 scientific publications from Canva, a critical table and a synthesis; DIP-4 — Done |
+| Existing system comparison | [Comparison](../research/system-comparison.md) | 3 systems × 9 criteria; DIP-5 — Done |
+| Technology comparison | [Technologies](../research/technology-comparison.md) | 4 decisions with alternatives |
+| Requirements | [FR/NFR](../requirements.md), [Specification](../tz-traceability.md) | Added the academic office and technical administrator roles, archive, XLSX, notifications, localisation |
+| Architecture | [Description](../architecture/architecture.md), [sources](../diagrams/source/) | Context, Use Case, components and SVG are available; the academic office, technical administrator, archive, import and notifications are covered |
+| UX | [Prototype](../prototype.md) | 11 Figma screens, 6 PNG files in the README; the local scenario and new rules are checked; mobile and keyboard checks and Development Visit are completed as confirmed by the author; DIP-8 — Done |
+| Verification | [Plan](../verification.md), [results](validation.md) | 17 domain tests; syntax and local links |
+| Management | [Plan](plan.md), [YouTrack](youtrack.md) | The DIP project and Kanban board are created; 21 tasks DIP-1–DIP-21 with the "Due date" field filled, real dependencies and links; DIP-9 — Review, future DIP-12–DIP-21 — Backlog |
+| Supervisor feedback | [Log](supervisor-feedback.md) | Confirmed: the supervisor's feedback and three completed fixes are shown on the slide; DIP-10 — Done |
+| Repository | [README](../../README.md) | Individual project; new changes go through a separate branch and PR, an independent review still needs to be confirmed |
 
-[Маршрут демонстрации](submission.md).
+[Demonstration route](submission.md).

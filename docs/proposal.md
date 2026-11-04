@@ -1,25 +1,25 @@
-# Проект платформы наставничества преподавателей
+# Faculty Mentoring Platform Project
 
-Платформа AITU объединяет выбор наставника, оформление пары, совместный индивидуальный план и развивающую обратную связь. Главная цель — сделать путь от профессионального запроса преподавателя до результата наставничества понятным и прослеживаемым.
+The AITU platform brings together mentor selection, pair registration, a joint individual plan and developmental feedback. The main goal is to make the path from a lecturer's professional request to the outcome of mentoring clear and traceable.
 
-## Участники
+## Participants
 
-Автор и разработчик: Тулегенова Карина Маратовна, SE-2419, Software Engineering. Руководитель: Тулебаев Ерсултан Бахытович. Автор отвечает за исследование, требования, архитектуру, интерфейс, сервер, данные и тестирование; руководитель проверяет значимые решения.
+Author and developer: Karina Maratovna Tulegenova, SE-2419, Software Engineering. Supervisor: Yersultan Bakhytovich Tulebayev. The author is responsible for research, requirements, architecture, interface, server, data and testing; the supervisor reviews significant decisions.
 
-## Проблема и основания
+## Problem and grounds
 
-Положение AITU требует карточку наставника, индивидуальный запрос, документ назначения, индивидуальный план и итоговую оценку. Это подтвержденная потребность в связанном документообороте. Встреча с заказчиками 8 октября и техническое задание определяют потребность в едином процессе наставничества. Количественная оценка процесса предусмотрена планом исследования.
+The AITU regulation requires a mentor profile, an individual request, an appointment document, an individual plan and a final evaluation. This is a confirmed need for connected document flow. The meeting with the clients on 8 October and the technical specification define the need for a single mentoring process. A quantitative assessment of the process is part of the research plan.
 
-Проект включает две отдельные формы, витрину мероприятий и каталог навыков для преподавателей, которые еще не сформулировали запрос. Основание этих функций — продуктовые требования автора проекта.
+The project includes two separate forms, an events showcase and a skills catalogue for lecturers who have not yet formulated a request. These functions are based on the project author's product requirements.
 
-## Цель и ожидаемые результаты
+## Goal and expected results
 
-Разработать веб-платформу с ролями и защищенным доступом, связывающую профессиональные запросы, пары, планы и результаты. Результаты: спецификация, архитектура и схема данных, интерактивный прототип, серверная реализация, тесты и оценка сценариев с представителями пользователей. Успех оценивается по выполнению сценариев и сокращению времени оформления относительно документного процесса, а не по доказательству роста качества преподавания за короткий дипломный проект.
+Develop a web platform with roles and protected access that connects professional requests, pairs, plans and outcomes. Results: specification, architecture and data model, interactive prototype, server implementation, tests and a scenario evaluation with user representatives. Success is measured by completed scenarios and reduced registration time compared with the paper process, not by proving an improvement in teaching quality within a short diploma project.
 
-## Границы
+## Scope
 
-Первая версия: профили и два вида заявок, каталог навыков и мероприятий, согласование обеих сторон и Школы, регистрация распоряжения проректора, индивидуальный план, встречи, Development Visit, промежуточная и итоговая оценка, обобщенная аналитика. Обязательное наставничество выпускников инициируется Школой; самостоятельный запрос также доступен любому преподавателю.
+First version: profiles and two kinds of applications, the skills and events catalogue, consent from both sides and the School, registration of the vice-rector's order, the individual plan, meetings, Development Visit, midpoint and final evaluation, aggregated analytics. Mandatory mentoring for graduates is initiated by the School; a self-initiated request is also available to any lecturer.
 
-Вне первой версии: автоматическое кадровое назначение, электронная юридически значимая подпись, интеграции с LMS/DU/Learn и кадровой системой, автоматический интеллектуальный подбор, аттестация, дисциплинарная оценка, публичный рейтинг преподавателей. Онлайн-распоряжение не заменяет официальное оформление: система фиксирует его реквизиты.
+Out of the first version: automatic HR appointment, legally binding electronic signature, integration with LMS/DU/Learn and the HR system, automatic intelligent matching, attestation, disciplinary assessment, a public ranking of lecturers. The online order does not replace the official procedure: the system records its details.
 
-К 24 октября готовится анализ, проектирование и прототип. Полная платформа на этом этапе не требуется по предоставленной памятке. Реализация в src/prototype — локальная демонстрация с синтетическими данными; production backend и авторизация остаются следующим этапом.
+The analysis, design and prototype are prepared by 24 October. The full platform is not required at this stage according to the provided guidelines. The implementation in src/prototype is a local demonstration with synthetic data; a production backend and authorisation remain the next stage.

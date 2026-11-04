@@ -1,20 +1,20 @@
-# Представление проекта 24 октября 2026
+# Project Presentation, 24 October 2026
 
-Репозиторий: https://github.com/krna-tul/Diploma_Project_TulegenovaKM
+Repository: https://github.com/krna-tul/Diploma_Project_TulegenovaKM
 
-## Демонстрация
+## Demonstration
 
-1. Показать README, предложение и границы MVP, реестр источников и карту ТЗ.
-2. Объяснить научные выводы и ограничения; сравнение аналогов и трех ключевых технических решений.
-3. Показать контекст, Use Case, компоненты и редактируемые исходники диаграмм.
-4. Выполнить npm run check; запустить npm start и пройти запрос → согласия → назначение → план → возврат → исправление → утверждение → встреча и ее подтверждение → Development Visit.
-5. Показать одну реальную YouTrack задачу, соответствующий PR/коммит и результат проверки.
-6. Представить фактический отзыв руководителя, выполненные изменения.
+1. Show the README, the proposal and MVP scope, the source register and the specification map.
+2. Explain the research findings and limitations; the comparison of existing systems and the three key technical decisions.
+3. Show the context, Use Case and component diagrams and their editable sources.
+4. Run npm run check; start npm start and walk through request → consents → appointment → plan → return → correction → approval → meeting and its confirmation → Development Visit.
+5. Show one real YouTrack task, the matching PR or commit and the check result.
+6. Present the actual supervisor feedback and the changes made.
 
-## Материалы этапа
+## Stage materials
 
-Локальный прототип использует синтетические данные. В репозитории размещены презентация, требования, литература, сравнения, архитектура, диаграммы и план оценки. Встреча с заказчиками 8 октября и отзыв преподавателя зафиксированы в документации. Выполнение DIP-4, DIP-5 и DIP-8 подтверждено автором проекта.
+The local prototype uses synthetic data. The repository contains the presentation, requirements, literature, comparisons, architecture, diagrams and the evaluation plan. The meeting with the clients on 8 October and the supervisor's feedback are recorded in the documentation. Completion of DIP-4, DIP-5 and DIP-8 is confirmed by the project author.
 
-## Версия материалов
+## Materials version
 
-[pre-defense-1](https://github.com/krna-tul/Diploma_Project_TulegenovaKM/tree/pre-defense-1) фиксирует комплект материалов первой предзащиты. Проверка: `npm run check`, 17 доменных тестов и 74 локальные ссылки. Основные диаграммы представлены непосредственно в README в Mermaid.
+[pre-defense-1](https://github.com/krna-tul/Diploma_Project_TulegenovaKM/tree/pre-defense-1) fixes the set of materials for the first pre-defence. Checks: `npm run check`, 17 domain tests and 74 local links. The main diagrams are shown directly in the README in Mermaid.

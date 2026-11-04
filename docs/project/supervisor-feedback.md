@@ -1,15 +1,15 @@
-# Замечания руководителя и изменения
+# Supervisor Feedback and Changes
 
-Автор подтвердила, что приложенный слайд **Supervisor Feedback and Improvements** представляет отзыв супервайзера по презентации. Три замечания и выполненные действия зафиксированы ниже.
+The author confirmed that the attached **Supervisor Feedback and Improvements** slide records the supervisor's feedback on the presentation. The three comments and the actions taken are listed below.
 
-![Отзыв супервайзера и исправления](../assets/evidence/supervisor-feedback.png)
+![Supervisor feedback and improvements](../assets/evidence/supervisor-feedback.png)
 
-| Замечание | Выполненное изменение | Подтверждение | Результат |
+| Comment | Change made | Evidence | Result |
 | --- | --- | --- | --- |
-| Указать полные названия публикаций и собрать Literature Review на одном слайде | Canva слайд 4, 12 полных названий | [Презентация](https://www.canva.com/design/DAHX4M_h4Jk/jzrlIAl0YynEVf303Q_fIA/edit) | 12 научных статей перенесены в репозиторий с той же нумерацией |
-| Добавить Project Management and Risks; сентябрь 2026 — май 2027 | Canva слайд 28, ответственности, сроки и риски; план репозитория расширен | Презентация и plan.md | [YouTrack DIP](https://karinatulegenova.youtrack.cloud/issues/DIP) создан; план связан с реальными задачами |
-| Добавить Supervisor Feedback and Improvements перед References | Canva слайд 29, три замечания, действия и статусы | Презентация, References слайд 30 | Отзыв преподавателя и выполненные исправления зафиксированы |
+| Give the full titles of publications and gather the Literature Review on one slide | Canva slide 4, 12 full titles | [Presentation](https://www.canva.com/design/DAHX4M_h4Jk/jzrlIAl0YynEVf303Q_fIA/edit) | 12 scientific articles moved into the repository with the same numbering |
+| Add Project Management and Risks; September 2026 – May 2027 | Canva slide 28, responsibilities, deadlines and risks; repository plan extended | Presentation and plan.md | [YouTrack DIP](https://karinatulegenova.youtrack.cloud/issues/DIP) created; the plan is linked to real tasks |
+| Add Supervisor Feedback and Improvements before References | Canva slide 29, three comments, actions and statuses | Presentation, References slide 30 | The supervisor's feedback and the completed fixes are recorded |
 
-## Результат
+## Result
 
-Отзыв преподавателя получен. Все три рекомендации выполнены и отражены в презентации и документации. DIP-10 — Готово.
+The supervisor's feedback has been received. All three recommendations are done and reflected in the presentation and the documentation. DIP-10 — Done.

@@ -1,46 +1,46 @@
-# Основания требований и параметры проекта
+# Requirement Sources and Project Parameters
 
-## Реестр предоставленных документов
+## Register of provided documents
 
-| ID | Документ | Использование |
+| ID | Document | Use |
 | --- | --- | --- |
-| TZ | Техзадание_наставничество[62] (4).docx, версия 1.0 | Целевой MVP, 15 критериев приемки, роли и интеграции |
-| REG | Положение о наставничестве_2026.docx | Порядок назначения, критерии, план, оценка, конфиденциальность |
-| DV-RU | Методические_инструкции_Development_visit.docx | Три этапа визита и карта наблюдения |
-| DV-KZ | Development_Visit_Әдістемелік_нұсқаулық_KZ.docx | Казахская терминология и те же этапы |
-| DV-EN | Methodological Guidelines Development Visit EN.docx | Английская терминология и те же этапы |
-| STAGE | До 24 октября (1) (2).docx | Перечень материалов первой предзащиты |
-| USER | Запрос автора проекта от 10 октября 2026 | Две формы, витрина, навыки, отдельные коммиты без push |
+| TZ | Technical specification for the mentoring platform, version 1.0 (DOCX, Russian) | Target MVP, 15 acceptance criteria, roles and integrations |
+| REG | Regulation on Mentoring 2026 (DOCX, Russian) | Appointment procedure, criteria, plan, evaluation, confidentiality |
+| DV-RU | Development Visit methodological guidelines (DOCX, Russian) | The three visit stages and the observation map |
+| DV-KZ | Development Visit methodological guidelines (DOCX, Kazakh) | Kazakh terminology and the same stages |
+| DV-EN | Methodological Guidelines Development Visit EN.docx | English terminology and the same stages |
+| STAGE | "By 24 October" stage memo (DOCX, Russian) | List of materials for the first pre-defence |
+| USER | Project author's request of 10 October 2026 | Two forms, a showcase, skills, separate commits without push |
 
-Исходные документы хранятся у автора проекта. Приложения 1–4 упомянуты в положении, но отдельные шаблоны приложений в предоставленном файле не обнаружены; поля ниже — проектные схемы, которые необходимо согласовать с Школой.
+The original documents are kept by the project author under their original file names. Appendices 1–4 are mentioned in the regulation, but separate appendix templates were not found in the provided file; the fields below are design schemas that must be agreed with the School.
 
-## Различия и решения
+## Differences and decisions
 
-«Декан» в устном запросе: в REG указаны Школа, директор Школы и проректор по академической работе. В интерфейсе используется точная роль «Директор Школы»; локальное соответствие декану необходимо подтвердить. «Выставляемый» трактуется как «наставляемый».
+"Dean" in the verbal request: REG names the School, the School director and the vice-rector for academic affairs. The interface uses the exact role "School Director"; the local equivalence with a dean must be confirmed. A misspelt term for "mentee" in the request is interpreted as "mentee".
 
-Индивидуальный план участника программы отличается от Индивидуального плана работы преподавателя. Первый содержит цели и мероприятия пары; во втором учитываются 15 часов за одного наставляемого в триместр, если внутренние документы не устанавливают иное. Система не генерирует полный кадровый план работы.
+The individual plan of a programme participant differs from the Individual Work Plan of a lecturer. The first contains the pair's goals and activities; the second records 15 hours per mentee per trimester unless internal documents state otherwise. The system does not generate the full HR work plan.
 
-Рекомендация встреч раз в две недели и 2–3 фокусов визита отображается подсказкой; это не жесткое ограничение. Лимит двух наставляемых допускает согласованное исключение. Срок 10 рабочих дней зависит от календаря университета и праздников; прототип считает только понедельник–пятницу, промышленная версия должна использовать утвержденный календарь.
+The recommendation to meet every two weeks and to choose 2–3 visit focuses is shown as a hint; it is not a hard limit. The limit of two mentees allows an agreed exception. The 10 working day deadline depends on the university calendar and holidays; the prototype counts Monday–Friday only, and the production version must use the approved calendar.
 
-В RU/EN нумерация финальной рефлексии — 7, в KZ — 6. Это различие нумерации, не дополнительный раздел. Используется единая смысловая схема. Русский интерфейс прототипа не означает завершенную трехъязычную локализацию.
+In RU/EN the final reflection is numbered 7, in KZ it is 6. This is a numbering difference, not an extra section. A single semantic schema is used. Localisation of the original workflow prototype into three languages is not complete.
 
-## Вопросы к заказчику
+## Questions for the client
 
-1. Кто выполняет функции директора Школы, кто регистрирует распоряжение и проверяет инструктаж?
-2. Каковы утвержденные формы приложений 1–4, сроки хранения, правила доступа к итоговым документам?
-3. Какой календарь определяет рабочие дни и академические периоды?
-4. Как подтверждаются стаж, квалификация, конфликт интересов и исключение из лимита?
-5. Кто публикует мероприятия, какие сведения карточки разрешено показывать внутри университета?
-6. Нужны ли RU/KZ/EN в первой серверной версии и какой университетский вход используется?
+1. Who acts as the School director, who registers the order and who checks the training?
+2. What are the approved forms of appendices 1–4, the retention periods and the access rules for final documents?
+3. Which calendar defines working days and academic periods?
+4. How are experience, qualifications, conflict of interest and an exception from the limit confirmed?
+5. Who publishes events, and which profile details may be shown within the university?
+6. Are RU/KZ/EN needed in the first server version, and which university sign-in is used?
 
-Статус: документальный анализ выполнен. Автор подтвердила встречу с тремя представителями заказчика 8 октября 2026; [тезисы и слайд](research/user-research.md) сохранены. ТЗ содержит требования заказчиков и используется вместе с результатами встречи.
+Status: the document analysis is done. The author confirmed a meeting with three client representatives on 8 October 2026; the [key points and slide](research/user-research.md) are saved. The specification contains the clients' requirements and is used together with the meeting results.
 
-## Сверка с ТЗ от 15 октября 2026
+## Reconciliation with the specification, 15 October 2026
 
-ТЗ добавлено к основаниям проекта. Реестр соответствия: [матрица ТЗ](tz-traceability.md). Положение определяет бизнес-правила, ТЗ — состав цифровой платформы. Рекомендованный стек допускает обоснованные эквиваленты; выбранный Django соответствует этой границе. Регистратор и академический департамент остаются детализацией согласования и инструктажа по Положению; целевые кабинеты включают УМО и технического администратора с раздельными правами.
+The specification was added to the project sources. Traceability register: [specification matrix](tz-traceability.md). The regulation defines the business rules, and the specification defines the scope of the digital platform. The recommended stack allows justified equivalents; the chosen Django fits within this boundary. The registrar and the academic department remain details of the consent and training steps from the regulation; the target workspaces include the academic office and the technical administrator with separate permissions.
 
-Трехъязычный интерфейс RU/KZ/EN обязателен для целевой версии по ТЗ; русский интерфейс текущего прототипа — ограничение этапа. Целевые операции — до 2 с, поиск — до 3 с при согласованной нагрузке. Прежние 100 пользователей/1000 карточек и p95 <1 с являются предложением испытательного стенда, а не утвержденным требованием заказчика. Календарь, размещение, хранение и внешние интеграции требуют согласования. Приложение Б ТЗ содержит перечень F-01–F-11, но не заменяет утвержденные полные шаблоны.
+A three-language RU/KZ/EN interface is mandatory for the target version according to the specification. Target operations take up to 2 s and search up to 3 s under an agreed load. The earlier figures of 100 users, 1,000 profiles and p95 < 1 s are a proposal for a test bench, not an approved client requirement. The calendar, hosting, retention and external integrations need to be agreed. Appendix B of the specification lists F-01–F-11 but does not replace the approved full templates.
 
-## Открытые данные для модели (22 октября 2026)
+## Open data for the model (22 October 2026)
 
-По пояснению автора проекта, конфиденциальные данные университета для обучения и демонстрации не были предоставлены. Использован открытый [UniSkill](https://huggingface.co/datasets/nurlanm/UniSkill_dataset), лицензия Apache-2.0. [Публикация Musazade, Mezei и Zhang (2026)](https://aclanthology.org/2026.lrec-1.31/). Происхождение CSV и хеши исходных файлов зафиксированы в `src/research/matching/data/source_manifest.json`. Открытые пары «курс — навык» следует отличать от иллюстративных профилей наставников и условных связей с курсами. Подробнее: [отчёт](frontend-matching-report.md).
+According to the project author, confidential university data was not provided for training or demonstration. The open [UniSkill](https://huggingface.co/datasets/nurlanm/UniSkill_dataset) dataset is used under the Apache-2.0 licence. [Publication by Musazade, Mezei and Zhang (2026)](https://aclanthology.org/2026.lrec-1.31/). The provenance of the CSV files and the hashes of the source files are recorded in `src/research/matching/data/source_manifest.json`. Open course–skill pairs must be distinguished from the illustrative mentor profiles and the illustrative course assignments. More details: [report](frontend-matching-report.md).
