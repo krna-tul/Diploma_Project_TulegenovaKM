@@ -15,6 +15,6 @@ Materials for the 24 October stage: analysis, design, planning and prototype. Co
 | Verification | [Plan](../verification.md), [results](validation.md) | 17 domain tests; syntax and local links |
 | Management | [Plan](plan.md), [YouTrack](youtrack.md) | The DIP project and Kanban board are created; 21 tasks DIP-1–DIP-21 with the "Due date" field filled, real dependencies and links; DIP-9 — Review, future DIP-12–DIP-21 — Backlog |
 | Supervisor feedback | [Log](supervisor-feedback.md) | Confirmed: the supervisor's feedback and three completed fixes are shown on the slide; DIP-10 — Done |
-| Repository | [README](../../README.md) | Individual project; new changes go through a separate branch and PR, an independent review still needs to be confirmed |
+| Repository | [README](../../README.md) | Individual project; at this stage changes went through a separate branch and PR, an independent review still needed to be confirmed. Since November 2026 the project uses a single `main` branch |
 
 [Demonstration route](submission.md).

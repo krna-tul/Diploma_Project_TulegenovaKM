@@ -2,7 +2,7 @@
 
 Developer: Karina Tulegenova — analysis, architecture, frontend and backend, testing and documentation. Supervisor: Yersultan Tulebayev — review of scope, architecture and the evaluation plan; individual meetings are arranged separately. AITU representatives confirm the business process, forms and IT access. The pilot participants are chosen when the pilot is organised.
 
-The diploma is an individual project. Changes are made in separate branches, checked in a Pull Request and merged into main after review. The [YouTrack DIP project](https://karinatulegenova.youtrack.cloud/issues/DIP) holds the project tasks. The [backlog](backlog.json) and the [import guide](youtrack.md) contain 21 work items; the tasks are linked to repository materials. Historical deadlines and commits are not changed retroactively.
+The diploma is an individual project. Since November 2026 changes are committed directly to the single `main` branch and checked by GitHub Actions on every push; the supervisor reviews the committed materials. Until then, changes went through separate branches and Pull Requests. The [YouTrack DIP project](https://karinatulegenova.youtrack.cloud/issues/DIP) holds the project tasks. The [backlog](backlog.json) and the [import guide](youtrack.md) contain 21 work items; the tasks are linked to repository materials. Historical deadlines and commits are not changed retroactively.
 
 ## Stages, September 2026 – May 2027
 

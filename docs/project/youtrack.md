@@ -4,7 +4,7 @@
 
 On 15 October 2026, 21 real tasks were created. Assignee: Karina Tulegenova — YouTrack `admin`, GitHub `krna-tul`. On 20 October the "Due Date" field was added and filled in all 21 cards; the dates are also repeated in the descriptions. Priorities P0/P1/P2 correspond to Critical/Major/Normal. Project stages: Backlog → Development → Review → Test → On test environment → Done (the YouTrack board uses the Russian names of these stages).
 
-The diploma is an individual project: the only developer is Karina Tulegenova (`krna-tul` / YouTrack `admin`). The supervisor reviews the work rather than acting as a second developer. New changes are made in separate branches and go through a Pull Request with checks before merging into `main`. DIP IDs are mentioned in commits and PRs; a back link to the specific commit or PR is added to the card. History is not rewritten. OCT/MVP/PILOT/FINAL are plan stages.
+The diploma is an individual project: the only developer is Karina Tulegenova (`krna-tul` / YouTrack `admin`). The supervisor reviews the work rather than acting as a second developer. Since November 2026 changes are committed directly to the single `main` branch, and GitHub Actions runs `npm run check` on every push; earlier changes went through Pull Requests, which remain in the history. DIP IDs are mentioned in commit messages; a back link to the specific commit is added to the card. History is not rewritten. OCT/MVP/PILOT/FINAL are plan stages.
 
 The deadline for organising GitHub and YouTrack is **22 October 2026**. The pre-defence is on **24 October**; DIP-11, due 23 October, covers preparing the talk and the set of materials and does not move the tool organisation deadline.
 

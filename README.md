@@ -138,7 +138,7 @@ src/
 <a name="version-control-workflow"></a>
 <h2 align="center">Version Control Workflow</h2>
 
-I develop the project through my GitHub account (`krna-tul`) and track work in YouTrack. Feature branches and pull requests record changes and validation; supervisor review is recorded separately from automated checks.
+I develop the project through my GitHub account (`krna-tul`) and track work in YouTrack. Since November 2026 the repository uses a single `main` branch: I commit directly to `main`, mention the DIP task ID in the commit message, and every push runs `npm run check` in GitHub Actions. The `main` ruleset still blocks force pushes and branch deletion. Earlier work went through pull requests No. 1–9, which remain in the history; supervisor review is recorded separately from automated checks.
 
 <a name="application-prototype"></a>
 <h2 align="center">Application Prototype</h2>
