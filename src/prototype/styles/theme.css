@@ -860,7 +860,7 @@ dialog::backdrop {
   background-repeat: no-repeat;
 }
 .lp-skyline {
-  margin: -110px -5% 0;
+  margin: 36px -5% 0;
   animation: skyline-in 1.4s var(--ease) 0.45s both;
 }
 .lp-skyline .scene-stage {
