@@ -610,4 +610,6 @@ export default {
   'AITU Faculty Mentoring · diploma prototype': 'AITU Faculty Mentoring · дипломдық прототип',
   'Privacy policy': 'Құпиялылық саясаты',
   'Public offer agreement': 'Жария оферта шарты',
+  Menu: 'Мәзір',
+  'One shared path': 'Бір ортақ жол',
 };

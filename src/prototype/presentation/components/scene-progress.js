@@ -26,9 +26,15 @@ export function createSparkles(count, seed = 7) {
     value ^= value + Math.imul(value ^ (value >>> 7), 61 | value);
     return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
   };
+  const spot = () => {
+    for (;;) {
+      const left = Math.round(random() * 1000) / 10;
+      const top = Math.round(random() * 1000) / 10;
+      if (left < 20 || left > 80 || top < 14 || top > 74) return { left, top };
+    }
+  };
   return Array.from({ length: count }, () => ({
-    left: Math.round(random() * 1000) / 10,
-    top: Math.round(random() * 1000) / 10,
+    ...spot(),
     size: Math.round(7 + random() * 11),
     depth: Math.round((0.2 + random() * 0.8) * 100) / 100,
     duration: Math.round((2.6 + random() * 3.4) * 10) / 10,

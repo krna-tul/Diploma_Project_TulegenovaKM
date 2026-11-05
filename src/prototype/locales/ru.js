@@ -612,4 +612,6 @@ export default {
   'AITU Faculty Mentoring · diploma prototype': 'AITU Faculty Mentoring · дипломный прототип',
   'Privacy policy': 'Политика конфиденциальности',
   'Public offer agreement': 'Договор публичной оферты',
+  Menu: 'Меню',
+  'One shared path': 'Один общий путь',
 };

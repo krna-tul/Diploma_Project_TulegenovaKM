@@ -1,6 +1,5 @@
 import { html } from '../components/html-template.js';
-import { renderLink, renderIcon } from '../components/html.js';
-import { renderEventCards } from './events.js';
+import { renderLink } from '../components/html.js';
 import { renderSiteFooter } from '../components/site-footer.js';
 import { renderIllustratedScene, renderSparkles } from '../components/illustrated-scenes.js';
 
@@ -28,6 +27,8 @@ const steps = [
   ],
 ];
 
+const journey = [...pillars.map(([, title, text]) => [title, text, null]), ...steps];
+
 export function renderLandingPage(viewContext) {
   return html`
     <section class="lp-hero">
@@ -43,34 +44,13 @@ export function renderLandingPage(viewContext) {
         <div class="actions">
           ${renderLink('Create mentee form', 'request')}${renderLink('Create mentor form', 'mentor-form', true)}
         </div>
-        <small class="lp-trust">FOR AITU FACULTY / VOLUNTARY / CONFIDENTIAL</small>
       </div>
       ${renderIllustratedScene('skyline', 'lp-skyline')}
     </section>
 
-    <section class="lp-section lp-pillars">
-      ${pillars
-        .map(
-          ([icon, title, text], index) => html`
-            <a class="lp-pillar" href="#about">
-              <span class="lp-pillar-top">
-                ${renderIcon(icon, 'lp-pillar-icon')}
-                <span class="lp-pillar-step" aria-hidden="true">0${index + 1}</span>
-              </span>
-              <h2>${title}</h2>
-              <p>${text}</p>
-              <span class="lp-round-arrow" aria-hidden="true">→</span>
-            </a>
-          `,
-        )
-        .join('')}
-    </section>
-
-    <section class="lp-section">
+    <section class="lp-section lp-explore-section">
       <div class="lp-explore">
-        <div class="lp-explore-icon">${renderIcon('calendar')}</div>
         <div class="lp-explore-copy">
-          <small>START WITH AN EVENT</small>
           <h2>
             Not sure which skill
             <br />
@@ -91,33 +71,12 @@ export function renderLandingPage(viewContext) {
     </section>
 
     <section class="lp-section">
-      <small class="lp-eyebrow">DISCOVER SKILLS THROUGH SHARED PRACTICE</small>
-      <div class="section-heading lp-heading">
-        <h2>Learn with our mentors</h2>
-        ${renderLink('View all events', 'events', true)}
-      </div>
-      ${renderEventCards(viewContext)}
-      <p class="demo-note">
-        Illustrative events for the prototype. Dates and mentors will be confirmed by AITU.
-      </p>
-    </section>
-
-    <section class="lp-section">
-      <small class="lp-eyebrow">HOW MENTORING WORKS</small>
-      <h2 class="lp-title">Three steps, one shared path</h2>
-      <div class="lp-steps">
-        ${steps
+      <h2 class="lp-title">One shared path</h2>
+      <div class="lp-glass-grid lp-glass-journey">
+        ${journey
           .map(
-            ([title, text, route], index) => html`
-              <a class="lp-step" href="#${route}">
-                <span class="lp-step-number">
-                  <b>0${index + 1}</b>
-                  <i aria-hidden="true"></i>
-                </span>
-                <h3>${title}</h3>
-                <p>${text}</p>
-              </a>
-            `,
+            ([title, text, route], index) =>
+              `<${route ? `a href="#${route}"` : 'article'} class="glass-card"><h3><span class="glass-num">${index + 1}.</span> ${title}</h3><p>${text}</p></${route ? 'a' : 'article'}>`,
           )
           .join('')}
       </div>

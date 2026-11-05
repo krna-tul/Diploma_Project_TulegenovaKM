@@ -25,17 +25,6 @@
   outline: 2px solid #3278bd;
   outline-offset: 2px;
 }
-html:not([lang='en']) h1,
-html:not([lang='en']) h2,
-html:not([lang='en']) h3 {
-  font-family: Georgia, 'Times New Roman', serif;
-}
-html:not([lang='en']) h1 {
-  font-size: 38px;
-}
-html:not([lang='en']) .landing-copy h1 {
-  font-size: 54px;
-}
 html:not([lang='en']) .sidebar-note h3 {
   white-space: normal;
 }
@@ -45,27 +34,12 @@ html:not([lang='en']) .public-nav {
 html:not([lang='en']) .landing-copy .actions {
   flex-wrap: wrap;
 }
-html:not([lang='en']) .overview-banner h2 {
-  font-size: 30px;
-}
-html:not([lang='en']) .brand-title {
-  font-size: 15px;
-}
-html:not([lang='en']) .event-card h2 {
-  font-size: 28px;
-}
 html:not([lang='en']) aside > small {
   font-size: 10px;
   overflow-wrap: anywhere;
 }
 html:not([lang='en']) .public-cta {
   flex-wrap: wrap;
-}
-html:not([lang='en']) .signin-form h1 {
-  font-size: 40px;
-}
-html:not([lang='en']) .signin-quote h2 {
-  font-size: 36px;
 }
 @media (max-width: 760px) {
   .public-nav,
@@ -85,21 +59,6 @@ html:not([lang='en']) .signin-quote h2 {
     min-width: 40px;
     min-height: 40px;
   }
-  html:not([lang='en']) h1 {
-    font-size: 30px;
-  }
-  html:not([lang='en']) .landing-copy h1 {
-    font-size: 40px;
-  }
-  html:not([lang='en']) .brand-title {
-    font-size: 12px;
-  }
-  html:not([lang='en']) .signin-form h1 {
-    font-size: 34px;
-  }
-  html:not([lang='en']) .signin-quote h2 {
-    font-size: 28px;
-  }
   html:not([lang='en']) .tabs {
     flex-wrap: wrap;
   }
@@ -117,9 +76,6 @@ html:not([lang='en']) .landing-copy h1 {
   overflow-wrap: anywhere;
 }
 @media (max-width: 760px) {
-  html:not([lang='en']) .landing-copy h1 {
-    font-size: 32px;
-  }
   .button,
   button {
     max-width: 100%;
@@ -138,8 +94,5 @@ html:not([lang='en']) .section-heading h2 {
 @media (max-width: 760px) {
   html:not([lang='en']) h2 {
     overflow-wrap: anywhere;
-  }
-  html:not([lang='en']) .public-section .section-heading h2 {
-    font-size: 30px !important;
   }
 }
