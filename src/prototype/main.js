@@ -31,6 +31,7 @@ import {
 } from './presentation/router.js';
 import { queryElement } from './presentation/dom.js';
 import { mountCardSliders } from './presentation/components/card-slider.js';
+import { mountScenes } from './presentation/components/scene-motion.js';
 const repository = createJsonStorageRepository({
   storage: window.localStorage,
   key: 'aitu-reference-ui-v1',
@@ -102,6 +103,7 @@ function render() {
   if (route === 'request') refreshSkillDescription();
   localize();
   mountCardSliders();
+  mountScenes();
   updateDocumentTitle(translate);
 }
 const dependencies = {

@@ -14,7 +14,7 @@ export function renderHeader(viewContext, publicPage) {
       </a>
       ${
         publicPage
-          ? `<div class="public-nav"><a href="#about">ABOUT THE PROGRAM</a><a href="#events">EVENTS</a><span class="language-wrap">${renderIcon('globe')}${languageSwitcher()}</span>${renderLink('Sign in', 'signin')}</div>`
+          ? `<div class="public-nav"><a href="#about">ABOUT THE PROGRAM</a><a href="#events">EVENTS</a><span class="language-wrap">${renderIcon('globe')}${languageSwitcher()}</span></div>`
           : `<div class="header-right"><span class="language-wrap">${renderIcon('globe')}${languageSwitcher()}</span><button data-action="notifications" class="notifications-button">${renderIcon('bell')}<span>Notifications</span></button><span class="avatar" title="Switch demo workspace">AK<select id="role" aria-label="Demo workspace">${[
               ['mentee', 'Mentee'],
               ['mentor', 'Mentor'],

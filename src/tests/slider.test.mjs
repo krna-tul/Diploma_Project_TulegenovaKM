@@ -70,3 +70,24 @@ test('every event has details and every detail line is translated', () => {
     }
   }
 });
+
+test('scene progress runs from 0 below the viewport to 1 above it', async () => {
+  const { getSceneProgress, getFlagStrips, FLAG_STRIPS, createSparkles } =
+    await import('../prototype/presentation/components/scene-progress.js');
+  assert.deepEqual(getSceneProgress({ top: 900, height: 400, viewport: 800 }), {
+    scroll: 0,
+    reveal: 0,
+    leave: 0,
+  });
+  assert.equal(getSceneProgress({ top: 200, height: 400, viewport: 800 }).reveal, 1);
+  assert.equal(getSceneProgress({ top: -500, height: 400, viewport: 800 }).scroll, 1);
+  assert.equal(getSceneProgress({ top: 0, height: 400, viewport: 800 }).leave, 0);
+  assert.equal(getSceneProgress({ top: -200, height: 400, viewport: 800 }).leave, 0.5);
+  const strips = getFlagStrips();
+  assert.equal(strips.length, FLAG_STRIPS);
+  assert.equal(strips[0].left, 0);
+  assert.equal(strips.at(-1).position, 100);
+  const sparkles = createSparkles(20, 3);
+  assert.deepEqual(sparkles, createSparkles(20, 3));
+  assert.ok(sparkles.every((s) => s.left >= 0 && s.left <= 100 && s.depth > 0 && s.depth <= 1));
+});

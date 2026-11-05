@@ -1,6 +1,8 @@
 import { html } from '../components/html-template.js';
 import { renderLink, renderIcon } from '../components/html.js';
 import { renderEventCards } from './events.js';
+import { renderSiteFooter } from '../components/site-footer.js';
+import { renderIllustratedScene, renderSparkles } from '../components/illustrated-scenes.js';
 
 const pillars = [
   [
@@ -29,6 +31,7 @@ const steps = [
 export function renderLandingPage(viewContext) {
   return html`
     <section class="lp-hero">
+      ${renderSparkles(26, 11)}
       <div class="lp-hero-copy">
         <h1>
           <span>A shared path to</span>
@@ -42,11 +45,7 @@ export function renderLandingPage(viewContext) {
         </div>
         <small class="lp-trust">FOR AITU FACULTY / VOLUNTARY / CONFIDENTIAL</small>
       </div>
-      <div
-        class="lp-illustration lp-skyline"
-        role="img"
-        aria-label="Illustrated Astana skyline"
-      ></div>
+      ${renderIllustratedScene('skyline', 'lp-skyline')}
     </section>
 
     <section class="lp-section lp-pillars">
@@ -125,7 +124,8 @@ export function renderLandingPage(viewContext) {
     </section>
 
     <section class="lp-final">
-      <div class="lp-final-copy">
+      ${renderSparkles(16, 29)}
+      <div class="lp-final-copy" data-reveal>
         <h2>
           <span>Your next step</span>
           <em>starts here.</em>
@@ -135,18 +135,9 @@ export function renderLandingPage(viewContext) {
           ${renderLink('Create mentee form', 'request')}${renderLink('Create mentor form', 'mentor-form', true)}
         </div>
       </div>
-      <div class="lp-illustration lp-campus" role="img" aria-label="Illustrated AITU campus"></div>
+      ${renderIllustratedScene('campus', 'lp-campus')}
     </section>
 
-    <footer class="landing-footer">
-      <span class="lp-footer-brand">
-        <span class="logo lp-footer-logo">
-          <img class="symbol" src="assets/logo-symbol.svg" alt="" />
-          <img class="wordmark" src="assets/logo-text.svg" alt="Astana IT University" />
-        </span>
-        <span>AITU Faculty Mentoring</span>
-      </span>
-      <a href="#help">Support · Privacy · Program guidelines</a>
-    </footer>
+    ${renderSiteFooter()}
   `;
 }
