@@ -1,3 +1,4 @@
+import { seededMeetings } from './records.js';
 export const createInitialState = () => ({
   request: {
     area: 'Teaching methods and lesson design',
@@ -48,4 +49,30 @@ export const createInitialState = () => ({
   assignments: {},
   enrollments: [],
   audit: [],
+  records: {
+    meetings: structuredClone(seededMeetings),
+    interim: [],
+    changes: [],
+    confidential: [],
+    support: [],
+    references: [],
+  },
+  appointment: { status: 'Not started' },
+  appointments: [
+    { mentee: 'Timur A.', mentor: 1 },
+    { mentee: 'Arman Zh.', mentor: 1 },
+    { mentee: 'Dana M.', mentor: 2 },
+  ],
+  observation: {},
+  final: { checklist: [], self: {}, review: {}, closed: false },
+  profile: {
+    name: 'Alina K.',
+    position: 'Senior lecturer',
+    school: 'School of Computing',
+    email: 'a.kenzhebaeva@astanait.edu.kz',
+    channel: 'Email and in-app',
+  },
+  imported: [],
+  notificationsRead: false,
 });
+export const withDefaults = (saved) => ({ ...createInitialState(), ...saved });

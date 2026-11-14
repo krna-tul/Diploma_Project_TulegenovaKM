@@ -20,6 +20,7 @@ export function renderHeader(viewContext, publicPage) {
               ['mentor', 'Mentor'],
               ['school', 'School coordinator'],
               ['umo', 'Program administrator'],
+              ['tech', 'Technical administrator'],
             ]
               .map(
                 ([value, label]) =>
@@ -31,7 +32,22 @@ export function renderHeader(viewContext, publicPage) {
   `;
 }
 const sidebarIcons = [
-  [/overview/i, 'home'],
+  [/overview|system status/i, 'home'],
+  [/program status/i, 'growth-chart'],
+  [/journal/i, 'calendar-clock'],
+  [/observation/i, 'observation'],
+  [/interim/i, 'chat'],
+  [/final|checklist/i, 'star'],
+  [/confidential/i, 'lock'],
+  [/change request/i, 'edit'],
+  [/appointment/i, 'people'],
+  [/workload/i, 'clock'],
+  [/reference/i, 'filter'],
+  [/import/i, 'download'],
+  [/analytics/i, 'growth-chart'],
+  [/audit|logs/i, 'eye'],
+  [/profile/i, 'user'],
+  [/support/i, 'help'],
   [/find a mentor|mentor directory/i, 'search'],
   [/request/i, 'document'],
   [/plans? for review/i, 'check-circle'],
@@ -50,41 +66,64 @@ const sidebarIcon = (label) =>
   sidebarIcons.find(([pattern]) => pattern.test(label))?.[1] || 'document';
 export function renderSidebar(viewContext) {
   const { role, page } = viewContext;
-  let items =
-    role === 'school'
-      ? [
-          ['umo', 'School overview'],
-          ['requests', 'Requests & assignments'],
-          ['review', 'Plans for review'],
-          ['changes', 'Program changes'],
-          ['umo', 'School reports'],
-        ]
-      : role === 'umo'
-        ? [
-            ['umo', 'Program overview'],
-            ['programs', 'Programs'],
-            ['mentors', 'Mentor directory'],
-            ['reports', 'Reports & exports'],
-            ['archive', 'Archive'],
-            ['settings', 'Program settings'],
-          ]
-        : role === 'mentor'
-          ? [
-              ['overview', 'Overview'],
-              ['mentor-form', 'Mentor profile'],
-              ['programs', 'My mentees'],
-              ['plan', 'Development plans'],
-              ['visit', 'Meetings & visits'],
-              ['feedback', 'Feedback'],
-            ]
-          : [
-              ['overview', 'Overview'],
-              ['mentors', 'Find a mentor'],
-              ['request', 'My request'],
-              ['plan', 'Development plan'],
-              ['visit', 'Meetings & visits'],
-              ['feedback', 'Feedback'],
-            ];
+  const items = {
+    school: [
+      ['umo', 'School overview'],
+      ['requests', 'Requests & assignments'],
+      ['appointment', 'Mentor appointment'],
+      ['workload', 'Mentor workload'],
+      ['review', 'Plans for review'],
+      ['changes', 'Program changes'],
+      ['final', 'Final checklists'],
+      ['umo', 'School reports'],
+    ],
+    umo: [
+      ['umo', 'Program overview'],
+      ['programs', 'Programs'],
+      ['mentors', 'Mentor directory'],
+      ['references', 'Reference lists'],
+      ['import', 'Import staff list'],
+      ['analytics', 'Analytics'],
+      ['reports', 'Reports & exports'],
+      ['archive', 'Archive'],
+      ['audit', 'Audit log'],
+      ['settings', 'Program settings'],
+    ],
+    tech: [
+      ['tech', 'System status'],
+      ['tech-logs', 'Technical logs'],
+      ['support', 'Support requests'],
+    ],
+    mentor: [
+      ['overview', 'Overview'],
+      ['mentor-form', 'Mentor profile'],
+      ['programs', 'My mentees'],
+      ['plan', 'Development plans'],
+      ['meetings', 'Meeting journal'],
+      ['visit', 'Meetings & visits'],
+      ['observation', 'Observation form'],
+      ['interim', 'Interim feedback'],
+      ['final', 'Final review'],
+      ['workload', 'My workload'],
+      ['changes', 'Change request'],
+      ['confidential', 'Confidential request'],
+      ['profile', 'Profile'],
+    ],
+    mentee: [
+      ['overview', 'Overview'],
+      ['status', 'Program status'],
+      ['mentors', 'Find a mentor'],
+      ['request', 'My request'],
+      ['plan', 'Development plan'],
+      ['meetings', 'Meeting journal'],
+      ['visit', 'Meetings & visits'],
+      ['interim', 'Interim feedback'],
+      ['final', 'Final reflection'],
+      ['changes', 'Change request'],
+      ['confidential', 'Confidential request'],
+      ['profile', 'Profile'],
+    ],
+  }[role];
   return html`
     <aside>
       <small>
@@ -95,6 +134,7 @@ export function renderSidebar(viewContext) {
             mentor: 'MENTOR',
             school: 'SCHOOL COORDINATOR',
             umo: 'PROGRAM ADMINISTRATOR',
+            tech: 'TECHNICAL ADMINISTRATOR',
           }[role]
         }
       </small>
@@ -117,6 +157,7 @@ export const renderFooter = (viewContext) => {
     <footer>
       <span>AITU Faculty Mentoring</span>
       <div class="link-row">
+        <a href="#support">Technical support</a>
         <a href="#help">Support · Privacy · Guidelines</a>
         <a href="#demo">Demo workspaces</a>
       </div>

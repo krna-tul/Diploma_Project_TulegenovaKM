@@ -29,6 +29,7 @@ export function renderVisitPage(viewContext) {
         <div class="actions">
           <button type="submit">Save ${visitTab}${arrowIcon}</button>
           ${visitTab === 'preparation' ? renderButton('Observation form', 'visit-tab', true, 'data-tab="observation"') : ''}
+          ${visitTab === 'observation' ? `<a class="button secondary" href="#observation">Full observation form${arrowIcon}</a>` : ''}
         </div>
       </form>
       <div>

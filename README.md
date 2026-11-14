@@ -48,6 +48,10 @@ The browser prototype demonstrates:
 - Individual development plans with activities, versions, and review decisions.
 - Meetings, Development Visits, and reflection forms.
 - School review and programme administration screens with summary exports.
+- The electronic forms F-03 to F-11 from the technical specification: mentor appointment with a workload check, meeting journal with confirmation, interim feedback, change requests, the final checklist, self-assessment and mentor review, and confidential requests.
+- The full Development Visit lesson observation form (lesson context, progression, criteria A–D, plus / question / recommendation).
+- Program status, notifications, profile and technical support screens.
+- Administrator tools: reference lists, staff import preview with errors and duplicates, analytics export, a logged archive and an audit log; a technical administrator view of integrations, delivery errors and logs without access to mentoring content.
 - English, Russian, and Kazakh interface switching.
 
 The [extended workflow demonstration](https://aitu-faculty-mentoring.vercel.app/workflow.html) also models mutual consent, appointment records, plan approval and return, meeting confirmation, and programme completion. Roles are switched manually for demonstration.

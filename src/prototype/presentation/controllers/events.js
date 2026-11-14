@@ -81,6 +81,7 @@ export function bindInterfaceEvents({
             mentor: 'mentor-form',
             school: 'review',
             umo: 'umo',
+            tech: 'tech',
           }[session.role],
         );
         render();

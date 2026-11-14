@@ -1,3 +1,4 @@
+import screens from './screens.js';
 export default {
   'Faculty Mentoring': 'Оқытушыларға тәлімгерлік',
   'AITU Faculty Mentoring': 'AITU оқытушыларына тәлімгерлік',
@@ -612,4 +613,5 @@ export default {
   'Public offer agreement': 'Жария оферта шарты',
   Menu: 'Мәзір',
   'One shared path': 'Бір ортақ жол',
+  ...Object.fromEntries(screens.map((row) => [row[0], row[2]])),
 };

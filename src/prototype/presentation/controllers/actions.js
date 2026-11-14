@@ -1,9 +1,11 @@
 import { demoMentors, demoEvents } from '../../domain/demo/catalog.js';
 import { buildProgramReportCsv } from '../../application/export-program-report.js';
+import { buildAnalyticsCsv } from '../../domain/demo/records.js';
 import { readFormValues, queryElement } from '../dom.js';
+import { roleLabels } from '../pages/meetings.js';
 import {
   renderAccountHelp,
-  renderNotifications,
+  renderArchiveRecord,
   renderMentorProfile,
   renderCourseEvidence,
   renderActivityDialog,
@@ -24,7 +26,56 @@ export function createActionHandlers({
   const requestValues = () => readFormValues(queryElement('[data-form=request]'));
   return {
     notifications() {
-      openDialog(renderNotifications(service.getState()));
+      navigate('notifications');
+    },
+    'read-notifications'() {
+      service.markNotificationsRead();
+      render();
+    },
+    'confirm-meeting'(button) {
+      service.confirmMeeting(Number(button.dataset.id));
+      notify('Meeting record confirmed.');
+      render();
+    },
+    'decide-change'(button) {
+      service.decideChange(Number(button.dataset.id), button.dataset.decision);
+      notify('School decision saved.');
+      render();
+    },
+    'confirm-appointment'() {
+      service.confirmAppointment();
+      notify('Appointment order recorded. The pair has ten working days to agree the plan.');
+      render();
+    },
+    'final-tab'(button) {
+      session.finalTab = button.dataset.tab;
+      render();
+    },
+    'close-program'() {
+      service.closeProgram();
+      notify('Program marked as completed.');
+      render();
+    },
+    'import-preview'() {
+      session.importPreview = service.previewImport();
+      render();
+    },
+    'import-apply'() {
+      service.applyImport();
+      notify('Valid rows imported. Import recorded in the audit log.');
+      render();
+    },
+    'open-archive'(button) {
+      service.openArchiveRecord(button.dataset.id);
+      openDialog(renderArchiveRecord(button.dataset.id));
+    },
+    'export-analytics'() {
+      downloadCsv(buildAnalyticsCsv(), 'aitu-program-analytics.csv');
+      service.recordReportExport();
+      notify('Analytics exported without personal details.');
+    },
+    'retry-delivery'() {
+      notify('Delivery retry scheduled.');
     },
     forgot() {
       openDialog(renderAccountHelp());
@@ -145,6 +196,30 @@ export function createFormHandlers({ service, session, render, notify, closeDial
     change(values) {
       service.requestChange(values.change);
       notify('Change request saved locally.');
+    },
+    record(values, event) {
+      const kind = event.target.dataset.kind;
+      service.saveRecord(kind, values, roleLabels[session.role]);
+      notify('Record saved.');
+      render();
+    },
+    observation(values) {
+      service.saveObservation(values);
+      notify('Observation form saved.');
+    },
+    final(values, event) {
+      service.saveFinal(event.target.dataset.part, values);
+      notify('Saved.');
+      render();
+    },
+    appointment(values) {
+      service.appointMentor(values);
+      notify('Appointment submitted for the vice-rector order.');
+      render();
+    },
+    profile(values) {
+      service.saveProfile(values);
+      notify('Preferences saved.');
     },
   };
 }

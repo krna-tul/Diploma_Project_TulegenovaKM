@@ -1,5 +1,5 @@
 import { html } from './presentation/components/html-template.js';
-import { createInitialState } from './domain/demo/initial-state.js';
+import { createInitialState, withDefaults } from './domain/demo/initial-state.js';
 import { demoMentors } from './domain/demo/catalog.js';
 import { getProgramSummaries } from './domain/demo/programs.js';
 import { rankMentors, getCourseOwner } from './domain/matching/rank-mentors.js';
@@ -32,13 +32,16 @@ import {
 import { queryElement } from './presentation/dom.js';
 import { mountCardSliders } from './presentation/components/card-slider.js';
 import { mountScenes } from './presentation/components/scene-motion.js';
-const repository = createJsonStorageRepository({
+const savedRepository = createJsonStorageRepository({
   storage: window.localStorage,
   key: 'aitu-reference-ui-v1',
   createDefault: createInitialState,
   isValid: (saved) => Array.isArray(saved.plan?.items),
 });
-const store = createStateStore(repository);
+const store = createStateStore({
+  ...savedRepository,
+  load: () => withDefaults(savedRepository.load()),
+});
 const service = createMentoringService({
   store,
 });
@@ -48,6 +51,8 @@ const session = {
   modelError: '',
   role: 'mentee',
   visitTab: 'preparation',
+  finalTab: 'checklist',
+  importPreview: null,
   ranked: service.getState().request.skill !== undefined,
 };
 const photoObserver = createPhotoObserver();

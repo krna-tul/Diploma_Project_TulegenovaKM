@@ -122,6 +122,12 @@ Card content fields are optional; a block is drawn only when its field exists: `
 
 To add a card, add an event with `card` and `details` to `demoEvents`, then add Russian and Kazakh translations for every new string to `locales/ru.js` and `locales/kk.js`. `src/tests/slider.test.mjs` fails if a card string has no translation.
 
+## Workspace screens
+
+The screens for forms F-03 to F-11, the observation form, program status and the administrator and technical tools live in `presentation/pages/meetings.js`, `observation-form.js`, `final-stage.js`, `appointment.js`, `umo-tools.js` and `account.js`, and are registered in `presentation/router.js`. Their demo data and rules (mentor limit of two mentees, 15 hours per mentee, import checks, program stage) are in `domain/demo/records.js`. Simple lists such as meetings, interim feedback, change, confidential and support requests use one generic `saveRecord(kind, values, author)` service method and one `record` form handler; the form's `data-kind` names the list.
+
+Older saved browser states are completed with new fields by `withDefaults` in `domain/demo/initial-state.js`. Translations for these screens are in `locales/screens.js` as `[English, Russian, Kazakh]` rows. `src/tests/screens.test.mjs` renders every new screen for every role and fails if any visible text, label or message has no translation.
+
 ## Reading and extending the code
 
 To add a screen, create a page module and register it in the router. Reuse the existing HTML helpers and keep domain mutations out of its template.

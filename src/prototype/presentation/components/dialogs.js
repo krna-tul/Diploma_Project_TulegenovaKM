@@ -3,6 +3,17 @@ import { html } from './html-template.js';
 import { escapeHtml, renderButton, renderInput, arrowIcon } from './html.js';
 export const renderAccountHelp = () =>
   '<h2>Account support</h2><p>This is a local demo; no account or password has been created. For institutional access, contact the program administrator.</p>';
+export function renderArchiveRecord(id) {
+  return html`
+    <small>
+      <span>ARCHIVE RECORD</span>
+      · ${escapeHtml(id)}
+    </small>
+    <h2>Completed program</h2>
+    <p>Request, plan, meeting count, checklist and final reviews are stored for this program.</p>
+    <p class="helper">This opening has been recorded in the audit log.</p>
+  `;
+}
 export function renderNotifications(state) {
   return html`
     <h2>Notifications</h2>

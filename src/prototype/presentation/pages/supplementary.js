@@ -36,10 +36,10 @@ export function renderSupplementaryPage(viewContext, routeName) {
         <button type="submit">Save feedback${arrowIcon}</button>
       </form>
     `;
-  if (['programs', 'reports', 'archive'].includes(routeName))
+  if (['programs', 'reports'].includes(routeName))
     return html`
-      ${renderHeading('PROGRAM ADMINISTRATION', routeName === 'archive' ? 'Program archive' : 'Programs and reports', 'Illustrative records for this prototype.')}
-      ${routeName === 'archive' ? '<p>No completed records in the local demonstration.</p>' : renderProgramTable(viewContext)}
+      ${renderHeading('PROGRAM ADMINISTRATION', 'Programs and reports', 'Illustrative records for this prototype.')}
+      ${renderProgramTable(viewContext)}
       <div class="actions">${renderButton('Export report', 'export')}</div>
     `;
   if (routeName === 'requests')
@@ -52,14 +52,6 @@ export function renderSupplementaryPage(viewContext, routeName) {
         <p>Preferred mentor: ${demoMentors[state.request.mentor]?.name || 'Not selected'}</p>
         <a href="workflow.html">Continue the full appointment and consent scenario →</a>
       </div>
-    `;
-  if (routeName === 'changes')
-    return html`
-      ${renderHeading('PROGRAM CHANGES', 'Request a change', 'Record a reason for the School to review.')}
-      <form class="panel" data-form="change">
-        ${renderTextarea('change', 'Reason for change', state.change || '')}
-        <button type="submit">Save change request${arrowIcon}</button>
-      </form>
     `;
   if (routeName === 'settings')
     return html`

@@ -1,3 +1,4 @@
+import screens from './screens.js';
 export default {
   'Faculty Mentoring': 'Наставничество преподавателей',
   'AITU Faculty Mentoring': 'Наставничество преподавателей AITU',
@@ -614,4 +615,5 @@ export default {
   'Public offer agreement': 'Договор публичной оферты',
   Menu: 'Меню',
   'One shared path': 'Один общий путь',
+  ...Object.fromEntries(screens.map((row) => [row[0], row[1]])),
 };
